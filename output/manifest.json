@@ -1,0 +1,60 @@
+{
+  "sample_rate": 44100,
+  "categories": [
+    {
+      "name": "clipboard",
+      "description": "Copy, cut and paste \u2014 the clipboard family.",
+      "sounds": [
+        {
+          "name": "copy",
+          "description": "Short rising confirmation blip",
+          "duration_s": 0.18,
+          "files": {
+            "wav": "output/clipboard/copy.wav"
+          }
+        },
+        {
+          "name": "cut",
+          "description": "Two quick scissor-like ticks",
+          "duration_s": 0.25,
+          "files": {
+            "wav": "output/clipboard/cut.wav"
+          }
+        },
+        {
+          "name": "paste",
+          "description": "Layered click + pop-in + low thump",
+          "duration_s": 0.5,
+          "files": {
+            "wav": "output/clipboard/paste.wav"
+          }
+        },
+        {
+          "name": "paste_bubble",
+          "description": "Soft bubble pop, water-droplet-ish",
+          "duration_s": 0.45,
+          "files": {
+            "wav": "output/clipboard/paste_bubble.wav"
+          }
+        },
+        {
+          "name": "paste_mechkey",
+          "description": "Mechanical keyboard clack",
+          "duration_s": 0.4,
+          "files": {
+            "wav": "output/clipboard/paste_mechkey.wav"
+          }
+        },
+        {
+          "name": "paste_scifi",
+          "description": "Sci-fi digital materialize",
+          "duration_s": 0.5,
+          "files": {
+            "wav": "output/clipboard/paste_scifi.wav"
+          }
+        }
+      ]
+    }
+  ],
+  "total_sounds": 6
+}
