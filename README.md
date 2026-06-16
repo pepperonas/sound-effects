@@ -7,8 +7,8 @@
 [![Made with Python](https://img.shields.io/badge/Made%20with-Python%203-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![No dependencies](https://img.shields.io/badge/dependencies-none-success)](#requirements)
 [![Stdlib only](https://img.shields.io/badge/stdlib-only-informational)](synth/core.py)
-[![Sounds](https://img.shields.io/badge/sounds-55-ff69b4)](output/)
-[![Categories](https://img.shields.io/badge/categories-8-blueviolet)](#-categories)
+[![Sounds](https://img.shields.io/badge/sounds-75-ff69b4)](output/)
+[![Categories](https://img.shields.io/badge/categories-10-blueviolet)](#-categories)
 [![Format WAV](https://img.shields.io/badge/format-WAV%2044.1kHz-orange)](#output-layout)
 [![Format MP3](https://img.shields.io/badge/format-MP3-orange)](#output-layout)
 [![Royalty free](https://img.shields.io/badge/royalty-free-brightgreen)](#-license)
@@ -33,7 +33,7 @@ python3 build.py          # → output/<category>/<name>.{wav,mp3} + manifest.js
 
 ## ✨ Highlights
 
-- 🧰 **55 ready-to-use sounds** across **8 categories** of computer interactions
+- 🧰 **75 ready-to-use sounds** across **10 categories** of computer interactions
 - 🐍 **Pure Python standard library** — clone and run, nothing to install
 - 🗂️ **Sorted output** — one folder per category + a machine-readable `manifest.json`
 - ♻️ **Reproducible** — seeded noise means identical output everywhere
@@ -52,6 +52,8 @@ python3 build.py          # → output/<category>/<name>.{wav,mp3} + manifest.js
 | ⚙️ **system** | startup, shutdown, connect, login, power | 8 |
 | ⌨️ **typing** | keystrokes, backspace, space, enter | 7 |
 | 💬 **messaging** | send, receive, delivered, typing, call tones | 6 |
+| ⏯️ **media** | play, pause, stop, skip, volume, record, screenshot | 10 |
+| 🎮 **game** | coin, powerup, jump, level-up, achievement, game-over | 10 |
 
 > See the full annotated list any time with `python3 build.py --list`.
 
@@ -61,6 +63,8 @@ python3 build.py          # → output/<category>/<name>.{wav,mp3} + manifest.js
 **status** · `success` · `success_short` · `error_buzz` · `error_descend` · `warning_pulse` · `complete` · `denied`
 **system** · `startup` · `shutdown` · `connect` · `disconnect` · `login` · `logout` · `battery_low` · `usb_plug`
 **notifications** · `ping` · `chime_two_note` · `chime_three_note` · `message_pop` · `alert_attention` · `bell_soft`
+**media** · `play` · `pause` · `stop` · `next_track` · `prev_track` · `volume_up` · `volume_down` · `mute` · `record` · `screenshot`
+**game** · `coin` · `powerup` · `jump` · `hurt` · `level_up` · `achievement` · `game_over` · `select` · `laser` · `explosion`
 
 ## 🚀 Usage
 
@@ -158,7 +162,9 @@ sound-effects/
 │   ├── ui.py
 │   ├── system.py
 │   ├── typing.py
-│   └── messaging.py
+│   ├── messaging.py
+│   ├── media.py
+│   └── game.py
 └── output/             # generated sounds, sorted by category (+ manifest.json)
 ```
 

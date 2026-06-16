@@ -88,7 +88,16 @@ def main():
         print("note: ffmpeg not found — generating WAV only.\n")
 
     os.makedirs(OUT, exist_ok=True)
-    manifest = {"sample_rate": SR, "categories": []}
+    # Merge into an existing manifest so partial (-c) builds don't drop categories.
+    manifest_path = os.path.join(OUT, "manifest.json")
+    by_cat = {}
+    if os.path.exists(manifest_path):
+        try:
+            with open(manifest_path) as f:
+                prev = json.load(f)
+            by_cat = {c["name"]: c for c in prev.get("categories", [])}
+        except (json.JSONDecodeError, OSError):
+            by_cat = {}
     grand_total = 0
 
     for m in mods:
@@ -114,12 +123,16 @@ def main():
             grand_total += 1
 
         cat_entry["sounds"].sort(key=lambda x: x["name"])
-        manifest["categories"].append(cat_entry)
+        by_cat[m.CATEGORY] = cat_entry
         print()
 
-    manifest["categories"].sort(key=lambda c: c["name"])
-    manifest["total_sounds"] = grand_total
-    with open(os.path.join(OUT, "manifest.json"), "w") as f:
+    categories = sorted(by_cat.values(), key=lambda c: c["name"])
+    manifest = {
+        "sample_rate": SR,
+        "total_sounds": sum(len(c["sounds"]) for c in categories),
+        "categories": categories,
+    }
+    with open(manifest_path, "w") as f:
         json.dump(manifest, f, indent=2)
 
     print(f"Done: {grand_total} sounds across {len(mods)} categories "
