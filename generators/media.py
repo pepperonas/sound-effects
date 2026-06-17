@@ -3,6 +3,7 @@ import math
 from synth import sine, triangle, noise_burst, mix, silence, perc, ad, Noise
 
 CATEGORY = "media"
+GROUP = "interface"
 DESCRIPTION = "Play, pause, stop, skip, volume, record and capture controls."
 
 

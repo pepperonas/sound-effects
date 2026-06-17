@@ -3,6 +3,7 @@ import math
 from synth import sine, triangle, mix, silence, perc, ad
 
 CATEGORY = "messaging"
+GROUP = "interface"
 DESCRIPTION = "Send, receive, delivered, typing and call tones."
 
 

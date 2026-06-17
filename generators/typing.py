@@ -3,6 +3,7 @@ import math
 from synth import sine, noise_burst, mix, silence, perc, ad, Noise
 
 CATEGORY = "typing"
+GROUP = "interface"
 DESCRIPTION = "Keystrokes, backspace, space, enter and key feedback."
 
 # Each keystroke uses an independent noise seed so a typed sequence varies.

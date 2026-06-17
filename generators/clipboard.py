@@ -4,6 +4,7 @@ from synth import (sine, square, noise_burst, mix, silence, ring_mod,
                    perc, ad, bell, Noise)
 
 CATEGORY = "clipboard"
+GROUP = "interface"
 DESCRIPTION = "Copy, cut and paste — the clipboard family."
 
 

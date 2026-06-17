@@ -1,19 +1,23 @@
 #!/usr/bin/env python3
 """
-build.py — generate every sound effect into output/<category>/, sorted.
+build.py — generate every sound effect into output/<group>/<category>/, sorted.
+
+Sounds are split into two use cases (the generator's GROUP):
+    interface/  — computer & UI interaction sounds
+    music/      — FL-Studio-style music-production samples
 
 Usage:
-    python3 build.py                 # build everything (WAV + MP3 if ffmpeg)
-    python3 build.py --list          # list categories & sounds, generate nothing
-    python3 build.py -c clicks ui    # only these categories
-    python3 build.py --no-mp3        # WAV only
-    python3 build.py --wav-only      # alias for --no-mp3
+    python3 build.py                 # build everything (WAV only)
+    python3 build.py --list          # list groups, categories & sounds, build nothing
+    python3 build.py -g music        # only this group (interface | music)
+    python3 build.py -c drums ui     # only these categories
+    python3 build.py --mp3           # also encode an MP3 copy (needs ffmpeg)
 
 Output layout:
     output/
-      <category>/
-        <name>.wav
-        <name>.mp3
+      <group>/
+        <category>/
+          <name>.wav
       manifest.json                  # machine-readable index of everything
 """
 import argparse
@@ -30,6 +34,12 @@ from synth.core import SR, write_wav          # noqa: E402
 import generators                              # noqa: E402
 
 OUT = os.path.join(ROOT, "output")
+
+GROUP_DESCRIPTIONS = {
+    "interface": "Computer & UI interaction sounds.",
+    "music": "FL-Studio-style music-production samples.",
+}
+GROUP_ORDER = {"interface": 0, "music": 1}
 
 
 def have_ffmpeg():
@@ -54,57 +64,87 @@ def human(n):
     return f"{n:.1f}GB"
 
 
+def group_of(m):
+    return getattr(m, "GROUP", "misc")
+
+
 def main():
-    ap = argparse.ArgumentParser(description="Generate UI sound effects.")
+    ap = argparse.ArgumentParser(description="Generate UI & music sound effects.")
+    ap.add_argument("-g", "--group", nargs="+", metavar="GRP",
+                    help="only build these groups (interface | music)")
     ap.add_argument("-c", "--category", nargs="+", metavar="CAT",
                     help="only build these categories")
     ap.add_argument("--list", action="store_true",
                     help="list everything and exit (no generation)")
-    ap.add_argument("--no-mp3", "--wav-only", dest="no_mp3", action="store_true",
-                    help="skip MP3 encoding")
+    ap.add_argument("--mp3", action="store_true",
+                    help="also encode an MP3 copy alongside each WAV (needs ffmpeg)")
     args = ap.parse_args()
 
     mods = generators.discover()
+    if args.group:
+        wanted = set(args.group)
+        mods = [m for m in mods if group_of(m) in wanted]
     if args.category:
         wanted = set(args.category)
         mods = [m for m in mods if m.CATEGORY in wanted]
-        if not mods:
-            print("No matching categories. Available:",
-                  ", ".join(sorted(m.CATEGORY for m in generators.discover())))
-            return 1
+    if not mods:
+        avail_g = sorted({group_of(m) for m in generators.discover()})
+        avail_c = sorted(m.CATEGORY for m in generators.discover())
+        print("No matching generators.")
+        print("  groups:    ", ", ".join(avail_g))
+        print("  categories:", ", ".join(avail_c))
+        return 1
+
+    # Stable order: interface group first, then music, categories alphabetical.
+    mods.sort(key=lambda m: (GROUP_ORDER.get(group_of(m), 9), m.CATEGORY))
 
     if args.list:
         total = 0
+        cur_group = None
         for m in mods:
-            print(f"\n\033[1m{m.CATEGORY}\033[0m — {m.DESCRIPTION}")
+            g = group_of(m)
+            if g != cur_group:
+                cur_group = g
+                print(f"\n\033[1;4m{g}\033[0m — {GROUP_DESCRIPTIONS.get(g, '')}")
+            print(f"  \033[1m{m.CATEGORY}\033[0m — {m.DESCRIPTION}")
             for name, desc, _ in m.SOUNDS:
-                print(f"    {name:<18} {desc}")
+                print(f"      {name:<18} {desc}")
                 total += 1
-        print(f"\n{len(mods)} categories, {total} sounds.")
+        n_groups = len({group_of(m) for m in mods})
+        print(f"\n{n_groups} groups, {len(mods)} categories, {total} sounds.")
         return 0
 
-    make_mp3 = not args.no_mp3 and have_ffmpeg()
-    if not args.no_mp3 and not make_mp3:
+    make_mp3 = args.mp3 and have_ffmpeg()
+    if args.mp3 and not make_mp3:
         print("note: ffmpeg not found — generating WAV only.\n")
 
     os.makedirs(OUT, exist_ok=True)
-    # Merge into an existing manifest so partial (-c) builds don't drop categories.
+    # Merge into an existing manifest so partial builds don't drop groups.
     manifest_path = os.path.join(OUT, "manifest.json")
-    by_cat = {}
+    groups = {}  # group name -> {name, description, categories: {cat -> entry}}
     if os.path.exists(manifest_path):
         try:
             with open(manifest_path) as f:
                 prev = json.load(f)
-            by_cat = {c["name"]: c for c in prev.get("categories", [])}
+            for g in prev.get("groups", []):
+                groups[g["name"]] = {
+                    "name": g["name"], "description": g.get("description", ""),
+                    "categories": {c["name"]: c for c in g.get("categories", [])},
+                }
         except (json.JSONDecodeError, OSError):
-            by_cat = {}
+            groups = {}
     grand_total = 0
+    cur_group = None
 
     for m in mods:
-        cat_dir = os.path.join(OUT, m.CATEGORY)
+        g = group_of(m)
+        if g != cur_group:
+            cur_group = g
+            print(f"\033[1;4m{g}\033[0m — {GROUP_DESCRIPTIONS.get(g, '')}")
+        cat_dir = os.path.join(OUT, g, m.CATEGORY)
         os.makedirs(cat_dir, exist_ok=True)
         cat_entry = {"name": m.CATEGORY, "description": m.DESCRIPTION, "sounds": []}
-        print(f"\033[1m{m.CATEGORY}\033[0m — {m.DESCRIPTION}")
+        print(f"  \033[1m{m.CATEGORY}\033[0m — {m.DESCRIPTION}")
 
         for name, desc, fn in m.SOUNDS:
             samples = fn()
@@ -123,20 +163,30 @@ def main():
             grand_total += 1
 
         cat_entry["sounds"].sort(key=lambda x: x["name"])
-        by_cat[m.CATEGORY] = cat_entry
+        grp = groups.setdefault(g, {"name": g, "categories": {}})
+        grp["description"] = GROUP_DESCRIPTIONS.get(g, grp.get("description", ""))
+        grp["categories"][m.CATEGORY] = cat_entry
         print()
 
-    categories = sorted(by_cat.values(), key=lambda c: c["name"])
+    # Serialize manifest: groups in canonical order, categories sorted.
+    out_groups = []
+    for g in sorted(groups.values(), key=lambda x: GROUP_ORDER.get(x["name"], 9)):
+        cats = sorted(g["categories"].values(), key=lambda c: c["name"])
+        out_groups.append({
+            "name": g["name"], "description": g["description"], "categories": cats,
+        })
+    total_sounds = sum(len(c["sounds"]) for g in out_groups for c in g["categories"])
     manifest = {
         "sample_rate": SR,
-        "total_sounds": sum(len(c["sounds"]) for c in categories),
-        "categories": categories,
+        "total_sounds": total_sounds,
+        "groups": out_groups,
     }
     with open(manifest_path, "w") as f:
         json.dump(manifest, f, indent=2)
 
+    n_groups = len({group_of(m) for m in mods})
     print(f"Done: {grand_total} sounds across {len(mods)} categories "
-          f"→ {os.path.relpath(OUT, ROOT)}/")
+          f"in {n_groups} group(s) → {os.path.relpath(OUT, ROOT)}/")
     print("Wrote output/manifest.json")
     return 0
 

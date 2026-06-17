@@ -3,6 +3,7 @@ import math
 from synth import square, sine, triangle, noise_burst, mix, silence, perc, ad, Noise
 
 CATEGORY = "game"
+GROUP = "interface"
 DESCRIPTION = "Retro-flavored coin, powerup, jump, level-up and game-over cues."
 
 

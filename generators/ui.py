@@ -3,6 +3,7 @@ import math
 from synth import sine, noise_burst, mix, silence, perc, ad, bell, Noise
 
 CATEGORY = "ui"
+GROUP = "interface"
 DESCRIPTION = "Open, close, hover, swipe, expand and popover motion."
 
 

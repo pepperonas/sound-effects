@@ -1,739 +1,1130 @@
 {
   "sample_rate": 44100,
-  "total_sounds": 75,
-  "categories": [
+  "total_sounds": 128,
+  "groups": [
     {
-      "name": "clicks",
-      "description": "Buttons, taps, toggles and switches.",
-      "sounds": [
+      "name": "interface",
+      "description": "Computer & UI interaction sounds.",
+      "categories": [
         {
-          "name": "click_crisp",
-          "description": "Crisp bright modern click",
-          "duration_s": 0.03,
-          "files": {
-            "wav": "output/clicks/click_crisp.wav",
-            "mp3": "output/clicks/click_crisp.mp3"
-          }
+          "name": "clicks",
+          "description": "Buttons, taps, toggles and switches.",
+          "sounds": [
+            {
+              "name": "click_crisp",
+              "description": "Crisp bright modern click",
+              "duration_s": 0.03,
+              "files": {
+                "wav": "output/interface/clicks/click_crisp.wav"
+              }
+            },
+            {
+              "name": "click_soft",
+              "description": "Soft rounded button click",
+              "duration_s": 0.04,
+              "files": {
+                "wav": "output/interface/clicks/click_soft.wav"
+              }
+            },
+            {
+              "name": "radio_select",
+              "description": "Clean radio/checkbox pip",
+              "duration_s": 0.06,
+              "files": {
+                "wav": "output/interface/clicks/radio_select.wav"
+              }
+            },
+            {
+              "name": "switch_mech",
+              "description": "Physical clicky switch snap",
+              "duration_s": 0.18,
+              "files": {
+                "wav": "output/interface/clicks/switch_mech.wav"
+              }
+            },
+            {
+              "name": "tap_minimal",
+              "description": "Minimal flat tap/tick",
+              "duration_s": 0.025,
+              "files": {
+                "wav": "output/interface/clicks/tap_minimal.wav"
+              }
+            },
+            {
+              "name": "toggle_off",
+              "description": "Downward two-tone toggle off",
+              "duration_s": 0.16,
+              "files": {
+                "wav": "output/interface/clicks/toggle_off.wav"
+              }
+            },
+            {
+              "name": "toggle_on",
+              "description": "Upward two-tone toggle on",
+              "duration_s": 0.16,
+              "files": {
+                "wav": "output/interface/clicks/toggle_on.wav"
+              }
+            }
+          ]
         },
         {
-          "name": "click_soft",
-          "description": "Soft rounded button click",
-          "duration_s": 0.04,
-          "files": {
-            "wav": "output/clicks/click_soft.wav",
-            "mp3": "output/clicks/click_soft.mp3"
-          }
+          "name": "clipboard",
+          "description": "Copy, cut and paste \u2014 the clipboard family.",
+          "sounds": [
+            {
+              "name": "copy",
+              "description": "Short rising confirmation blip",
+              "duration_s": 0.18,
+              "files": {
+                "wav": "output/interface/clipboard/copy.wav"
+              }
+            },
+            {
+              "name": "cut",
+              "description": "Two quick scissor-like ticks",
+              "duration_s": 0.25,
+              "files": {
+                "wav": "output/interface/clipboard/cut.wav"
+              }
+            },
+            {
+              "name": "paste",
+              "description": "Layered click + pop-in + low thump",
+              "duration_s": 0.5,
+              "files": {
+                "wav": "output/interface/clipboard/paste.wav"
+              }
+            },
+            {
+              "name": "paste_bubble",
+              "description": "Soft bubble pop, water-droplet-ish",
+              "duration_s": 0.45,
+              "files": {
+                "wav": "output/interface/clipboard/paste_bubble.wav"
+              }
+            },
+            {
+              "name": "paste_mechkey",
+              "description": "Mechanical keyboard clack",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/interface/clipboard/paste_mechkey.wav"
+              }
+            },
+            {
+              "name": "paste_scifi",
+              "description": "Sci-fi digital materialize",
+              "duration_s": 0.5,
+              "files": {
+                "wav": "output/interface/clipboard/paste_scifi.wav"
+              }
+            }
+          ]
         },
         {
-          "name": "radio_select",
-          "description": "Clean radio/checkbox pip",
-          "duration_s": 0.06,
-          "files": {
-            "wav": "output/clicks/radio_select.wav",
-            "mp3": "output/clicks/radio_select.mp3"
-          }
+          "name": "game",
+          "description": "Retro-flavored coin, powerup, jump, level-up and game-over cues.",
+          "sounds": [
+            {
+              "name": "achievement",
+              "description": "Bright unlock fanfare",
+              "duration_s": 0.8,
+              "files": {
+                "wav": "output/interface/game/achievement.wav"
+              }
+            },
+            {
+              "name": "coin",
+              "description": "Classic two-step coin blip",
+              "duration_s": 0.3,
+              "files": {
+                "wav": "output/interface/game/coin.wav"
+              }
+            },
+            {
+              "name": "explosion",
+              "description": "Noisy boom with rumble",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/interface/game/explosion.wav"
+              }
+            },
+            {
+              "name": "game_over",
+              "description": "Descending minor fail run",
+              "duration_s": 0.8,
+              "files": {
+                "wav": "output/interface/game/game_over.wav"
+              }
+            },
+            {
+              "name": "hurt",
+              "description": "Downward damage blip",
+              "duration_s": 0.16,
+              "files": {
+                "wav": "output/interface/game/hurt.wav"
+              }
+            },
+            {
+              "name": "jump",
+              "description": "Upward square jump swoop",
+              "duration_s": 0.18,
+              "files": {
+                "wav": "output/interface/game/jump.wav"
+              }
+            },
+            {
+              "name": "laser",
+              "description": "Fast descending zap",
+              "duration_s": 0.16,
+              "files": {
+                "wav": "output/interface/game/laser.wav"
+              }
+            },
+            {
+              "name": "level_up",
+              "description": "Triumphant ascending run",
+              "duration_s": 0.6,
+              "files": {
+                "wav": "output/interface/game/level_up.wav"
+              }
+            },
+            {
+              "name": "powerup",
+              "description": "Rising stepped power-up",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/interface/game/powerup.wav"
+              }
+            },
+            {
+              "name": "select",
+              "description": "Retro menu select blip",
+              "duration_s": 0.08,
+              "files": {
+                "wav": "output/interface/game/select.wav"
+              }
+            }
+          ]
         },
         {
-          "name": "switch_mech",
-          "description": "Physical clicky switch snap",
-          "duration_s": 0.18,
-          "files": {
-            "wav": "output/clicks/switch_mech.wav",
-            "mp3": "output/clicks/switch_mech.mp3"
-          }
+          "name": "media",
+          "description": "Play, pause, stop, skip, volume, record and capture controls.",
+          "sounds": [
+            {
+              "name": "mute",
+              "description": "Soft downward mute thunk",
+              "duration_s": 0.18,
+              "files": {
+                "wav": "output/interface/media/mute.wav"
+              }
+            },
+            {
+              "name": "next_track",
+              "description": "Rising skip-forward blip",
+              "duration_s": 0.2,
+              "files": {
+                "wav": "output/interface/media/next_track.wav"
+              }
+            },
+            {
+              "name": "pause",
+              "description": "Two soft pause taps",
+              "duration_s": 0.2,
+              "files": {
+                "wav": "output/interface/media/pause.wav"
+              }
+            },
+            {
+              "name": "play",
+              "description": "Bright upward play",
+              "duration_s": 0.16,
+              "files": {
+                "wav": "output/interface/media/play.wav"
+              }
+            },
+            {
+              "name": "prev_track",
+              "description": "Falling skip-back blip",
+              "duration_s": 0.2,
+              "files": {
+                "wav": "output/interface/media/prev_track.wav"
+              }
+            },
+            {
+              "name": "record",
+              "description": "Firm record-start tone",
+              "duration_s": 0.22,
+              "files": {
+                "wav": "output/interface/media/record.wav"
+              }
+            },
+            {
+              "name": "screenshot",
+              "description": "Camera shutter snap",
+              "duration_s": 0.22,
+              "files": {
+                "wav": "output/interface/media/screenshot.wav"
+              }
+            },
+            {
+              "name": "stop",
+              "description": "Flat damped stop block",
+              "duration_s": 0.16,
+              "files": {
+                "wav": "output/interface/media/stop.wav"
+              }
+            },
+            {
+              "name": "volume_down",
+              "description": "Falling volume tick",
+              "duration_s": 0.12,
+              "files": {
+                "wav": "output/interface/media/volume_down.wav"
+              }
+            },
+            {
+              "name": "volume_up",
+              "description": "Rising volume tick",
+              "duration_s": 0.12,
+              "files": {
+                "wav": "output/interface/media/volume_up.wav"
+              }
+            }
+          ]
         },
         {
-          "name": "tap_minimal",
-          "description": "Minimal flat tap/tick",
-          "duration_s": 0.025,
-          "files": {
-            "wav": "output/clicks/tap_minimal.wav",
-            "mp3": "output/clicks/tap_minimal.mp3"
-          }
+          "name": "messaging",
+          "description": "Send, receive, delivered, typing and call tones.",
+          "sounds": [
+            {
+              "name": "call_end",
+              "description": "Descending call-end two-tone",
+              "duration_s": 0.32,
+              "files": {
+                "wav": "output/interface/messaging/call_end.wav"
+              }
+            },
+            {
+              "name": "call_ring",
+              "description": "Warm two-tone ring burst",
+              "duration_s": 0.6,
+              "files": {
+                "wav": "output/interface/messaging/call_ring.wav"
+              }
+            },
+            {
+              "name": "delivered",
+              "description": "High delivered double-pip",
+              "duration_s": 0.18,
+              "files": {
+                "wav": "output/interface/messaging/delivered.wav"
+              }
+            },
+            {
+              "name": "receive",
+              "description": "Gentle settle pop",
+              "duration_s": 0.3,
+              "files": {
+                "wav": "output/interface/messaging/receive.wav"
+              }
+            },
+            {
+              "name": "send",
+              "description": "Upward swoosh-out",
+              "duration_s": 0.2,
+              "files": {
+                "wav": "output/interface/messaging/send.wav"
+              }
+            },
+            {
+              "name": "typing",
+              "description": "Soft triple typing blip",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/interface/messaging/typing.wav"
+              }
+            }
+          ]
         },
         {
-          "name": "toggle_off",
-          "description": "Downward two-tone toggle off",
-          "duration_s": 0.16,
-          "files": {
-            "wav": "output/clicks/toggle_off.wav",
-            "mp3": "output/clicks/toggle_off.mp3"
-          }
+          "name": "notifications",
+          "description": "Pings, chimes, message and alert tones.",
+          "sounds": [
+            {
+              "name": "alert_attention",
+              "description": "Two firm attention tones",
+              "duration_s": 0.45,
+              "files": {
+                "wav": "output/interface/notifications/alert_attention.wav"
+              }
+            },
+            {
+              "name": "bell_soft",
+              "description": "Soft mallet bell with shimmer",
+              "duration_s": 0.6,
+              "files": {
+                "wav": "output/interface/notifications/bell_soft.wav"
+              }
+            },
+            {
+              "name": "chime_three_note",
+              "description": "Ascending three-note chime",
+              "duration_s": 0.7,
+              "files": {
+                "wav": "output/interface/notifications/chime_three_note.wav"
+              }
+            },
+            {
+              "name": "chime_two_note",
+              "description": "Two-note chime (C6\u2192G6)",
+              "duration_s": 0.5,
+              "files": {
+                "wav": "output/interface/notifications/chime_two_note.wav"
+              }
+            },
+            {
+              "name": "message_pop",
+              "description": "Soft bubbly message pop",
+              "duration_s": 0.28,
+              "files": {
+                "wav": "output/interface/notifications/message_pop.wav"
+              }
+            },
+            {
+              "name": "ping",
+              "description": "Single bright ping",
+              "duration_s": 0.3,
+              "files": {
+                "wav": "output/interface/notifications/ping.wav"
+              }
+            }
+          ]
         },
         {
-          "name": "toggle_on",
-          "description": "Upward two-tone toggle on",
-          "duration_s": 0.16,
-          "files": {
-            "wav": "output/clicks/toggle_on.wav",
-            "mp3": "output/clicks/toggle_on.mp3"
-          }
-        }
-      ]
-    },
-    {
-      "name": "clipboard",
-      "description": "Copy, cut and paste \u2014 the clipboard family.",
-      "sounds": [
-        {
-          "name": "copy",
-          "description": "Short rising confirmation blip",
-          "duration_s": 0.18,
-          "files": {
-            "wav": "output/clipboard/copy.wav",
-            "mp3": "output/clipboard/copy.mp3"
-          }
+          "name": "status",
+          "description": "Success, error, warning and completion feedback.",
+          "sounds": [
+            {
+              "name": "complete",
+              "description": "Warm resolving completion",
+              "duration_s": 0.71,
+              "files": {
+                "wav": "output/interface/status/complete.wav"
+              }
+            },
+            {
+              "name": "denied",
+              "description": "Flat low denial thud",
+              "duration_s": 0.22,
+              "files": {
+                "wav": "output/interface/status/denied.wav"
+              }
+            },
+            {
+              "name": "error_buzz",
+              "description": "Low dissonant error buzz",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/interface/status/error_buzz.wav"
+              }
+            },
+            {
+              "name": "error_descend",
+              "description": "Clean descending error two-tone",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/interface/status/error_descend.wav"
+              }
+            },
+            {
+              "name": "success",
+              "description": "Ascending major arpeggio",
+              "duration_s": 0.5,
+              "files": {
+                "wav": "output/interface/status/success.wav"
+              }
+            },
+            {
+              "name": "success_short",
+              "description": "Quick rising confirm",
+              "duration_s": 0.28,
+              "files": {
+                "wav": "output/interface/status/success_short.wav"
+              }
+            },
+            {
+              "name": "warning_pulse",
+              "description": "Two urgent warning pulses",
+              "duration_s": 0.42,
+              "files": {
+                "wav": "output/interface/status/warning_pulse.wav"
+              }
+            }
+          ]
         },
         {
-          "name": "cut",
-          "description": "Two quick scissor-like ticks",
-          "duration_s": 0.25,
-          "files": {
-            "wav": "output/clipboard/cut.wav",
-            "mp3": "output/clipboard/cut.mp3"
-          }
-        },
-        {
-          "name": "paste",
-          "description": "Layered click + pop-in + low thump",
-          "duration_s": 0.5,
-          "files": {
-            "wav": "output/clipboard/paste.wav",
-            "mp3": "output/clipboard/paste.mp3"
-          }
-        },
-        {
-          "name": "paste_bubble",
-          "description": "Soft bubble pop, water-droplet-ish",
-          "duration_s": 0.45,
-          "files": {
-            "wav": "output/clipboard/paste_bubble.wav",
-            "mp3": "output/clipboard/paste_bubble.mp3"
-          }
-        },
-        {
-          "name": "paste_mechkey",
-          "description": "Mechanical keyboard clack",
-          "duration_s": 0.4,
-          "files": {
-            "wav": "output/clipboard/paste_mechkey.wav",
-            "mp3": "output/clipboard/paste_mechkey.mp3"
-          }
-        },
-        {
-          "name": "paste_scifi",
-          "description": "Sci-fi digital materialize",
-          "duration_s": 0.5,
-          "files": {
-            "wav": "output/clipboard/paste_scifi.wav",
-            "mp3": "output/clipboard/paste_scifi.mp3"
-          }
-        }
-      ]
-    },
-    {
-      "name": "game",
-      "description": "Retro-flavored coin, powerup, jump, level-up and game-over cues.",
-      "sounds": [
-        {
-          "name": "achievement",
-          "description": "Bright unlock fanfare",
-          "duration_s": 0.8,
-          "files": {
-            "wav": "output/game/achievement.wav",
-            "mp3": "output/game/achievement.mp3"
-          }
-        },
-        {
-          "name": "coin",
-          "description": "Classic two-step coin blip",
-          "duration_s": 0.3,
-          "files": {
-            "wav": "output/game/coin.wav",
-            "mp3": "output/game/coin.mp3"
-          }
-        },
-        {
-          "name": "explosion",
-          "description": "Noisy boom with rumble",
-          "duration_s": 0.4,
-          "files": {
-            "wav": "output/game/explosion.wav",
-            "mp3": "output/game/explosion.mp3"
-          }
-        },
-        {
-          "name": "game_over",
-          "description": "Descending minor fail run",
-          "duration_s": 0.8,
-          "files": {
-            "wav": "output/game/game_over.wav",
-            "mp3": "output/game/game_over.mp3"
-          }
-        },
-        {
-          "name": "hurt",
-          "description": "Downward damage blip",
-          "duration_s": 0.16,
-          "files": {
-            "wav": "output/game/hurt.wav",
-            "mp3": "output/game/hurt.mp3"
-          }
-        },
-        {
-          "name": "jump",
-          "description": "Upward square jump swoop",
-          "duration_s": 0.18,
-          "files": {
-            "wav": "output/game/jump.wav",
-            "mp3": "output/game/jump.mp3"
-          }
-        },
-        {
-          "name": "laser",
-          "description": "Fast descending zap",
-          "duration_s": 0.16,
-          "files": {
-            "wav": "output/game/laser.wav",
-            "mp3": "output/game/laser.mp3"
-          }
-        },
-        {
-          "name": "level_up",
-          "description": "Triumphant ascending run",
-          "duration_s": 0.6,
-          "files": {
-            "wav": "output/game/level_up.wav",
-            "mp3": "output/game/level_up.mp3"
-          }
-        },
-        {
-          "name": "powerup",
-          "description": "Rising stepped power-up",
-          "duration_s": 0.4,
-          "files": {
-            "wav": "output/game/powerup.wav",
-            "mp3": "output/game/powerup.mp3"
-          }
-        },
-        {
-          "name": "select",
-          "description": "Retro menu select blip",
-          "duration_s": 0.08,
-          "files": {
-            "wav": "output/game/select.wav",
-            "mp3": "output/game/select.mp3"
-          }
-        }
-      ]
-    },
-    {
-      "name": "media",
-      "description": "Play, pause, stop, skip, volume, record and capture controls.",
-      "sounds": [
-        {
-          "name": "mute",
-          "description": "Soft downward mute thunk",
-          "duration_s": 0.18,
-          "files": {
-            "wav": "output/media/mute.wav",
-            "mp3": "output/media/mute.mp3"
-          }
-        },
-        {
-          "name": "next_track",
-          "description": "Rising skip-forward blip",
-          "duration_s": 0.2,
-          "files": {
-            "wav": "output/media/next_track.wav",
-            "mp3": "output/media/next_track.mp3"
-          }
-        },
-        {
-          "name": "pause",
-          "description": "Two soft pause taps",
-          "duration_s": 0.2,
-          "files": {
-            "wav": "output/media/pause.wav",
-            "mp3": "output/media/pause.mp3"
-          }
-        },
-        {
-          "name": "play",
-          "description": "Bright upward play",
-          "duration_s": 0.16,
-          "files": {
-            "wav": "output/media/play.wav",
-            "mp3": "output/media/play.mp3"
-          }
-        },
-        {
-          "name": "prev_track",
-          "description": "Falling skip-back blip",
-          "duration_s": 0.2,
-          "files": {
-            "wav": "output/media/prev_track.wav",
-            "mp3": "output/media/prev_track.mp3"
-          }
-        },
-        {
-          "name": "record",
-          "description": "Firm record-start tone",
-          "duration_s": 0.22,
-          "files": {
-            "wav": "output/media/record.wav",
-            "mp3": "output/media/record.mp3"
-          }
-        },
-        {
-          "name": "screenshot",
-          "description": "Camera shutter snap",
-          "duration_s": 0.22,
-          "files": {
-            "wav": "output/media/screenshot.wav",
-            "mp3": "output/media/screenshot.mp3"
-          }
-        },
-        {
-          "name": "stop",
-          "description": "Flat damped stop block",
-          "duration_s": 0.16,
-          "files": {
-            "wav": "output/media/stop.wav",
-            "mp3": "output/media/stop.mp3"
-          }
-        },
-        {
-          "name": "volume_down",
-          "description": "Falling volume tick",
-          "duration_s": 0.12,
-          "files": {
-            "wav": "output/media/volume_down.wav",
-            "mp3": "output/media/volume_down.mp3"
-          }
-        },
-        {
-          "name": "volume_up",
-          "description": "Rising volume tick",
-          "duration_s": 0.12,
-          "files": {
-            "wav": "output/media/volume_up.wav",
-            "mp3": "output/media/volume_up.mp3"
-          }
-        }
-      ]
-    },
-    {
-      "name": "messaging",
-      "description": "Send, receive, delivered, typing and call tones.",
-      "sounds": [
-        {
-          "name": "call_end",
-          "description": "Descending call-end two-tone",
-          "duration_s": 0.32,
-          "files": {
-            "wav": "output/messaging/call_end.wav",
-            "mp3": "output/messaging/call_end.mp3"
-          }
-        },
-        {
-          "name": "call_ring",
-          "description": "Warm two-tone ring burst",
-          "duration_s": 0.6,
-          "files": {
-            "wav": "output/messaging/call_ring.wav",
-            "mp3": "output/messaging/call_ring.mp3"
-          }
-        },
-        {
-          "name": "delivered",
-          "description": "High delivered double-pip",
-          "duration_s": 0.18,
-          "files": {
-            "wav": "output/messaging/delivered.wav",
-            "mp3": "output/messaging/delivered.mp3"
-          }
-        },
-        {
-          "name": "receive",
-          "description": "Gentle settle pop",
-          "duration_s": 0.3,
-          "files": {
-            "wav": "output/messaging/receive.wav",
-            "mp3": "output/messaging/receive.mp3"
-          }
-        },
-        {
-          "name": "send",
-          "description": "Upward swoosh-out",
-          "duration_s": 0.2,
-          "files": {
-            "wav": "output/messaging/send.wav",
-            "mp3": "output/messaging/send.mp3"
-          }
+          "name": "system",
+          "description": "Startup, shutdown, connect/disconnect, login and power events.",
+          "sounds": [
+            {
+              "name": "battery_low",
+              "description": "Two soft warning dips",
+              "duration_s": 0.5,
+              "files": {
+                "wav": "output/interface/system/battery_low.wav"
+              }
+            },
+            {
+              "name": "connect",
+              "description": "Rising 'plugged in' two-note",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/interface/system/connect.wav"
+              }
+            },
+            {
+              "name": "disconnect",
+              "description": "Falling 'unplugged' two-note",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/interface/system/disconnect.wav"
+              }
+            },
+            {
+              "name": "login",
+              "description": "Warm welcoming arpeggio",
+              "duration_s": 0.6,
+              "files": {
+                "wav": "output/interface/system/login.wav"
+              }
+            },
+            {
+              "name": "logout",
+              "description": "Short descending settle",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/interface/system/logout.wav"
+              }
+            },
+            {
+              "name": "shutdown",
+              "description": "Descending fade-out sweep",
+              "duration_s": 0.85,
+              "files": {
+                "wav": "output/interface/system/shutdown.wav"
+              }
+            },
+            {
+              "name": "startup",
+              "description": "Rising swell into a major chord",
+              "duration_s": 0.97,
+              "files": {
+                "wav": "output/interface/system/startup.wav"
+              }
+            },
+            {
+              "name": "usb_plug",
+              "description": "Bright USB-detected blip",
+              "duration_s": 0.12,
+              "files": {
+                "wav": "output/interface/system/usb_plug.wav"
+              }
+            }
+          ]
         },
         {
           "name": "typing",
-          "description": "Soft triple typing blip",
-          "duration_s": 0.4,
-          "files": {
-            "wav": "output/messaging/typing.wav",
-            "mp3": "output/messaging/typing.mp3"
-          }
+          "description": "Keystrokes, backspace, space, enter and key feedback.",
+          "sounds": [
+            {
+              "name": "backspace",
+              "description": "Downward delete tick",
+              "duration_s": 0.1,
+              "files": {
+                "wav": "output/interface/typing/backspace.wav"
+              }
+            },
+            {
+              "name": "enter",
+              "description": "Confirming return click",
+              "duration_s": 0.16,
+              "files": {
+                "wav": "output/interface/typing/enter.wav"
+              }
+            },
+            {
+              "name": "key_1",
+              "description": "Keystroke variation 1",
+              "duration_s": 0.12,
+              "files": {
+                "wav": "output/interface/typing/key_1.wav"
+              }
+            },
+            {
+              "name": "key_2",
+              "description": "Keystroke variation 2",
+              "duration_s": 0.12,
+              "files": {
+                "wav": "output/interface/typing/key_2.wav"
+              }
+            },
+            {
+              "name": "key_3",
+              "description": "Keystroke variation 3",
+              "duration_s": 0.12,
+              "files": {
+                "wav": "output/interface/typing/key_3.wav"
+              }
+            },
+            {
+              "name": "key_error",
+              "description": "Invalid-key low buzz",
+              "duration_s": 0.12,
+              "files": {
+                "wav": "output/interface/typing/key_error.wav"
+              }
+            },
+            {
+              "name": "space",
+              "description": "Deeper softer spacebar thock",
+              "duration_s": 0.14,
+              "files": {
+                "wav": "output/interface/typing/space.wav"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ui",
+          "description": "Open, close, hover, swipe, expand and popover motion.",
+          "sounds": [
+            {
+              "name": "close",
+              "description": "Falling close swish",
+              "duration_s": 0.32,
+              "files": {
+                "wav": "output/interface/ui/close.wav"
+              }
+            },
+            {
+              "name": "collapse",
+              "description": "Short downward collapse",
+              "duration_s": 0.18,
+              "files": {
+                "wav": "output/interface/ui/collapse.wav"
+              }
+            },
+            {
+              "name": "dismiss",
+              "description": "Soft descending dismiss",
+              "duration_s": 0.14,
+              "files": {
+                "wav": "output/interface/ui/dismiss.wav"
+              }
+            },
+            {
+              "name": "expand",
+              "description": "Short upward expand glide",
+              "duration_s": 0.18,
+              "files": {
+                "wav": "output/interface/ui/expand.wav"
+              }
+            },
+            {
+              "name": "hover",
+              "description": "Subtle high hover tick",
+              "duration_s": 0.018,
+              "files": {
+                "wav": "output/interface/ui/hover.wav"
+              }
+            },
+            {
+              "name": "open",
+              "description": "Rising airy open swish",
+              "duration_s": 0.35,
+              "files": {
+                "wav": "output/interface/ui/open.wav"
+              }
+            },
+            {
+              "name": "popup",
+              "description": "Bouncy popover pop",
+              "duration_s": 0.16,
+              "files": {
+                "wav": "output/interface/ui/popup.wav"
+              }
+            },
+            {
+              "name": "swipe",
+              "description": "Quick noise whoosh",
+              "duration_s": 0.22,
+              "files": {
+                "wav": "output/interface/ui/swipe.wav"
+              }
+            }
+          ]
         }
       ]
     },
     {
-      "name": "notifications",
-      "description": "Pings, chimes, message and alert tones.",
-      "sounds": [
+      "name": "music",
+      "description": "FL-Studio-style music-production samples.",
+      "categories": [
         {
-          "name": "alert_attention",
-          "description": "Two firm attention tones",
-          "duration_s": 0.45,
-          "files": {
-            "wav": "output/notifications/alert_attention.wav",
-            "mp3": "output/notifications/alert_attention.mp3"
-          }
+          "name": "bass",
+          "description": "808s, sub, reese, pluck and synth basses, tuned to musical notes.",
+          "sounds": [
+            {
+              "name": "bass_808",
+              "description": "Tuned 808 sub with glide",
+              "duration_s": 0.9,
+              "files": {
+                "wav": "output/music/bass/bass_808.wav"
+              }
+            },
+            {
+              "name": "fm_bass",
+              "description": "FM growl bass",
+              "duration_s": 0.5,
+              "files": {
+                "wav": "output/music/bass/fm_bass.wav"
+              }
+            },
+            {
+              "name": "pluck_bass",
+              "description": "Snappy filter-pluck bass",
+              "duration_s": 0.3,
+              "files": {
+                "wav": "output/music/bass/pluck_bass.wav"
+              }
+            },
+            {
+              "name": "reese",
+              "description": "Detuned reese bass",
+              "duration_s": 0.8,
+              "files": {
+                "wav": "output/music/bass/reese.wav"
+              }
+            },
+            {
+              "name": "saw_bass",
+              "description": "Fat low-passed saw bass",
+              "duration_s": 0.5,
+              "files": {
+                "wav": "output/music/bass/saw_bass.wav"
+              }
+            },
+            {
+              "name": "square_bass",
+              "description": "Hollow woody square bass",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/music/bass/square_bass.wav"
+              }
+            },
+            {
+              "name": "sub_bass",
+              "description": "Pure clean sine sub",
+              "duration_s": 0.7,
+              "files": {
+                "wav": "output/music/bass/sub_bass.wav"
+              }
+            },
+            {
+              "name": "wobble_bass",
+              "description": "LFO wobble bass",
+              "duration_s": 0.9,
+              "files": {
+                "wav": "output/music/bass/wobble_bass.wav"
+              }
+            }
+          ]
         },
         {
-          "name": "bell_soft",
-          "description": "Soft mallet bell with shimmer",
-          "duration_s": 0.6,
-          "files": {
-            "wav": "output/notifications/bell_soft.wav",
-            "mp3": "output/notifications/bell_soft.mp3"
-          }
+          "name": "chords",
+          "description": "Major, minor, 7th, sus and power chord stabs + pads (rooted on C).",
+          "sounds": [
+            {
+              "name": "dom7",
+              "description": "Bluesy dominant 7th stab",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/music/chords/dom7.wav"
+              }
+            },
+            {
+              "name": "maj7",
+              "description": "Lush major 7th stab",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/music/chords/maj7.wav"
+              }
+            },
+            {
+              "name": "major",
+              "description": "Major triad stab",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/music/chords/major.wav"
+              }
+            },
+            {
+              "name": "major_pad",
+              "description": "Sustained major pad chord",
+              "duration_s": 1.3,
+              "files": {
+                "wav": "output/music/chords/major_pad.wav"
+              }
+            },
+            {
+              "name": "min7",
+              "description": "Smooth minor 7th stab",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/music/chords/min7.wav"
+              }
+            },
+            {
+              "name": "minor",
+              "description": "Minor triad stab",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/music/chords/minor.wav"
+              }
+            },
+            {
+              "name": "minor_pad",
+              "description": "Sustained minor pad chord",
+              "duration_s": 1.3,
+              "files": {
+                "wav": "output/music/chords/minor_pad.wav"
+              }
+            },
+            {
+              "name": "power",
+              "description": "Root-fifth-octave power chord",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/music/chords/power.wav"
+              }
+            },
+            {
+              "name": "sus4",
+              "description": "Open suspended-4th stab",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/music/chords/sus4.wav"
+              }
+            }
+          ]
         },
         {
-          "name": "chime_three_note",
-          "description": "Ascending three-note chime",
-          "duration_s": 0.7,
-          "files": {
-            "wav": "output/notifications/chime_three_note.wav",
-            "mp3": "output/notifications/chime_three_note.mp3"
-          }
+          "name": "drums",
+          "description": "Kicks, snares, claps, hats, toms, cymbals and percussion one-shots.",
+          "sounds": [
+            {
+              "name": "clap",
+              "description": "Staggered hand clap with tail",
+              "duration_s": 0.32,
+              "files": {
+                "wav": "output/music/drums/clap.wav"
+              }
+            },
+            {
+              "name": "cowbell",
+              "description": "Classic 808 cowbell",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/music/drums/cowbell.wav"
+              }
+            },
+            {
+              "name": "crash",
+              "description": "Bright crash cymbal wash",
+              "duration_s": 1.4,
+              "files": {
+                "wav": "output/music/drums/crash.wav"
+              }
+            },
+            {
+              "name": "hat_closed",
+              "description": "Short metallic closed hi-hat",
+              "duration_s": 0.05,
+              "files": {
+                "wav": "output/music/drums/hat_closed.wav"
+              }
+            },
+            {
+              "name": "hat_open",
+              "description": "Sizzling open hi-hat",
+              "duration_s": 0.35,
+              "files": {
+                "wav": "output/music/drums/hat_open.wav"
+              }
+            },
+            {
+              "name": "kick",
+              "description": "Punchy kick with click transient",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/music/drums/kick.wav"
+              }
+            },
+            {
+              "name": "kick_808",
+              "description": "Long boomy 808 sub kick",
+              "duration_s": 0.8,
+              "files": {
+                "wav": "output/music/drums/kick_808.wav"
+              }
+            },
+            {
+              "name": "kick_sub",
+              "description": "Clean deep sub kick for layering",
+              "duration_s": 0.5,
+              "files": {
+                "wav": "output/music/drums/kick_sub.wav"
+              }
+            },
+            {
+              "name": "ride",
+              "description": "Tonal ride cymbal ping",
+              "duration_s": 0.7,
+              "files": {
+                "wav": "output/music/drums/ride.wav"
+              }
+            },
+            {
+              "name": "rimshot",
+              "description": "Ultra-short woody rimshot",
+              "duration_s": 0.03,
+              "files": {
+                "wav": "output/music/drums/rimshot.wav"
+              }
+            },
+            {
+              "name": "shaker",
+              "description": "Soft band-limited shaker",
+              "duration_s": 0.12,
+              "files": {
+                "wav": "output/music/drums/shaker.wav"
+              }
+            },
+            {
+              "name": "snap",
+              "description": "Sharp finger snap",
+              "duration_s": 0.08,
+              "files": {
+                "wav": "output/music/drums/snap.wav"
+              }
+            },
+            {
+              "name": "snare",
+              "description": "Tonal snare with bright crack",
+              "duration_s": 0.3,
+              "files": {
+                "wav": "output/music/drums/snare.wav"
+              }
+            },
+            {
+              "name": "snare_rim",
+              "description": "Tight cutting rimshot snare",
+              "duration_s": 0.16,
+              "files": {
+                "wav": "output/music/drums/snare_rim.wav"
+              }
+            },
+            {
+              "name": "tom_high",
+              "description": "High tom",
+              "duration_s": 0.35,
+              "files": {
+                "wav": "output/music/drums/tom_high.wav"
+              }
+            },
+            {
+              "name": "tom_low",
+              "description": "Low round tom",
+              "duration_s": 0.35,
+              "files": {
+                "wav": "output/music/drums/tom_low.wav"
+              }
+            },
+            {
+              "name": "tom_mid",
+              "description": "Mid tom",
+              "duration_s": 0.35,
+              "files": {
+                "wav": "output/music/drums/tom_mid.wav"
+              }
+            }
+          ]
         },
         {
-          "name": "chime_two_note",
-          "description": "Two-note chime (C6\u2192G6)",
-          "duration_s": 0.5,
-          "files": {
-            "wav": "output/notifications/chime_two_note.wav",
-            "mp3": "output/notifications/chime_two_note.mp3"
-          }
+          "name": "fx",
+          "description": "Risers, downlifters, impacts, sweeps and transition effects.",
+          "sounds": [
+            {
+              "name": "downlifter",
+              "description": "Falling post-drop downlifter",
+              "duration_s": 1.2,
+              "files": {
+                "wav": "output/music/fx/downlifter.wav"
+              }
+            },
+            {
+              "name": "impact",
+              "description": "Cinematic sub + noise impact",
+              "duration_s": 1.0,
+              "files": {
+                "wav": "output/music/fx/impact.wav"
+              }
+            },
+            {
+              "name": "laser_zap",
+              "description": "Descending ring-mod zap",
+              "duration_s": 0.3,
+              "files": {
+                "wav": "output/music/fx/laser_zap.wav"
+              }
+            },
+            {
+              "name": "reverse_cymbal",
+              "description": "Reverse cymbal swell",
+              "duration_s": 1.3,
+              "files": {
+                "wav": "output/music/fx/reverse_cymbal.wav"
+              }
+            },
+            {
+              "name": "riser",
+              "description": "Tension-building uplifter",
+              "duration_s": 1.5,
+              "files": {
+                "wav": "output/music/fx/riser.wav"
+              }
+            },
+            {
+              "name": "sub_drop",
+              "description": "Sine sub drop into the floor",
+              "duration_s": 1.0,
+              "files": {
+                "wav": "output/music/fx/sub_drop.wav"
+              }
+            },
+            {
+              "name": "sweep_down",
+              "description": "Filtered noise sweep down",
+              "duration_s": 0.7,
+              "files": {
+                "wav": "output/music/fx/sweep_down.wav"
+              }
+            },
+            {
+              "name": "sweep_up",
+              "description": "Filtered noise sweep up",
+              "duration_s": 0.7,
+              "files": {
+                "wav": "output/music/fx/sweep_up.wav"
+              }
+            },
+            {
+              "name": "vinyl_crackle",
+              "description": "Lo-fi vinyl crackle bed",
+              "duration_s": 1.5,
+              "files": {
+                "wav": "output/music/fx/vinyl_crackle.wav"
+              }
+            },
+            {
+              "name": "white_riser",
+              "description": "Pure rising noise riser",
+              "duration_s": 1.4,
+              "files": {
+                "wav": "output/music/fx/white_riser.wav"
+              }
+            }
+          ]
         },
         {
-          "name": "message_pop",
-          "description": "Soft bubbly message pop",
-          "duration_s": 0.28,
-          "files": {
-            "wav": "output/notifications/message_pop.wav",
-            "mp3": "output/notifications/message_pop.mp3"
-          }
-        },
-        {
-          "name": "ping",
-          "description": "Single bright ping",
-          "duration_s": 0.3,
-          "files": {
-            "wav": "output/notifications/ping.wav",
-            "mp3": "output/notifications/ping.mp3"
-          }
-        }
-      ]
-    },
-    {
-      "name": "status",
-      "description": "Success, error, warning and completion feedback.",
-      "sounds": [
-        {
-          "name": "complete",
-          "description": "Warm resolving completion",
-          "duration_s": 0.71,
-          "files": {
-            "wav": "output/status/complete.wav",
-            "mp3": "output/status/complete.mp3"
-          }
-        },
-        {
-          "name": "denied",
-          "description": "Flat low denial thud",
-          "duration_s": 0.22,
-          "files": {
-            "wav": "output/status/denied.wav",
-            "mp3": "output/status/denied.mp3"
-          }
-        },
-        {
-          "name": "error_buzz",
-          "description": "Low dissonant error buzz",
-          "duration_s": 0.4,
-          "files": {
-            "wav": "output/status/error_buzz.wav",
-            "mp3": "output/status/error_buzz.mp3"
-          }
-        },
-        {
-          "name": "error_descend",
-          "description": "Clean descending error two-tone",
-          "duration_s": 0.4,
-          "files": {
-            "wav": "output/status/error_descend.wav",
-            "mp3": "output/status/error_descend.mp3"
-          }
-        },
-        {
-          "name": "success",
-          "description": "Ascending major arpeggio",
-          "duration_s": 0.5,
-          "files": {
-            "wav": "output/status/success.wav",
-            "mp3": "output/status/success.mp3"
-          }
-        },
-        {
-          "name": "success_short",
-          "description": "Quick rising confirm",
-          "duration_s": 0.28,
-          "files": {
-            "wav": "output/status/success_short.wav",
-            "mp3": "output/status/success_short.mp3"
-          }
-        },
-        {
-          "name": "warning_pulse",
-          "description": "Two urgent warning pulses",
-          "duration_s": 0.42,
-          "files": {
-            "wav": "output/status/warning_pulse.wav",
-            "mp3": "output/status/warning_pulse.mp3"
-          }
-        }
-      ]
-    },
-    {
-      "name": "system",
-      "description": "Startup, shutdown, connect/disconnect, login and power events.",
-      "sounds": [
-        {
-          "name": "battery_low",
-          "description": "Two soft warning dips",
-          "duration_s": 0.5,
-          "files": {
-            "wav": "output/system/battery_low.wav",
-            "mp3": "output/system/battery_low.mp3"
-          }
-        },
-        {
-          "name": "connect",
-          "description": "Rising 'plugged in' two-note",
-          "duration_s": 0.4,
-          "files": {
-            "wav": "output/system/connect.wav",
-            "mp3": "output/system/connect.mp3"
-          }
-        },
-        {
-          "name": "disconnect",
-          "description": "Falling 'unplugged' two-note",
-          "duration_s": 0.4,
-          "files": {
-            "wav": "output/system/disconnect.wav",
-            "mp3": "output/system/disconnect.mp3"
-          }
-        },
-        {
-          "name": "login",
-          "description": "Warm welcoming arpeggio",
-          "duration_s": 0.6,
-          "files": {
-            "wav": "output/system/login.wav",
-            "mp3": "output/system/login.mp3"
-          }
-        },
-        {
-          "name": "logout",
-          "description": "Short descending settle",
-          "duration_s": 0.4,
-          "files": {
-            "wav": "output/system/logout.wav",
-            "mp3": "output/system/logout.mp3"
-          }
-        },
-        {
-          "name": "shutdown",
-          "description": "Descending fade-out sweep",
-          "duration_s": 0.85,
-          "files": {
-            "wav": "output/system/shutdown.wav",
-            "mp3": "output/system/shutdown.mp3"
-          }
-        },
-        {
-          "name": "startup",
-          "description": "Rising swell into a major chord",
-          "duration_s": 0.97,
-          "files": {
-            "wav": "output/system/startup.wav",
-            "mp3": "output/system/startup.mp3"
-          }
-        },
-        {
-          "name": "usb_plug",
-          "description": "Bright USB-detected blip",
-          "duration_s": 0.12,
-          "files": {
-            "wav": "output/system/usb_plug.wav",
-            "mp3": "output/system/usb_plug.mp3"
-          }
-        }
-      ]
-    },
-    {
-      "name": "typing",
-      "description": "Keystrokes, backspace, space, enter and key feedback.",
-      "sounds": [
-        {
-          "name": "backspace",
-          "description": "Downward delete tick",
-          "duration_s": 0.1,
-          "files": {
-            "wav": "output/typing/backspace.wav",
-            "mp3": "output/typing/backspace.mp3"
-          }
-        },
-        {
-          "name": "enter",
-          "description": "Confirming return click",
-          "duration_s": 0.16,
-          "files": {
-            "wav": "output/typing/enter.wav",
-            "mp3": "output/typing/enter.mp3"
-          }
-        },
-        {
-          "name": "key_1",
-          "description": "Keystroke variation 1",
-          "duration_s": 0.12,
-          "files": {
-            "wav": "output/typing/key_1.wav",
-            "mp3": "output/typing/key_1.mp3"
-          }
-        },
-        {
-          "name": "key_2",
-          "description": "Keystroke variation 2",
-          "duration_s": 0.12,
-          "files": {
-            "wav": "output/typing/key_2.wav",
-            "mp3": "output/typing/key_2.mp3"
-          }
-        },
-        {
-          "name": "key_3",
-          "description": "Keystroke variation 3",
-          "duration_s": 0.12,
-          "files": {
-            "wav": "output/typing/key_3.wav",
-            "mp3": "output/typing/key_3.mp3"
-          }
-        },
-        {
-          "name": "key_error",
-          "description": "Invalid-key low buzz",
-          "duration_s": 0.12,
-          "files": {
-            "wav": "output/typing/key_error.wav",
-            "mp3": "output/typing/key_error.mp3"
-          }
-        },
-        {
-          "name": "space",
-          "description": "Deeper softer spacebar thock",
-          "duration_s": 0.14,
-          "files": {
-            "wav": "output/typing/space.wav",
-            "mp3": "output/typing/space.mp3"
-          }
-        }
-      ]
-    },
-    {
-      "name": "ui",
-      "description": "Open, close, hover, swipe, expand and popover motion.",
-      "sounds": [
-        {
-          "name": "close",
-          "description": "Falling close swish",
-          "duration_s": 0.32,
-          "files": {
-            "wav": "output/ui/close.wav",
-            "mp3": "output/ui/close.mp3"
-          }
-        },
-        {
-          "name": "collapse",
-          "description": "Short downward collapse",
-          "duration_s": 0.18,
-          "files": {
-            "wav": "output/ui/collapse.wav",
-            "mp3": "output/ui/collapse.mp3"
-          }
-        },
-        {
-          "name": "dismiss",
-          "description": "Soft descending dismiss",
-          "duration_s": 0.14,
-          "files": {
-            "wav": "output/ui/dismiss.wav",
-            "mp3": "output/ui/dismiss.mp3"
-          }
-        },
-        {
-          "name": "expand",
-          "description": "Short upward expand glide",
-          "duration_s": 0.18,
-          "files": {
-            "wav": "output/ui/expand.wav",
-            "mp3": "output/ui/expand.mp3"
-          }
-        },
-        {
-          "name": "hover",
-          "description": "Subtle high hover tick",
-          "duration_s": 0.018,
-          "files": {
-            "wav": "output/ui/hover.wav",
-            "mp3": "output/ui/hover.mp3"
-          }
-        },
-        {
-          "name": "open",
-          "description": "Rising airy open swish",
-          "duration_s": 0.35,
-          "files": {
-            "wav": "output/ui/open.wav",
-            "mp3": "output/ui/open.mp3"
-          }
-        },
-        {
-          "name": "popup",
-          "description": "Bouncy popover pop",
-          "duration_s": 0.16,
-          "files": {
-            "wav": "output/ui/popup.wav",
-            "mp3": "output/ui/popup.mp3"
-          }
-        },
-        {
-          "name": "swipe",
-          "description": "Quick noise whoosh",
-          "duration_s": 0.22,
-          "files": {
-            "wav": "output/ui/swipe.wav",
-            "mp3": "output/ui/swipe.mp3"
-          }
+          "name": "synth",
+          "description": "Plucks, stabs, leads, keys, bells and pads \u2014 tuned melodic one-shots.",
+          "sounds": [
+            {
+              "name": "arp_blip",
+              "description": "Tiny square arp blip",
+              "duration_s": 0.1,
+              "files": {
+                "wav": "output/music/synth/arp_blip.wav"
+              }
+            },
+            {
+              "name": "bell_tone",
+              "description": "Inharmonic FM bell",
+              "duration_s": 0.9,
+              "files": {
+                "wav": "output/music/synth/bell_tone.wav"
+              }
+            },
+            {
+              "name": "key",
+              "description": "Electric-piano-ish key",
+              "duration_s": 0.6,
+              "files": {
+                "wav": "output/music/synth/key.wav"
+              }
+            },
+            {
+              "name": "lead",
+              "description": "Sustained vibrato saw lead",
+              "duration_s": 0.7,
+              "files": {
+                "wav": "output/music/synth/lead.wav"
+              }
+            },
+            {
+              "name": "organ",
+              "description": "Additive drawbar organ",
+              "duration_s": 0.7,
+              "files": {
+                "wav": "output/music/synth/organ.wav"
+              }
+            },
+            {
+              "name": "pad",
+              "description": "Warm swelling saw pad",
+              "duration_s": 1.2,
+              "files": {
+                "wav": "output/music/synth/pad.wav"
+              }
+            },
+            {
+              "name": "pluck",
+              "description": "Bright filter-pluck note",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/music/synth/pluck.wav"
+              }
+            },
+            {
+              "name": "saw_lead_oct",
+              "description": "Octave-stacked saw lead",
+              "duration_s": 0.5,
+              "files": {
+                "wav": "output/music/synth/saw_lead_oct.wav"
+              }
+            },
+            {
+              "name": "stab",
+              "description": "Detuned saw triad stab",
+              "duration_s": 0.3,
+              "files": {
+                "wav": "output/music/synth/stab.wav"
+              }
+            }
+          ]
         }
       ]
     }

@@ -3,6 +3,7 @@ import math
 from synth import sine, triangle, noise_burst, mix, silence, perc, ad, bell, Noise
 
 CATEGORY = "system"
+GROUP = "interface"
 DESCRIPTION = "Startup, shutdown, connect/disconnect, login and power events."
 
 

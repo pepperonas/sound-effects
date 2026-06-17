@@ -154,6 +154,75 @@ def ring_mod(samples, freq, depth=1.0):
     return out
 
 
+def lowpass(samples, cutoff):
+    """One-pole RC low-pass. `cutoff` in Hz (constant or callable f(t)->Hz)."""
+    out = [0.0] * len(samples)
+    dt = 1.0 / SR
+    y = 0.0
+    for i, x in enumerate(samples):
+        fc = cutoff(i / SR) if callable(cutoff) else cutoff
+        rc = 1.0 / (2 * math.pi * max(1.0, fc))
+        a = dt / (rc + dt)
+        y += a * (x - y)
+        out[i] = y
+    return out
+
+
+def highpass(samples, cutoff):
+    """One-pole RC high-pass. `cutoff` in Hz (constant or callable f(t)->Hz)."""
+    out = [0.0] * len(samples)
+    dt = 1.0 / SR
+    prev_x = 0.0
+    prev_y = 0.0
+    for i, x in enumerate(samples):
+        fc = cutoff(i / SR) if callable(cutoff) else cutoff
+        rc = 1.0 / (2 * math.pi * max(1.0, fc))
+        a = rc / (rc + dt)
+        y = a * (prev_y + x - prev_x)
+        out[i] = y
+        prev_x = x
+        prev_y = y
+    return out
+
+
+def drive(samples, amount=2.0):
+    """Soft tanh saturation — fattens kicks, basses and stabs."""
+    return [math.tanh(amount * s) for s in samples]
+
+
+def reverse(samples):
+    """Reverse a buffer — for reverse cymbals, swooshes, suck-ins."""
+    return list(samples)[::-1]
+
+
+# --------------------------------------------------------------------------- #
+# Musical pitch helpers — turn note names into frequencies for melodic samples.
+# --------------------------------------------------------------------------- #
+_SEMITONE = {"c": 0, "d": 2, "e": 4, "f": 5, "g": 7, "a": 9, "b": 11}
+
+
+def note(name):
+    """Note name -> Hz, scientific pitch (A4 = 440). e.g. note('C2'), note('F#3')."""
+    name = name.strip()
+    letter = name[0].lower()
+    if letter not in _SEMITONE:
+        raise ValueError("bad note: %s" % name)
+    semi = _SEMITONE[letter]
+    i = 1
+    while i < len(name) and name[i] in "#b":
+        semi += 1 if name[i] == "#" else -1
+        i += 1
+    octave = int(name[i:])
+    midi = semi + (octave + 1) * 12  # C-1 = midi 0, C4 = 60
+    return 440.0 * 2 ** ((midi - 69) / 12.0)
+
+
+def chord(root, intervals):
+    """List of Hz from a root note name and semitone offsets, e.g. (0,4,7)."""
+    base = note(root) if isinstance(root, str) else float(root)
+    return [base * 2 ** (i / 12.0) for i in intervals]
+
+
 def fade_in(samples, ms=10):
     f = min(int(ms / 1000 * SR), len(samples))
     for k in range(f):

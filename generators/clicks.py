@@ -3,6 +3,7 @@ import math
 from synth import sine, square, noise_burst, mix, silence, perc, ad, Noise
 
 CATEGORY = "clicks"
+GROUP = "interface"
 DESCRIPTION = "Buttons, taps, toggles and switches."
 
 

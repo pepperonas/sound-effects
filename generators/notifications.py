@@ -3,6 +3,7 @@ import math
 from synth import sine, triangle, mix, silence, perc, ad, adsr
 
 CATEGORY = "notifications"
+GROUP = "interface"
 DESCRIPTION = "Pings, chimes, message and alert tones."
 
 

@@ -3,6 +3,7 @@ import math
 from synth import sine, square, triangle, noise_burst, mix, silence, perc, ad
 
 CATEGORY = "status"
+GROUP = "interface"
 DESCRIPTION = "Success, error, warning and completion feedback."
 
 
