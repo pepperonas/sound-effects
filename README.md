@@ -7,7 +7,7 @@
 [![Made with Python](https://img.shields.io/badge/Made%20with-Python%203-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![No dependencies](https://img.shields.io/badge/dependencies-none-success)](#requirements)
 [![Stdlib only](https://img.shields.io/badge/stdlib-only-informational)](synth/core.py)
-[![Sounds](https://img.shields.io/badge/sounds-128-ff69b4)](output/)
+[![Sounds](https://img.shields.io/badge/sounds-129-ff69b4)](output/)
 [![Categories](https://img.shields.io/badge/categories-15-blueviolet)](#-categories)
 [![Format WAV](https://img.shields.io/badge/format-WAV%2044.1kHz-orange)](#output-layout)
 [![MP3 optional](https://img.shields.io/badge/MP3-optional-lightgrey)](#output-layout)
@@ -33,7 +33,7 @@ python3 build.py          # → output/<category>/<name>.{wav,mp3} + manifest.js
 
 ## ✨ Highlights
 
-- 🧰 **128 ready-to-use sounds** across **15 categories** — UI interactions **and** music-production samples
+- 🧰 **129 ready-to-use sounds** across **15 categories** — UI interactions **and** music-production samples
 - 🎹 **FL-Studio-style sample kit** — drums, basses, synth tones, chord stabs and production FX, tuned to musical notes
 - 🐍 **Pure Python standard library** — clone and run, nothing to install
 - 🗂️ **Sorted output** — one folder per category + a machine-readable `manifest.json`
@@ -55,7 +55,7 @@ python3 build.py          # → output/<category>/<name>.{wav,mp3} + manifest.js
 | ⚙️ **system** | startup, shutdown, connect, login, power | 8 |
 | ⌨️ **typing** | keystrokes, backspace, space, enter | 7 |
 | 💬 **messaging** | send, receive, delivered, typing, call tones | 6 |
-| ⏯️ **media** | play, pause, stop, skip, volume, record, screenshot | 10 |
+| ⏯️ **media** | play, pause, stop, skip, volume, record, screenshot | 11 |
 | 🎮 **game** | coin, powerup, jump, level-up, achievement, game-over | 10 |
 
 ### 🎹 Music production (FL-Studio-style sample kit)

@@ -1,6 +1,6 @@
 {
   "sample_rate": 44100,
-  "total_sounds": 128,
+  "total_sounds": 129,
   "groups": [
     {
       "name": "interface",
@@ -266,6 +266,14 @@
               "duration_s": 0.22,
               "files": {
                 "wav": "output/interface/media/screenshot.wav"
+              }
+            },
+            {
+              "name": "screenshot_dslr",
+              "description": "Rich DSLR shutter (mirror slap + double curtain)",
+              "duration_s": 0.3,
+              "files": {
+                "wav": "output/interface/media/screenshot_dslr.wav"
               }
             },
             {

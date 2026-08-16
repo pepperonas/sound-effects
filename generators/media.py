@@ -1,6 +1,7 @@
 """Media controls — play, pause, stop, skip, volume, record, screenshot."""
 import math
 from synth import sine, triangle, noise_burst, mix, silence, perc, ad, Noise
+from synth.core import lowpass, highpass
 
 CATEGORY = "media"
 GROUP = "interface"
@@ -67,6 +68,25 @@ def record():
     return s
 
 
+def screenshot_dslr():
+    """Screenshot — rich DSLR shutter: mirror slap, double curtain, metal ring."""
+    s = silence(0.30)
+    n = Noise(4242)
+    # Mirror slap: low bodied thump with a hard attack
+    mix(s, lowpass(noise_burst(0.03, perc(90), 0.2, n), 900), 0.0, 0.9)
+    mix(s, sine(180, 0.035, perc(120)), 0.0, 0.5)
+    # First curtain: bright snick
+    mix(s, highpass(noise_burst(0.014, perc(220), 0.05, n), 1800), 0.012, 0.8)
+    # Second curtain, slightly later and duller (the classic double)
+    mix(s, highpass(noise_burst(0.016, perc(180), 0.1, n), 1200), 0.075, 0.7)
+    # Tiny metallic after-ring of the mechanism
+    mix(s, sine(3100, 0.05, perc(140)), 0.075, 0.10)
+    mix(s, sine(2200, 0.06, perc(110)), 0.078, 0.08)
+    # Winder settle: faint low tick at the end
+    mix(s, lowpass(noise_burst(0.02, perc(150), 0.3, n), 700), 0.15, 0.25)
+    return s
+
+
 def screenshot():
     """Screenshot — classic camera shutter snap."""
     s = silence(0.22)
@@ -88,4 +108,5 @@ SOUNDS = [
     ("mute",         "Soft downward mute thunk",      mute),
     ("record",       "Firm record-start tone",        record),
     ("screenshot",   "Camera shutter snap",           screenshot),
+    ("screenshot_dslr", "Rich DSLR shutter (mirror slap + double curtain)", screenshot_dslr),
 ]
