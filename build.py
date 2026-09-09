@@ -13,6 +13,7 @@ Usage:
     python3 build.py -g music        # only this group (interface | music)
     python3 build.py -c drums ui     # only these categories
     python3 build.py --mp3           # also encode an MP3 copy (needs ffmpeg)
+    python3 build.py --prune         # also delete output of removed/renamed sounds
 
 Output layout:
     output/
@@ -80,6 +81,9 @@ def main():
                     help="list everything and exit (no generation)")
     ap.add_argument("--mp3", action="store_true",
                     help="also encode an MP3 copy alongside each WAV (needs ffmpeg)")
+    ap.add_argument("--prune", action="store_true",
+                    help="delete output files no generator produces any more "
+                         "(renamed or removed sounds leave their old WAV behind)")
     args = ap.parse_args()
 
     mods = generators.discover()
@@ -169,6 +173,27 @@ def main():
         grp["description"] = GROUP_DESCRIPTIONS.get(g, grp.get("description", ""))
         grp["categories"][m.CATEGORY] = cat_entry
         print()
+
+    # Sounds that were renamed or dropped leave their old file behind, which
+    # then ships in a pack that neither the code nor the manifest knows about.
+    # Opt-in, because deleting files nobody asked to delete is worse.
+    if args.prune:
+        keep = {os.path.join(OUT, group_of(m), m.CATEGORY, n + ext)
+                for m in generators.discover()
+                for n, _, _ in m.SOUNDS for ext in (".wav", ".mp3")}
+        for g in sorted(GROUP_DESCRIPTIONS):
+            gdir = os.path.join(OUT, g)
+            if not os.path.isdir(gdir):
+                continue
+            for cat in sorted(os.listdir(gdir)):
+                cdir = os.path.join(gdir, cat)
+                if not os.path.isdir(cdir):
+                    continue
+                for f in sorted(os.listdir(cdir)):
+                    path = os.path.join(cdir, f)
+                    if f.endswith((".wav", ".mp3")) and path not in keep:
+                        os.remove(path)
+                        print(f"    \033[33m-\033[0m pruned {os.path.relpath(path, ROOT)}")
 
     # Serialize manifest: groups in canonical order, categories sorted.
     out_groups = []

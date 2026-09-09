@@ -113,6 +113,18 @@ class TestRenderedFiles(unittest.TestCase):
                 with self.subTest(sound=name):
                     self.assertIn((cat, name), on_disk)
 
+    def test_no_orphaned_files(self):
+        """The other half of the contract, and the half that actually rotted:
+        a renamed or dropped sound leaves its old WAV behind, and it then
+        ships in a pack that neither the code nor the manifest knows about.
+        Three had accumulated before this test existed. `build.py --prune`
+        clears them."""
+        registered = {(m.CATEGORY, n) for m in MODS.values() for n, _, _ in m.SOUNDS}
+        orphans = [os.path.relpath(p, ROOT) for c, n, p in self.files
+                   if (c, n) not in registered]
+        # Name the orphans, not the 598 files that are fine.
+        self.assertEqual(orphans, [], "run: python3 build.py --prune")
+
 
 class TestDeterminism(unittest.TestCase):
     """Seeded noise means a rebuild must reproduce the file exactly."""
