@@ -23,14 +23,17 @@ def _key(freq, body_decay=55, seed=None):
 
 
 def key_1():
+    """Keystroke — the plain key press, first of three variations."""
     return _key(420, seed=7011)
 
 
 def key_2():
+    """Keystroke — a slightly deeper key, so repeats do not machine-gun."""
     return _key(380, seed=7029)
 
 
 def key_3():
+    """Keystroke — the brightest of the three, for variety in a run."""
     return _key(460, seed=7043)
 
 

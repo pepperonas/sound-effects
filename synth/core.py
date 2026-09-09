@@ -111,6 +111,81 @@ def triangle(freq, dur, env=None):
     return osc("triangle", freq, dur, env)
 
 
+def pluck(freq, dur, damp=0.5, decay=0.996, pick=1.0, env=None, noise=None):
+    """Karplus-Strong plucked string — a noise burst circulating through a
+    damped delay line. Sounds like a real plucked string, not like a filtered
+    saw, because the physics are the same: a wave travelling a fixed length.
+
+    `damp` 0..1  how fast the highs die away (0 = glassy, 1 = dull thud)
+
+    The damper is a two-point average whose loss at Nyquist is |1 - 2a|, so its
+    strength peaks at a = 0.5 and falls back to nothing at a = 1. Feeding `damp`
+    straight in would therefore be non-monotonic — 0.85 would ring LONGER than
+    0.5 — so it is mapped onto the useful half of the range.
+    `decay` <1   overall sustain of the string
+    `pick` 0..1  brightness of the pluck itself (1 = hard plectrum, 0.2 = thumb)
+
+    `freq` may be a callable f(t)->Hz: the delay line is re-read every sample,
+    so bends, slides and string vibrato all work.
+    """
+    n = int(dur * SR)
+    if n <= 0:
+        return []
+    dq = 0.5 * max(0.0, min(1.0, damp))                  # monotonic damping
+    f_min = min(_freq_at(freq, 0.0), _freq_at(freq, dur)) if callable(freq) else freq
+    size = int(SR / max(20.0, f_min * 0.5)) + 4          # room for the lowest pitch
+    line = [0.0] * size
+    src = noise or Noise(9631)
+
+    # Excite the stretch of line the first read will touch.
+    d0 = max(2.0, SR / _freq_at(freq, 0.0) - dq)
+    lp = 0.0
+    for k in range(int(d0) + 1):
+        x = src()
+        lp = lp * (1.0 - pick) + x * pick                # duller pick = softer attack
+        line[k] = lp
+
+    out = [0.0] * n
+    w = int(d0) + 1                                      # write head sits past the burst
+    prev = 0.0
+    for i in range(n):
+        t = i / SR
+        d = max(2.0, SR / _freq_at(freq, t) - dq)        # dq = the damper's own delay
+        r = (w - d) % size
+        i0 = int(r)
+        frac = r - i0
+        a = line[i0]
+        v = a + frac * (line[(i0 + 1) % size] - a)       # fractional read = in tune
+        out[i] = v * (env(t) if env else 1.0)
+        line[w] = decay * ((1.0 - dq) * v + dq * prev)
+        prev = v
+        w = (w + 1) % size
+    return out
+
+
+def fm(freq, dur, ratio=1.0, index=2.0, env=None, mod_env=None, phase=0.0):
+    """Two-operator FM (phase modulation) — one sine bending another's phase.
+
+    This is how an electric piano, a bell and a marimba are actually made:
+    integer `ratio` gives harmonic timbres (1 = reedy, 2 = hollow, 3-4 = woody),
+    non-integer gives inharmonic bells. `index` is the modulation depth; a
+    `mod_env` that decays makes the tone bright on the attack and mellow after
+    — the single most recognisable "struck tine" cue.
+    """
+    n = int(dur * SR)
+    out = [0.0] * n
+    cph = phase
+    mph = 0.0
+    for i in range(n):
+        t = i / SR
+        f = _freq_at(freq, t)
+        cph += 2 * math.pi * f / SR
+        mph += 2 * math.pi * f * ratio / SR
+        depth = index * (mod_env(t) if mod_env else 1.0)
+        out[i] = math.sin(cph + depth * math.sin(mph)) * (env(t) if env else 1.0)
+    return out
+
+
 def noise_burst(dur, env=None, color=0.0, noise=None):
     """White-ish noise. `color` in [0,1] applies a one-pole low-pass (warmer)."""
     n = int(dur * SR)
@@ -215,6 +290,22 @@ def note(name):
     octave = int(name[i:])
     midi = semi + (octave + 1) * 12  # C-1 = midi 0, C4 = 60
     return 440.0 * 2 ** ((midi - 69) / 12.0)
+
+
+def vibrato(freq, rate=5.5, depth=0.006, onset=0.0):
+    """Wrap a pitch in vibrato -> f(t). `depth` is a fraction of the pitch.
+
+    `onset` seconds of straight tone before the wobble fades in, the way a
+    player leans into a held note; without it sustained instruments sound
+    mechanical from the very first sample.
+    """
+    base = note(freq) if isinstance(freq, str) else freq
+
+    def f(t):
+        f0 = base(t) if callable(base) else base
+        grow = 1.0 if onset <= 0 else min(1.0, t / onset)
+        return f0 * (1.0 + depth * grow * math.sin(2 * math.pi * rate * t))
+    return f
 
 
 def chord(root, intervals):

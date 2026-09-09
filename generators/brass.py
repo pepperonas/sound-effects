@@ -13,15 +13,13 @@ compressed hit. Everything is rooted on C so it sits with the bass and chord
 kits; minor figures use C minor, fanfares C major.
 """
 import math
-from synth import (SR, saw, square, triangle, noise_burst, mix,
+from synth import (saw, square, triangle, noise_burst, mix,
                    adsr, perc, lowpass, highpass, drive, note, Noise)
+from ._music import STEP, filter_env, motif as _motif
 
 CATEGORY = "brass"
 GROUP = "music"
 DESCRIPTION = "Synthetic brass stabs and 2-5 note fanfare motifs, rooted on C."
-
-# One step = a 1/16 at 140 BPM. All motif rhythms are written in these steps.
-STEP = 60.0 / 140.0 / 4.0
 
 # Timbre presets — passed straight through to _stab().
 BRIGHT = dict(bright=1.45, drive_amt=1.9)
@@ -29,22 +27,6 @@ DARK = dict(bright=0.55, drive_amt=1.6, sub=1.3, air=0.4)
 AGGRO = dict(bright=1.75, drive_amt=2.6, detune=0.010, attack=0.003)
 SOFT = dict(bright=0.85, drive_amt=1.0, attack=0.022, air=1.7, sub=0.8)
 WIDE = dict(bright=1.25, drive_amt=1.7, detune=0.018)
-
-
-def _filter_env(lo, span, rise=0.010, fall=0.085):
-    """Cutoff f(t): snaps open on the attack, settles to a sustained brightness.
-
-    (1-e^-t/rise)·e^-t/fall peaks well below 1, so it is normalised by its own
-    maximum — otherwise `span` would not mean what it says.
-    """
-    u = rise / (rise + fall)
-    gmax = (1.0 - u) * u ** (rise / fall)
-
-    def cut(t):
-        opening = 1.0 - math.exp(-t / rise)
-        bark = opening * math.exp(-t / fall) / gmax
-        return min(17000.0, lo + span * (0.78 * bark + 0.22 * opening))
-    return cut
 
 
 def _stab(pitch, dur=0.19, v=1.0, bright=1.0, detune=0.007, drive_amt=1.8,
@@ -72,7 +54,7 @@ def _stab(pitch, dur=0.19, v=1.0, bright=1.0, detune=0.007, drive_amt=1.8,
 
     lo = min(900.0, f0 * 1.6)
     span = (f0 * 13.0 + 1250.0) * bright * (0.55 + 0.45 * v)
-    s = lowpass(s, _filter_env(lo, span))
+    s = lowpass(s, filter_env(lo, span))
     # Give the tanh room to be expressive. Un-scaled, the summed layers hit it
     # at ~2.4 and *every* preset saturates flat to 1.0 — which silently kills
     # both the velocity response and the difference between SOFT and AGGRO.
@@ -81,37 +63,22 @@ def _stab(pitch, dur=0.19, v=1.0, bright=1.0, detune=0.007, drive_amt=1.8,
     return highpass(s, min(80.0, f0 * 0.55))
 
 
-def _motif(steps, **timbre):
-    """Render (start, pitch, length, velocity) events; start/length in 1/16ths.
-
-    The buffer grows with the notes, so it starts exactly on the first attack
-    and runs to the end of the last release — no leading silence, no truncated
-    tail — plus a hair of silence for write_wav's fade to land on.
-    """
-    out = []
-    for start, pitch, length, v in steps:
-        mix(out, _stab(pitch, length * STEP, v=v, **timbre),
-            start * STEP, 0.55 + 0.45 * v)
-    out.extend([0.0] * int(0.025 * SR))   # let write_wav's tail fade land on silence
-    return out
-
-
 # --------------------------------------------------------------------------- #
 # Single stabs — the building blocks, one note each.
 # --------------------------------------------------------------------------- #
 def brass_stab():
     """Signature brass stab — one bright C3 hit, the core one-shot."""
-    return _motif([(0, "C3", 3, 1.0)], **BRIGHT)
+    return _motif(_stab, [(0, "C3", 3, 1.0)], **BRIGHT)
 
 
 def brass_stab_low():
     """Low brass stab — C2, dark and heavy, for weight under a mid stab."""
-    return _motif([(0, "C2", 4, 1.0)], **DARK)
+    return _motif(_stab, [(0, "C2", 4, 1.0)], **DARK)
 
 
 def brass_stab_soft():
     """Soft brass stab — C3 with a slower lip attack, warm and unforced."""
-    return _motif([(0, "C3", 4, 0.7)], **SOFT)
+    return _motif(_stab, [(0, "C3", 4, 0.7)], **SOFT)
 
 
 # --------------------------------------------------------------------------- #
@@ -119,37 +86,37 @@ def brass_stab_soft():
 # --------------------------------------------------------------------------- #
 def brass_duo_up():
     """Two stabs a fifth up — C3 → G3, even eighths, the classic lift."""
-    return _motif([(0, "C3", 2, 0.85), (2, "G3", 3, 1.0)], **BRIGHT)
+    return _motif(_stab, [(0, "C3", 2, 0.85), (2, "G3", 3, 1.0)], **BRIGHT)
 
 
 def brass_duo_down():
     """Two stabs a fifth down — G3 → C3, even eighths, lands home."""
-    return _motif([(0, "G3", 2, 0.9), (2, "C3", 3, 1.0)], **BRIGHT)
+    return _motif(_stab, [(0, "G3", 2, 0.9), (2, "C3", 3, 1.0)], **BRIGHT)
 
 
 def brass_dub_dub():
     """"DÜB-DÜB" — two hard C3 stabs a sixteenth apart, aggressive and tight."""
-    return _motif([(0, "C3", 1, 0.95), (1, "C3", 2, 1.0)], **AGGRO)
+    return _motif(_stab, [(0, "C3", 1, 0.95), (1, "C3", 2, 1.0)], **AGGRO)
 
 
 def brass_da_da():
     """"DA-DA" — Eb3 → C3, short then long-accented, a minor third down."""
-    return _motif([(0, "Eb3", 2, 0.85), (2, "C3", 4, 1.0)], **BRIGHT)
+    return _motif(_stab, [(0, "Eb3", 2, 0.85), (2, "C3", 4, 1.0)], **BRIGHT)
 
 
 def brass_double_hit():
     """Two C3 stabs a quarter apart — a rest between them, wide and detuned."""
-    return _motif([(0, "C3", 2, 1.0), (4, "C3", 4, 0.95)], **WIDE)
+    return _motif(_stab, [(0, "C3", 2, 1.0), (4, "C3", 4, 0.95)], **WIDE)
 
 
 def brass_octave():
     """Octave leap — C3 → C4, short then held, wide detune for size."""
-    return _motif([(0, "C3", 2, 0.85), (2, "C4", 5, 1.0)], **WIDE)
+    return _motif(_stab, [(0, "C3", 2, 0.85), (2, "C4", 5, 1.0)], **WIDE)
 
 
 def brass_fanfare_2():
     """Bugle fourth — G3 pickup into a long C4, the two-note fanfare."""
-    return _motif([(0, "G3", 1, 0.8), (1, "C4", 6, 1.0)], **BRIGHT)
+    return _motif(_stab, [(0, "G3", 1, 0.8), (1, "C4", 6, 1.0)], **BRIGHT)
 
 
 # --------------------------------------------------------------------------- #
@@ -157,28 +124,28 @@ def brass_fanfare_2():
 # --------------------------------------------------------------------------- #
 def brass_rise_3():
     """Three rising stabs — C3 Eb3 G3, the C minor triad in even eighths."""
-    return _motif([(0, "C3", 2, 0.8), (2, "Eb3", 2, 0.9), (4, "G3", 4, 1.0)])
+    return _motif(_stab, [(0, "C3", 2, 0.8), (2, "Eb3", 2, 0.9), (4, "G3", 4, 1.0)])
 
 
 def brass_fall_3():
     """Three falling stabs — G3 Eb3 C3, the minor triad down to the root."""
-    return _motif([(0, "G3", 2, 0.9), (2, "Eb3", 2, 0.85), (4, "C3", 4, 1.0)])
+    return _motif(_stab, [(0, "G3", 2, 0.9), (2, "Eb3", 2, 0.85), (4, "C3", 4, 1.0)])
 
 
 def brass_fanfare_3():
     """Short-short-LONG major fanfare — C3 E3 G3, triumphant and bright."""
-    return _motif([(0, "C3", 1, 0.85), (1, "E3", 1, 0.9), (2, "G3", 7, 1.0)],
+    return _motif(_stab, [(0, "C3", 1, 0.85), (1, "E3", 1, 0.9), (2, "G3", 7, 1.0)],
                   **BRIGHT)
 
 
 def brass_call():
     """Question figure — long C3, then F3 G3 rising to the unresolved fifth."""
-    return _motif([(0, "C3", 4, 1.0), (4, "F3", 2, 0.85), (6, "G3", 3, 0.9)])
+    return _motif(_stab, [(0, "C3", 4, 1.0), (4, "F3", 2, 0.85), (6, "G3", 3, 0.9)])
 
 
 def brass_answer():
     """Response to brass_call — G3 F3 fall back into a long C3, resolved."""
-    return _motif([(0, "G3", 2, 0.9), (2, "F3", 2, 0.85), (4, "C3", 6, 1.0)])
+    return _motif(_stab, [(0, "G3", 2, 0.9), (2, "F3", 2, 0.85), (4, "C3", 6, 1.0)])
 
 
 # --------------------------------------------------------------------------- #
@@ -186,25 +153,25 @@ def brass_answer():
 # --------------------------------------------------------------------------- #
 def brass_triumph():
     """Da-da-da-DAAA — three short G3 hits into a held C4 a fourth above."""
-    return _motif([(0, "G3", 1, 0.85), (2, "G3", 1, 0.85), (4, "G3", 1, 0.9),
+    return _motif(_stab, [(0, "G3", 1, 0.85), (2, "G3", 1, 0.85), (4, "G3", 1, 0.9),
                    (6, "C4", 8, 1.0)], **BRIGHT)
 
 
 def brass_riff_4():
     """Syncopated minor riff — C3 Eb3 C3 then a low Bb2 off the beat."""
-    return _motif([(0, "C3", 2, 1.0), (2, "Eb3", 1, 0.8), (3, "C3", 1, 0.85),
+    return _motif(_stab, [(0, "C3", 2, 1.0), (2, "Eb3", 1, 0.8), (3, "C3", 1, 0.85),
                    (5, "Bb2", 4, 0.95)], **AGGRO)
 
 
 def brass_stomp():
     """Low marching stomp — C2 C2 Eb2, heavy and dark, sits under a beat."""
-    return _motif([(0, "C2", 2, 1.0), (2, "C2", 2, 0.9), (4, "Eb2", 5, 1.0)],
+    return _motif(_stab, [(0, "C2", 2, 1.0), (2, "C2", 2, 0.9), (4, "Eb2", 5, 1.0)],
                   **DARK)
 
 
 def brass_climb_5():
     """Five-note climb — C3 Eb3 G3 Bb3 into a held C4, a run into the hit."""
-    return _motif([(0, "C3", 1, 0.75), (1, "Eb3", 1, 0.8), (2, "G3", 1, 0.85),
+    return _motif(_stab, [(0, "C3", 1, 0.75), (1, "Eb3", 1, 0.8), (2, "G3", 1, 0.85),
                    (3, "Bb3", 1, 0.9), (4, "C4", 9, 1.0)], **BRIGHT)
 
 

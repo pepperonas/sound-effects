@@ -1,6 +1,6 @@
 {
   "sample_rate": 44100,
-  "total_sounds": 148,
+  "total_sounds": 398,
   "groups": [
     {
       "name": "interface",
@@ -909,6 +909,212 @@
           ]
         },
         {
+          "name": "choir",
+          "description": "Synthetic choir: vowel formants, swells, stabs, chords and cadences.",
+          "sounds": [
+            {
+              "name": "choir_ah",
+              "description": "Open 'ah' vowel",
+              "duration_s": 1.446,
+              "files": {
+                "wav": "output/music/choir/choir_ah.wav"
+              }
+            },
+            {
+              "name": "choir_amen",
+              "description": "Plagal 'amen' cadence",
+              "duration_s": 2.518,
+              "files": {
+                "wav": "output/music/choir/choir_amen.wav"
+              }
+            },
+            {
+              "name": "choir_cadence",
+              "description": "Fm-G-Cm cadence",
+              "duration_s": 2.732,
+              "files": {
+                "wav": "output/music/choir/choir_cadence.wav"
+              }
+            },
+            {
+              "name": "choir_cluster",
+              "description": "Uneasy three-note cluster",
+              "duration_s": 1.446,
+              "files": {
+                "wav": "output/music/choir/choir_cluster.wav"
+              }
+            },
+            {
+              "name": "choir_eh",
+              "description": "Bright 'eh' vowel",
+              "duration_s": 1.446,
+              "files": {
+                "wav": "output/music/choir/choir_eh.wav"
+              }
+            },
+            {
+              "name": "choir_fall",
+              "description": "Three falling chords",
+              "duration_s": 2.304,
+              "files": {
+                "wav": "output/music/choir/choir_fall.wav"
+              }
+            },
+            {
+              "name": "choir_high",
+              "description": "Bright soprano note",
+              "duration_s": 1.446,
+              "files": {
+                "wav": "output/music/choir/choir_high.wav"
+              }
+            },
+            {
+              "name": "choir_hit",
+              "description": "Single hard downbeat hit",
+              "duration_s": 0.788,
+              "files": {
+                "wav": "output/music/choir/choir_hit.wav"
+              }
+            },
+            {
+              "name": "choir_hum",
+              "description": "Closed-lip hum",
+              "duration_s": 1.661,
+              "files": {
+                "wav": "output/music/choir/choir_hum.wav"
+              }
+            },
+            {
+              "name": "choir_low",
+              "description": "Bass section, octave down",
+              "duration_s": 1.661,
+              "files": {
+                "wav": "output/music/choir/choir_low.wav"
+              }
+            },
+            {
+              "name": "choir_maj",
+              "description": "Major triad",
+              "duration_s": 1.661,
+              "files": {
+                "wav": "output/music/choir/choir_maj.wav"
+              }
+            },
+            {
+              "name": "choir_min",
+              "description": "Minor triad",
+              "duration_s": 1.661,
+              "files": {
+                "wav": "output/music/choir/choir_min.wav"
+              }
+            },
+            {
+              "name": "choir_min7",
+              "description": "Minor 7th, four parts",
+              "duration_s": 1.661,
+              "files": {
+                "wav": "output/music/choir/choir_min7.wav"
+              }
+            },
+            {
+              "name": "choir_octaves",
+              "description": "Three-octave unison",
+              "duration_s": 1.661,
+              "files": {
+                "wav": "output/music/choir/choir_octaves.wav"
+              }
+            },
+            {
+              "name": "choir_oh",
+              "description": "Warm 'oh' vowel",
+              "duration_s": 1.446,
+              "files": {
+                "wav": "output/music/choir/choir_oh.wav"
+              }
+            },
+            {
+              "name": "choir_oo",
+              "description": "Dark rounded 'oo'",
+              "duration_s": 1.446,
+              "files": {
+                "wav": "output/music/choir/choir_oo.wav"
+              }
+            },
+            {
+              "name": "choir_rise",
+              "description": "Three rising chords",
+              "duration_s": 2.304,
+              "files": {
+                "wav": "output/music/choir/choir_rise.wav"
+              }
+            },
+            {
+              "name": "choir_solo",
+              "description": "Single exposed voice",
+              "duration_s": 1.446,
+              "files": {
+                "wav": "output/music/choir/choir_solo.wav"
+              }
+            },
+            {
+              "name": "choir_stab",
+              "description": "Shouted chord stab",
+              "duration_s": 0.339,
+              "files": {
+                "wav": "output/music/choir/choir_stab.wav"
+              }
+            },
+            {
+              "name": "choir_stab_2",
+              "description": "Two shouted stabs",
+              "duration_s": 0.554,
+              "files": {
+                "wav": "output/music/choir/choir_stab_2.wav"
+              }
+            },
+            {
+              "name": "choir_sus",
+              "description": "Open sus4 chord",
+              "duration_s": 1.661,
+              "files": {
+                "wav": "output/music/choir/choir_sus.wav"
+              }
+            },
+            {
+              "name": "choir_swell",
+              "description": "Minor chord swell",
+              "duration_s": 2.125,
+              "files": {
+                "wav": "output/music/choir/choir_swell.wav"
+              }
+            },
+            {
+              "name": "choir_swell_maj",
+              "description": "Major chord swell",
+              "duration_s": 2.125,
+              "files": {
+                "wav": "output/music/choir/choir_swell_maj.wav"
+              }
+            },
+            {
+              "name": "choir_vowel_shift",
+              "description": "Held chord opening oo->ah",
+              "duration_s": 1.902,
+              "files": {
+                "wav": "output/music/choir/choir_vowel_shift.wav"
+              }
+            },
+            {
+              "name": "choir_wide",
+              "description": "Wide spread voicing",
+              "duration_s": 1.661,
+              "files": {
+                "wav": "output/music/choir/choir_wide.wav"
+              }
+            }
+          ]
+        },
+        {
           "name": "chords",
           "description": "Major, minor, 7th, sus and power chord stabs + pads (rooted on C).",
           "sounds": [
@@ -1129,6 +1335,624 @@
           ]
         },
         {
+          "name": "ebass",
+          "description": "Electric bass: fingered, picked and slapped lines, octave pumps, walks.",
+          "sounds": [
+            {
+              "name": "ebass_chrom",
+              "description": "Chromatic approach into C",
+              "duration_s": 1.156,
+              "files": {
+                "wav": "output/music/ebass/ebass_chrom.wav"
+              }
+            },
+            {
+              "name": "ebass_climb",
+              "description": "Rising fill to the octave",
+              "duration_s": 1.156,
+              "files": {
+                "wav": "output/music/ebass/ebass_climb.wav"
+              }
+            },
+            {
+              "name": "ebass_drop",
+              "description": "Octave drop to the low root",
+              "duration_s": 1.371,
+              "files": {
+                "wav": "output/music/ebass/ebass_drop.wav"
+              }
+            },
+            {
+              "name": "ebass_fall",
+              "description": "Descending pentatonic fall",
+              "duration_s": 1.156,
+              "files": {
+                "wav": "output/music/ebass/ebass_fall.wav"
+              }
+            },
+            {
+              "name": "ebass_fifths",
+              "description": "Alternating fifths, sixteenths",
+              "duration_s": 0.835,
+              "files": {
+                "wav": "output/music/ebass/ebass_fifths.wav"
+              }
+            },
+            {
+              "name": "ebass_fill",
+              "description": "Six-note run back to the root",
+              "duration_s": 1.156,
+              "files": {
+                "wav": "output/music/ebass/ebass_fill.wav"
+              }
+            },
+            {
+              "name": "ebass_ghost",
+              "description": "Ghost notes into the root",
+              "duration_s": 1.156,
+              "files": {
+                "wav": "output/music/ebass/ebass_ghost.wav"
+              }
+            },
+            {
+              "name": "ebass_hold",
+              "description": "Long held ringing root",
+              "duration_s": 2.014,
+              "files": {
+                "wav": "output/music/ebass/ebass_hold.wav"
+              }
+            },
+            {
+              "name": "ebass_mute",
+              "description": "Palm-muted woody note",
+              "duration_s": 0.299,
+              "files": {
+                "wav": "output/music/ebass/ebass_mute.wav"
+              }
+            },
+            {
+              "name": "ebass_note",
+              "description": "Fingered sustained note",
+              "duration_s": 1.156,
+              "files": {
+                "wav": "output/music/ebass/ebass_note.wav"
+              }
+            },
+            {
+              "name": "ebass_octave_2",
+              "description": "Two-step octave pump",
+              "duration_s": 0.514,
+              "files": {
+                "wav": "output/music/ebass/ebass_octave_2.wav"
+              }
+            },
+            {
+              "name": "ebass_octave_4",
+              "description": "Four-step octave pump",
+              "duration_s": 0.942,
+              "files": {
+                "wav": "output/music/ebass/ebass_octave_4.wav"
+              }
+            },
+            {
+              "name": "ebass_pick",
+              "description": "Plectrum-picked note",
+              "duration_s": 0.942,
+              "files": {
+                "wav": "output/music/ebass/ebass_pick.wav"
+              }
+            },
+            {
+              "name": "ebass_pop",
+              "description": "Popped high string",
+              "duration_s": 0.514,
+              "files": {
+                "wav": "output/music/ebass/ebass_pop.wav"
+              }
+            },
+            {
+              "name": "ebass_pump_8",
+              "description": "Straight eighth-note pump",
+              "duration_s": 0.942,
+              "files": {
+                "wav": "output/music/ebass/ebass_pump_8.wav"
+              }
+            },
+            {
+              "name": "ebass_riff_min",
+              "description": "Minor pentatonic bass hook",
+              "duration_s": 0.942,
+              "files": {
+                "wav": "output/music/ebass/ebass_riff_min.wav"
+              }
+            },
+            {
+              "name": "ebass_root_fifth",
+              "description": "Root-fifth alternation",
+              "duration_s": 1.156,
+              "files": {
+                "wav": "output/music/ebass/ebass_root_fifth.wav"
+              }
+            },
+            {
+              "name": "ebass_slap",
+              "description": "Thumb slap on the root",
+              "duration_s": 0.621,
+              "files": {
+                "wav": "output/music/ebass/ebass_slap.wav"
+              }
+            },
+            {
+              "name": "ebass_slap_2",
+              "description": "Two thumb slaps",
+              "duration_s": 0.728,
+              "files": {
+                "wav": "output/music/ebass/ebass_slap_2.wav"
+              }
+            },
+            {
+              "name": "ebass_slap_groove",
+              "description": "Full funk slap groove",
+              "duration_s": 1.156,
+              "files": {
+                "wav": "output/music/ebass/ebass_slap_groove.wav"
+              }
+            },
+            {
+              "name": "ebass_slap_pop",
+              "description": "Slap and pop octave",
+              "duration_s": 0.942,
+              "files": {
+                "wav": "output/music/ebass/ebass_slap_pop.wav"
+              }
+            },
+            {
+              "name": "ebass_slide_up",
+              "description": "Slide up the neck into C",
+              "duration_s": 1.156,
+              "files": {
+                "wav": "output/music/ebass/ebass_slide_up.wav"
+              }
+            },
+            {
+              "name": "ebass_triplet",
+              "description": "Triplet fill into the fifth",
+              "duration_s": 0.942,
+              "files": {
+                "wav": "output/music/ebass/ebass_triplet.wav"
+              }
+            },
+            {
+              "name": "ebass_walk_down",
+              "description": "Walking line down F-Eb-D-C",
+              "duration_s": 1.799,
+              "files": {
+                "wav": "output/music/ebass/ebass_walk_down.wav"
+              }
+            },
+            {
+              "name": "ebass_walk_up",
+              "description": "Walking line up C-D-Eb-F",
+              "duration_s": 1.799,
+              "files": {
+                "wav": "output/music/ebass/ebass_walk_up.wav"
+              }
+            }
+          ]
+        },
+        {
+          "name": "epiano",
+          "description": "Rhodes/Wurlitzer e-piano: 7th and 9th chords, comping, licks, tremolo.",
+          "sounds": [
+            {
+              "name": "epiano_answer",
+              "description": "Falling answer phrase",
+              "duration_s": 2.789,
+              "files": {
+                "wav": "output/music/epiano/epiano_answer.wav"
+              }
+            },
+            {
+              "name": "epiano_arp_down",
+              "description": "Minor 9th arpeggio down",
+              "duration_s": 1.761,
+              "files": {
+                "wav": "output/music/epiano/epiano_arp_down.wav"
+              }
+            },
+            {
+              "name": "epiano_arp_up",
+              "description": "Minor 9th arpeggio up",
+              "duration_s": 1.761,
+              "files": {
+                "wav": "output/music/epiano/epiano_arp_up.wav"
+              }
+            },
+            {
+              "name": "epiano_bark",
+              "description": "Hard-struck barking tine",
+              "duration_s": 2.168,
+              "files": {
+                "wav": "output/music/epiano/epiano_bark.wav"
+              }
+            },
+            {
+              "name": "epiano_bell",
+              "description": "High glassy bell tone",
+              "duration_s": 1.961,
+              "files": {
+                "wav": "output/music/epiano/epiano_bell.wav"
+              }
+            },
+            {
+              "name": "epiano_cadence",
+              "description": "ii-V-I jazz cadence",
+              "duration_s": 3.739,
+              "files": {
+                "wav": "output/music/epiano/epiano_cadence.wav"
+              }
+            },
+            {
+              "name": "epiano_call",
+              "description": "Rising question phrase",
+              "duration_s": 2.589,
+              "files": {
+                "wav": "output/music/epiano/epiano_call.wav"
+              }
+            },
+            {
+              "name": "epiano_comp",
+              "description": "Off-beat comping figure",
+              "duration_s": 2.711,
+              "files": {
+                "wav": "output/music/epiano/epiano_comp.wav"
+              }
+            },
+            {
+              "name": "epiano_dim",
+              "description": "Diminished 7th chord",
+              "duration_s": 2.175,
+              "files": {
+                "wav": "output/music/epiano/epiano_dim.wav"
+              }
+            },
+            {
+              "name": "epiano_dom7",
+              "description": "C dominant 7th chord",
+              "duration_s": 2.482,
+              "files": {
+                "wav": "output/music/epiano/epiano_dom7.wav"
+              }
+            },
+            {
+              "name": "epiano_lick",
+              "description": "Short blues lick",
+              "duration_s": 2.696,
+              "files": {
+                "wav": "output/music/epiano/epiano_lick.wav"
+              }
+            },
+            {
+              "name": "epiano_maj7",
+              "description": "C major 7th chord",
+              "duration_s": 2.482,
+              "files": {
+                "wav": "output/music/epiano/epiano_maj7.wav"
+              }
+            },
+            {
+              "name": "epiano_maj9",
+              "description": "C major 9th chord",
+              "duration_s": 2.582,
+              "files": {
+                "wav": "output/music/epiano/epiano_maj9.wav"
+              }
+            },
+            {
+              "name": "epiano_min7",
+              "description": "C minor 7th chord",
+              "duration_s": 2.482,
+              "files": {
+                "wav": "output/music/epiano/epiano_min7.wav"
+              }
+            },
+            {
+              "name": "epiano_min9",
+              "description": "C minor 9th chord",
+              "duration_s": 2.582,
+              "files": {
+                "wav": "output/music/epiano/epiano_min9.wav"
+              }
+            },
+            {
+              "name": "epiano_note",
+              "description": "Single tine, normal touch",
+              "duration_s": 2.168,
+              "files": {
+                "wav": "output/music/epiano/epiano_note.wav"
+              }
+            },
+            {
+              "name": "epiano_riff",
+              "description": "Two-note riff over the chord",
+              "duration_s": 2.711,
+              "files": {
+                "wav": "output/music/epiano/epiano_riff.wav"
+              }
+            },
+            {
+              "name": "epiano_roll",
+              "description": "Rolled 9th chord",
+              "duration_s": 2.802,
+              "files": {
+                "wav": "output/music/epiano/epiano_roll.wav"
+              }
+            },
+            {
+              "name": "epiano_soft",
+              "description": "Gently struck, near-sine",
+              "duration_s": 2.268,
+              "files": {
+                "wav": "output/music/epiano/epiano_soft.wav"
+              }
+            },
+            {
+              "name": "epiano_stab",
+              "description": "Damped chord stab",
+              "duration_s": 0.312,
+              "files": {
+                "wav": "output/music/epiano/epiano_stab.wav"
+              }
+            },
+            {
+              "name": "epiano_sus",
+              "description": "Sus4 add9, no third",
+              "duration_s": 2.482,
+              "files": {
+                "wav": "output/music/epiano/epiano_sus.wav"
+              }
+            },
+            {
+              "name": "epiano_tremolo",
+              "description": "Held chord with tremolo",
+              "duration_s": 2.925,
+              "files": {
+                "wav": "output/music/epiano/epiano_tremolo.wav"
+              }
+            },
+            {
+              "name": "epiano_turn",
+              "description": "Flat-six turnaround",
+              "duration_s": 3.325,
+              "files": {
+                "wav": "output/music/epiano/epiano_turn.wav"
+              }
+            },
+            {
+              "name": "epiano_vamp",
+              "description": "Two-chord minor vamp",
+              "duration_s": 3.125,
+              "files": {
+                "wav": "output/music/epiano/epiano_vamp.wav"
+              }
+            },
+            {
+              "name": "epiano_wurli",
+              "description": "Reedy Wurlitzer timbre",
+              "duration_s": 1.868,
+              "files": {
+                "wav": "output/music/epiano/epiano_wurli.wav"
+              }
+            }
+          ]
+        },
+        {
+          "name": "flute",
+          "description": "Solo flute: phrases, trills, runs, grace notes and flutter-tongue.",
+          "sounds": [
+            {
+              "name": "flute_answer",
+              "description": "Falling answer phrase",
+              "duration_s": 1.518,
+              "files": {
+                "wav": "output/music/flute/flute_answer.wav"
+              }
+            },
+            {
+              "name": "flute_arp_down",
+              "description": "Minor arpeggio down",
+              "duration_s": 1.304,
+              "files": {
+                "wav": "output/music/flute/flute_arp_down.wav"
+              }
+            },
+            {
+              "name": "flute_arp_up",
+              "description": "Minor arpeggio up",
+              "duration_s": 1.304,
+              "files": {
+                "wav": "output/music/flute/flute_arp_up.wav"
+              }
+            },
+            {
+              "name": "flute_breathy",
+              "description": "Under-blown, air-heavy",
+              "duration_s": 0.982,
+              "files": {
+                "wav": "output/music/flute/flute_breathy.wav"
+              }
+            },
+            {
+              "name": "flute_call",
+              "description": "Rising question phrase",
+              "duration_s": 1.411,
+              "files": {
+                "wav": "output/music/flute/flute_call.wav"
+              }
+            },
+            {
+              "name": "flute_chiff",
+              "description": "Hard spitting attack",
+              "duration_s": 0.768,
+              "files": {
+                "wav": "output/music/flute/flute_chiff.wav"
+              }
+            },
+            {
+              "name": "flute_chromatic",
+              "description": "Restless chromatic climb",
+              "duration_s": 1.304,
+              "files": {
+                "wav": "output/music/flute/flute_chromatic.wav"
+              }
+            },
+            {
+              "name": "flute_flutter",
+              "description": "Flutter-tongue rattle",
+              "duration_s": 1.411,
+              "files": {
+                "wav": "output/music/flute/flute_flutter.wav"
+              }
+            },
+            {
+              "name": "flute_grace",
+              "description": "Grace note into the main note",
+              "duration_s": 1.175,
+              "files": {
+                "wav": "output/music/flute/flute_grace.wav"
+              }
+            },
+            {
+              "name": "flute_high",
+              "description": "Pure piercing high note",
+              "duration_s": 0.875,
+              "files": {
+                "wav": "output/music/flute/flute_high.wav"
+              }
+            },
+            {
+              "name": "flute_low",
+              "description": "Breathy low register",
+              "duration_s": 0.982,
+              "files": {
+                "wav": "output/music/flute/flute_low.wav"
+              }
+            },
+            {
+              "name": "flute_mordent",
+              "description": "Single mordent flick",
+              "duration_s": 1.132,
+              "files": {
+                "wav": "output/music/flute/flute_mordent.wav"
+              }
+            },
+            {
+              "name": "flute_note",
+              "description": "Normally tongued note",
+              "duration_s": 0.982,
+              "files": {
+                "wav": "output/music/flute/flute_note.wav"
+              }
+            },
+            {
+              "name": "flute_octave",
+              "description": "Dramatic octave leap",
+              "duration_s": 1.411,
+              "files": {
+                "wav": "output/music/flute/flute_octave.wav"
+              }
+            },
+            {
+              "name": "flute_phrase",
+              "description": "Complete melodic phrase",
+              "duration_s": 1.839,
+              "files": {
+                "wav": "output/music/flute/flute_phrase.wav"
+              }
+            },
+            {
+              "name": "flute_run_down",
+              "description": "Descending scale run",
+              "duration_s": 1.518,
+              "files": {
+                "wav": "output/music/flute/flute_run_down.wav"
+              }
+            },
+            {
+              "name": "flute_run_up",
+              "description": "Ascending minor scale run",
+              "duration_s": 1.518,
+              "files": {
+                "wav": "output/music/flute/flute_run_up.wav"
+              }
+            },
+            {
+              "name": "flute_sigh",
+              "description": "Falling, fading sigh",
+              "duration_s": 1.625,
+              "files": {
+                "wav": "output/music/flute/flute_sigh.wav"
+              }
+            },
+            {
+              "name": "flute_soft",
+              "description": "Softly blown, airy",
+              "duration_s": 0.982,
+              "files": {
+                "wav": "output/music/flute/flute_soft.wav"
+              }
+            },
+            {
+              "name": "flute_staccato",
+              "description": "Four dry staccato notes",
+              "duration_s": 0.835,
+              "files": {
+                "wav": "output/music/flute/flute_staccato.wav"
+              }
+            },
+            {
+              "name": "flute_straight",
+              "description": "Straight tone, no vibrato",
+              "duration_s": 1.196,
+              "files": {
+                "wav": "output/music/flute/flute_straight.wav"
+              }
+            },
+            {
+              "name": "flute_trill",
+              "description": "Whole-tone trill",
+              "duration_s": 1.839,
+              "files": {
+                "wav": "output/music/flute/flute_trill.wav"
+              }
+            },
+            {
+              "name": "flute_trill_half",
+              "description": "Half-tone trill",
+              "duration_s": 1.839,
+              "files": {
+                "wav": "output/music/flute/flute_trill_half.wav"
+              }
+            },
+            {
+              "name": "flute_turn",
+              "description": "Four-note turn ornament",
+              "duration_s": 1.304,
+              "files": {
+                "wav": "output/music/flute/flute_turn.wav"
+              }
+            },
+            {
+              "name": "flute_vib",
+              "description": "Held note, growing vibrato",
+              "duration_s": 1.625,
+              "files": {
+                "wav": "output/music/flute/flute_vib.wav"
+              }
+            }
+          ]
+        },
+        {
           "name": "fx",
           "description": "Risers, downlifters, impacts, sweeps and transition effects.",
           "sounds": [
@@ -1210,6 +2034,1242 @@
               "duration_s": 1.4,
               "files": {
                 "wav": "output/music/fx/white_riser.wav"
+              }
+            }
+          ]
+        },
+        {
+          "name": "guitar",
+          "description": "Electric guitar: power chords, palm-muted chugs, riffs, bends, arpeggios.",
+          "sounds": [
+            {
+              "name": "guitar_arp",
+              "description": "Clean picked arpeggio up",
+              "duration_s": 1.146,
+              "files": {
+                "wav": "output/music/guitar/guitar_arp.wav"
+              }
+            },
+            {
+              "name": "guitar_arp_down",
+              "description": "Clean arpeggio down",
+              "duration_s": 1.146,
+              "files": {
+                "wav": "output/music/guitar/guitar_arp_down.wav"
+              }
+            },
+            {
+              "name": "guitar_bend",
+              "description": "Whole-tone bend, held",
+              "duration_s": 1.146,
+              "files": {
+                "wav": "output/music/guitar/guitar_bend.wav"
+              }
+            },
+            {
+              "name": "guitar_bend_release",
+              "description": "Bend up and release",
+              "duration_s": 1.361,
+              "files": {
+                "wav": "output/music/guitar/guitar_bend_release.wav"
+              }
+            },
+            {
+              "name": "guitar_chug",
+              "description": "Single palm-muted chug",
+              "duration_s": 0.19,
+              "files": {
+                "wav": "output/music/guitar/guitar_chug.wav"
+              }
+            },
+            {
+              "name": "guitar_chug_2",
+              "description": "Two palm-muted chugs",
+              "duration_s": 0.404,
+              "files": {
+                "wav": "output/music/guitar/guitar_chug_2.wav"
+              }
+            },
+            {
+              "name": "guitar_chug_open",
+              "description": "Two chugs into an open chord",
+              "duration_s": 1.162,
+              "files": {
+                "wav": "output/music/guitar/guitar_chug_open.wav"
+              }
+            },
+            {
+              "name": "guitar_gallop",
+              "description": "Long-short-short metal gallop",
+              "duration_s": 0.512,
+              "files": {
+                "wav": "output/music/guitar/guitar_gallop.wav"
+              }
+            },
+            {
+              "name": "guitar_harmonic",
+              "description": "Glassy natural harmonic",
+              "duration_s": 1.146,
+              "files": {
+                "wav": "output/music/guitar/guitar_harmonic.wav"
+              }
+            },
+            {
+              "name": "guitar_note",
+              "description": "Single picked crunch note",
+              "duration_s": 0.932,
+              "files": {
+                "wav": "output/music/guitar/guitar_note.wav"
+              }
+            },
+            {
+              "name": "guitar_octaves",
+              "description": "Octave stab, hit twice",
+              "duration_s": 0.932,
+              "files": {
+                "wav": "output/music/guitar/guitar_octaves.wav"
+              }
+            },
+            {
+              "name": "guitar_power",
+              "description": "Held C power chord",
+              "duration_s": 1.166,
+              "files": {
+                "wav": "output/music/guitar/guitar_power.wav"
+              }
+            },
+            {
+              "name": "guitar_power_down",
+              "description": "Falling G-F-C power chords",
+              "duration_s": 1.807,
+              "files": {
+                "wav": "output/music/guitar/guitar_power_down.wav"
+              }
+            },
+            {
+              "name": "guitar_power_flat6",
+              "description": "Flat-six C-Bb-Eb turnaround",
+              "duration_s": 1.807,
+              "files": {
+                "wav": "output/music/guitar/guitar_power_flat6.wav"
+              }
+            },
+            {
+              "name": "guitar_power_up",
+              "description": "Rising C-F-G power chords",
+              "duration_s": 1.807,
+              "files": {
+                "wav": "output/music/guitar/guitar_power_up.wav"
+              }
+            },
+            {
+              "name": "guitar_riff_chug",
+              "description": "Chugs answered by a riff",
+              "duration_s": 1.146,
+              "files": {
+                "wav": "output/music/guitar/guitar_riff_chug.wav"
+              }
+            },
+            {
+              "name": "guitar_riff_low",
+              "description": "Chunky low-string riff",
+              "duration_s": 0.825,
+              "files": {
+                "wav": "output/music/guitar/guitar_riff_low.wav"
+              }
+            },
+            {
+              "name": "guitar_riff_min",
+              "description": "Minor pentatonic riff",
+              "duration_s": 1.146,
+              "files": {
+                "wav": "output/music/guitar/guitar_riff_min.wav"
+              }
+            },
+            {
+              "name": "guitar_run_down",
+              "description": "Fast descending run",
+              "duration_s": 1.254,
+              "files": {
+                "wav": "output/music/guitar/guitar_run_down.wav"
+              }
+            },
+            {
+              "name": "guitar_run_up",
+              "description": "Fast ascending pentatonic run",
+              "duration_s": 1.254,
+              "files": {
+                "wav": "output/music/guitar/guitar_run_up.wav"
+              }
+            },
+            {
+              "name": "guitar_slide_up",
+              "description": "Slide into a power chord",
+              "duration_s": 1.379,
+              "files": {
+                "wav": "output/music/guitar/guitar_slide_up.wav"
+              }
+            },
+            {
+              "name": "guitar_stop",
+              "description": "Single full-stop chord",
+              "duration_s": 0.42,
+              "files": {
+                "wav": "output/music/guitar/guitar_stop.wav"
+              }
+            },
+            {
+              "name": "guitar_strum_down",
+              "description": "Clean downstroke strum",
+              "duration_s": 1.194,
+              "files": {
+                "wav": "output/music/guitar/guitar_strum_down.wav"
+              }
+            },
+            {
+              "name": "guitar_strum_up",
+              "description": "Clean upstroke strum",
+              "duration_s": 1.185,
+              "files": {
+                "wav": "output/music/guitar/guitar_strum_up.wav"
+              }
+            },
+            {
+              "name": "guitar_tremolo",
+              "description": "Tremolo-picked single note",
+              "duration_s": 0.932,
+              "files": {
+                "wav": "output/music/guitar/guitar_tremolo.wav"
+              }
+            }
+          ]
+        },
+        {
+          "name": "harp",
+          "description": "Harp: glissandi, rolled chords, arpeggios and cascades.",
+          "sounds": [
+            {
+              "name": "harp_answer",
+              "description": "Falling answer, resolved",
+              "duration_s": 2.882,
+              "files": {
+                "wav": "output/music/harp/harp_answer.wav"
+              }
+            },
+            {
+              "name": "harp_arp_down",
+              "description": "Minor arpeggio down",
+              "duration_s": 1.968,
+              "files": {
+                "wav": "output/music/harp/harp_arp_down.wav"
+              }
+            },
+            {
+              "name": "harp_arp_up",
+              "description": "Minor arpeggio up",
+              "duration_s": 1.968,
+              "files": {
+                "wav": "output/music/harp/harp_arp_up.wav"
+              }
+            },
+            {
+              "name": "harp_arp_updown",
+              "description": "Arpeggio up and back",
+              "duration_s": 1.975,
+              "files": {
+                "wav": "output/music/harp/harp_arp_updown.wav"
+              }
+            },
+            {
+              "name": "harp_arp_wide",
+              "description": "Three-octave wide arpeggio",
+              "duration_s": 3.111,
+              "files": {
+                "wav": "output/music/harp/harp_arp_wide.wav"
+              }
+            },
+            {
+              "name": "harp_bisbig",
+              "description": "Whispered bisbigliando flutter",
+              "duration_s": 1.882,
+              "files": {
+                "wav": "output/music/harp/harp_bisbig.wav"
+              }
+            },
+            {
+              "name": "harp_call",
+              "description": "Rising question figure",
+              "duration_s": 2.682,
+              "files": {
+                "wav": "output/music/harp/harp_call.wav"
+              }
+            },
+            {
+              "name": "harp_cascade",
+              "description": "Falling, slowing cascade",
+              "duration_s": 3.314,
+              "files": {
+                "wav": "output/music/harp/harp_cascade.wav"
+              }
+            },
+            {
+              "name": "harp_fall_3",
+              "description": "Three falling strings",
+              "duration_s": 2.468,
+              "files": {
+                "wav": "output/music/harp/harp_fall_3.wav"
+              }
+            },
+            {
+              "name": "harp_final",
+              "description": "Wide two-octave closing roll",
+              "duration_s": 2.857,
+              "files": {
+                "wav": "output/music/harp/harp_final.wav"
+              }
+            },
+            {
+              "name": "harp_gliss_down",
+              "description": "Pentatonic gliss down",
+              "duration_s": 2.196,
+              "files": {
+                "wav": "output/music/harp/harp_gliss_down.wav"
+              }
+            },
+            {
+              "name": "harp_gliss_fast",
+              "description": "Quick one-octave flick",
+              "duration_s": 1.336,
+              "files": {
+                "wav": "output/music/harp/harp_gliss_fast.wav"
+              }
+            },
+            {
+              "name": "harp_gliss_long",
+              "description": "Three-octave gliss",
+              "duration_s": 2.536,
+              "files": {
+                "wav": "output/music/harp/harp_gliss_long.wav"
+              }
+            },
+            {
+              "name": "harp_gliss_minor",
+              "description": "Minor pentatonic gliss",
+              "duration_s": 2.175,
+              "files": {
+                "wav": "output/music/harp/harp_gliss_minor.wav"
+              }
+            },
+            {
+              "name": "harp_gliss_up",
+              "description": "Pentatonic gliss up",
+              "duration_s": 2.196,
+              "files": {
+                "wav": "output/music/harp/harp_gliss_up.wav"
+              }
+            },
+            {
+              "name": "harp_harmonic",
+              "description": "Glassy string harmonic",
+              "duration_s": 1.332,
+              "files": {
+                "wav": "output/music/harp/harp_harmonic.wav"
+              }
+            },
+            {
+              "name": "harp_low",
+              "description": "Low bass string",
+              "duration_s": 2.132,
+              "files": {
+                "wav": "output/music/harp/harp_low.wav"
+              }
+            },
+            {
+              "name": "harp_note",
+              "description": "Single ringing string",
+              "duration_s": 1.732,
+              "files": {
+                "wav": "output/music/harp/harp_note.wav"
+              }
+            },
+            {
+              "name": "harp_octaves",
+              "description": "Octave pairs, twice",
+              "duration_s": 2.268,
+              "files": {
+                "wav": "output/music/harp/harp_octaves.wav"
+              }
+            },
+            {
+              "name": "harp_rise_3",
+              "description": "Three rising strings",
+              "duration_s": 2.468,
+              "files": {
+                "wav": "output/music/harp/harp_rise_3.wav"
+              }
+            },
+            {
+              "name": "harp_roll_maj",
+              "description": "Rolled C major chord",
+              "duration_s": 2.068,
+              "files": {
+                "wav": "output/music/harp/harp_roll_maj.wav"
+              }
+            },
+            {
+              "name": "harp_roll_maj7",
+              "description": "Rolled major 7th chord",
+              "duration_s": 2.068,
+              "files": {
+                "wav": "output/music/harp/harp_roll_maj7.wav"
+              }
+            },
+            {
+              "name": "harp_roll_min",
+              "description": "Rolled C minor chord",
+              "duration_s": 2.068,
+              "files": {
+                "wav": "output/music/harp/harp_roll_min.wav"
+              }
+            },
+            {
+              "name": "harp_roll_sus",
+              "description": "Rolled sus2 chord",
+              "duration_s": 2.068,
+              "files": {
+                "wav": "output/music/harp/harp_roll_sus.wav"
+              }
+            },
+            {
+              "name": "harp_sweep_up",
+              "description": "Fastest rake, near-chord",
+              "duration_s": 2.052,
+              "files": {
+                "wav": "output/music/harp/harp_sweep_up.wav"
+              }
+            }
+          ]
+        },
+        {
+          "name": "mallets",
+          "description": "Marimba, vibraphone and glockenspiel: runs, ostinatos, rolls, arpeggios.",
+          "sounds": [
+            {
+              "name": "mallets_answer",
+              "description": "Falling answer figure",
+              "duration_s": 2.482,
+              "files": {
+                "wav": "output/music/mallets/mallets_answer.wav"
+              }
+            },
+            {
+              "name": "mallets_arp_down",
+              "description": "Minor arpeggio down",
+              "duration_s": 1.668,
+              "files": {
+                "wav": "output/music/mallets/mallets_arp_down.wav"
+              }
+            },
+            {
+              "name": "mallets_arp_up",
+              "description": "Minor arpeggio up",
+              "duration_s": 1.668,
+              "files": {
+                "wav": "output/music/mallets/mallets_arp_up.wav"
+              }
+            },
+            {
+              "name": "mallets_call",
+              "description": "Rising question figure",
+              "duration_s": 2.282,
+              "files": {
+                "wav": "output/music/mallets/mallets_call.wav"
+              }
+            },
+            {
+              "name": "mallets_fall_3",
+              "description": "Three falling bars",
+              "duration_s": 2.382,
+              "files": {
+                "wav": "output/music/mallets/mallets_fall_3.wav"
+              }
+            },
+            {
+              "name": "mallets_glock",
+              "description": "Glockenspiel steel bar",
+              "duration_s": 2.146,
+              "files": {
+                "wav": "output/music/mallets/mallets_glock.wav"
+              }
+            },
+            {
+              "name": "mallets_glock_chime",
+              "description": "Two ringing glock chimes",
+              "duration_s": 3.175,
+              "files": {
+                "wav": "output/music/mallets/mallets_glock_chime.wav"
+              }
+            },
+            {
+              "name": "mallets_glock_run",
+              "description": "Bright glockenspiel run",
+              "duration_s": 1.961,
+              "files": {
+                "wav": "output/music/mallets/mallets_glock_run.wav"
+              }
+            },
+            {
+              "name": "mallets_hard",
+              "description": "Hard mallet, bright modes",
+              "duration_s": 1.346,
+              "files": {
+                "wav": "output/music/mallets/mallets_hard.wav"
+              }
+            },
+            {
+              "name": "mallets_marimba",
+              "description": "Marimba single bar",
+              "duration_s": 1.346,
+              "files": {
+                "wav": "output/music/mallets/mallets_marimba.wav"
+              }
+            },
+            {
+              "name": "mallets_marimba_low",
+              "description": "Low woody marimba bar",
+              "duration_s": 2.054,
+              "files": {
+                "wav": "output/music/mallets/mallets_marimba_low.wav"
+              }
+            },
+            {
+              "name": "mallets_octaves",
+              "description": "Two-mallet octaves",
+              "duration_s": 2.175,
+              "files": {
+                "wav": "output/music/mallets/mallets_octaves.wav"
+              }
+            },
+            {
+              "name": "mallets_ostinato",
+              "description": "Four-note looping ostinato",
+              "duration_s": 1.682,
+              "files": {
+                "wav": "output/music/mallets/mallets_ostinato.wav"
+              }
+            },
+            {
+              "name": "mallets_ostinato_5",
+              "description": "Five-beat odd-metre ostinato",
+              "duration_s": 1.896,
+              "files": {
+                "wav": "output/music/mallets/mallets_ostinato_5.wav"
+              }
+            },
+            {
+              "name": "mallets_rise_3",
+              "description": "Three rising bars",
+              "duration_s": 2.382,
+              "files": {
+                "wav": "output/music/mallets/mallets_rise_3.wav"
+              }
+            },
+            {
+              "name": "mallets_roll",
+              "description": "Single-note sustaining roll",
+              "duration_s": 1.796,
+              "files": {
+                "wav": "output/music/mallets/mallets_roll.wav"
+              }
+            },
+            {
+              "name": "mallets_roll_chord",
+              "description": "Rolled minor third",
+              "duration_s": 1.896,
+              "files": {
+                "wav": "output/music/mallets/mallets_roll_chord.wav"
+              }
+            },
+            {
+              "name": "mallets_run_down",
+              "description": "Descending scale run",
+              "duration_s": 1.782,
+              "files": {
+                "wav": "output/music/mallets/mallets_run_down.wav"
+              }
+            },
+            {
+              "name": "mallets_run_up",
+              "description": "Ascending scale run",
+              "duration_s": 1.682,
+              "files": {
+                "wav": "output/music/mallets/mallets_run_up.wav"
+              }
+            },
+            {
+              "name": "mallets_soft",
+              "description": "Soft yarn mallet, near-sine",
+              "duration_s": 1.654,
+              "files": {
+                "wav": "output/music/mallets/mallets_soft.wav"
+              }
+            },
+            {
+              "name": "mallets_stagger",
+              "description": "Staggered rising pair",
+              "duration_s": 2.696,
+              "files": {
+                "wav": "output/music/mallets/mallets_stagger.wav"
+              }
+            },
+            {
+              "name": "mallets_thirds",
+              "description": "Parallel thirds up the scale",
+              "duration_s": 1.668,
+              "files": {
+                "wav": "output/music/mallets/mallets_thirds.wav"
+              }
+            },
+            {
+              "name": "mallets_tremolo",
+              "description": "Vibraphone motor tremolo",
+              "duration_s": 3.268,
+              "files": {
+                "wav": "output/music/mallets/mallets_tremolo.wav"
+              }
+            },
+            {
+              "name": "mallets_vibes",
+              "description": "Vibraphone ringing bar",
+              "duration_s": 2.854,
+              "files": {
+                "wav": "output/music/mallets/mallets_vibes.wav"
+              }
+            },
+            {
+              "name": "mallets_vibes_chord",
+              "description": "Vibraphone minor 9th chord",
+              "duration_s": 3.268,
+              "files": {
+                "wav": "output/music/mallets/mallets_vibes_chord.wav"
+              }
+            }
+          ]
+        },
+        {
+          "name": "organ",
+          "description": "Drawbar organ: registrations, chord stabs, progressions and glissandi.",
+          "sounds": [
+            {
+              "name": "organ_arp_down",
+              "description": "Minor arpeggio down",
+              "duration_s": 1.361,
+              "files": {
+                "wav": "output/music/organ/organ_arp_down.wav"
+              }
+            },
+            {
+              "name": "organ_arp_up",
+              "description": "Minor arpeggio up",
+              "duration_s": 0.611,
+              "files": {
+                "wav": "output/music/organ/organ_arp_up.wav"
+              }
+            },
+            {
+              "name": "organ_bright",
+              "description": "All drawbars out",
+              "duration_s": 0.962,
+              "files": {
+                "wav": "output/music/organ/organ_bright.wav"
+              }
+            },
+            {
+              "name": "organ_cadence",
+              "description": "ii-V-I cadence",
+              "duration_s": 2.034,
+              "files": {
+                "wav": "output/music/organ/organ_cadence.wav"
+              }
+            },
+            {
+              "name": "organ_dom7",
+              "description": "Gospel dominant 7th",
+              "duration_s": 1.176,
+              "files": {
+                "wav": "output/music/organ/organ_dom7.wav"
+              }
+            },
+            {
+              "name": "organ_flute",
+              "description": "Single 8' flute sine",
+              "duration_s": 0.962,
+              "files": {
+                "wav": "output/music/organ/organ_flute.wav"
+              }
+            },
+            {
+              "name": "organ_full",
+              "description": "Fat 16-5\u2153-8 registration",
+              "duration_s": 0.962,
+              "files": {
+                "wav": "output/music/organ/organ_full.wav"
+              }
+            },
+            {
+              "name": "organ_gliss_down",
+              "description": "Palm glissando down",
+              "duration_s": 1.093,
+              "files": {
+                "wav": "output/music/organ/organ_gliss_down.wav"
+              }
+            },
+            {
+              "name": "organ_gliss_up",
+              "description": "Palm glissando up",
+              "duration_s": 0.557,
+              "files": {
+                "wav": "output/music/organ/organ_gliss_up.wav"
+              }
+            },
+            {
+              "name": "organ_hollow",
+              "description": "Stopped-pipe, no fifths",
+              "duration_s": 0.962,
+              "files": {
+                "wav": "output/music/organ/organ_hollow.wav"
+              }
+            },
+            {
+              "name": "organ_jazz",
+              "description": "Everyday jazz registration",
+              "duration_s": 0.962,
+              "files": {
+                "wav": "output/music/organ/organ_jazz.wav"
+              }
+            },
+            {
+              "name": "organ_leslie",
+              "description": "Held chord through a Leslie",
+              "duration_s": 1.819,
+              "files": {
+                "wav": "output/music/organ/organ_leslie.wav"
+              }
+            },
+            {
+              "name": "organ_maj",
+              "description": "C major triad held",
+              "duration_s": 1.176,
+              "files": {
+                "wav": "output/music/organ/organ_maj.wav"
+              }
+            },
+            {
+              "name": "organ_min",
+              "description": "C minor triad held",
+              "duration_s": 1.176,
+              "files": {
+                "wav": "output/music/organ/organ_min.wav"
+              }
+            },
+            {
+              "name": "organ_min7",
+              "description": "Minor 7th organ chord",
+              "duration_s": 1.176,
+              "files": {
+                "wav": "output/music/organ/organ_min7.wav"
+              }
+            },
+            {
+              "name": "organ_octaves",
+              "description": "Held octaves, full bars",
+              "duration_s": 1.391,
+              "files": {
+                "wav": "output/music/organ/organ_octaves.wav"
+              }
+            },
+            {
+              "name": "organ_pedal",
+              "description": "Low pedal under a chord",
+              "duration_s": 1.819,
+              "files": {
+                "wav": "output/music/organ/organ_pedal.wav"
+              }
+            },
+            {
+              "name": "organ_plagal",
+              "description": "Plagal 'amen' cadence",
+              "duration_s": 2.034,
+              "files": {
+                "wav": "output/music/organ/organ_plagal.wav"
+              }
+            },
+            {
+              "name": "organ_riff",
+              "description": "Bluesy right-hand riff",
+              "duration_s": 1.498,
+              "files": {
+                "wav": "output/music/organ/organ_riff.wav"
+              }
+            },
+            {
+              "name": "organ_shout",
+              "description": "Rising gospel shout stabs",
+              "duration_s": 1.391,
+              "files": {
+                "wav": "output/music/organ/organ_shout.wav"
+              }
+            },
+            {
+              "name": "organ_stab",
+              "description": "Single percussive stab",
+              "duration_s": 0.182,
+              "files": {
+                "wav": "output/music/organ/organ_stab.wav"
+              }
+            },
+            {
+              "name": "organ_stab_2",
+              "description": "Two off-beat stabs",
+              "duration_s": 0.504,
+              "files": {
+                "wav": "output/music/organ/organ_stab_2.wav"
+              }
+            },
+            {
+              "name": "organ_sus",
+              "description": "Open sus4 chord",
+              "duration_s": 1.176,
+              "files": {
+                "wav": "output/music/organ/organ_sus.wav"
+              }
+            },
+            {
+              "name": "organ_swell",
+              "description": "Chord swelled in on the pedal",
+              "duration_s": 1.819,
+              "files": {
+                "wav": "output/music/organ/organ_swell.wav"
+              }
+            },
+            {
+              "name": "organ_vamp",
+              "description": "Gospel two-chord vamp",
+              "duration_s": 1.819,
+              "files": {
+                "wav": "output/music/organ/organ_vamp.wav"
+              }
+            }
+          ]
+        },
+        {
+          "name": "piano",
+          "description": "Acoustic piano: chords, arpeggios, runs, cadences and stride figures.",
+          "sounds": [
+            {
+              "name": "piano_answer",
+              "description": "Falling answer phrase",
+              "duration_s": 2.989,
+              "files": {
+                "wav": "output/music/piano/piano_answer.wav"
+              }
+            },
+            {
+              "name": "piano_arp_down",
+              "description": "Minor arpeggio down",
+              "duration_s": 2.068,
+              "files": {
+                "wav": "output/music/piano/piano_arp_down.wav"
+              }
+            },
+            {
+              "name": "piano_arp_up",
+              "description": "Minor arpeggio up",
+              "duration_s": 2.068,
+              "files": {
+                "wav": "output/music/piano/piano_arp_up.wav"
+              }
+            },
+            {
+              "name": "piano_arp_updown",
+              "description": "Arpeggio up and back",
+              "duration_s": 1.975,
+              "files": {
+                "wav": "output/music/piano/piano_arp_updown.wav"
+              }
+            },
+            {
+              "name": "piano_cadence",
+              "description": "ii-V-I cadence",
+              "duration_s": 3.739,
+              "files": {
+                "wav": "output/music/piano/piano_cadence.wav"
+              }
+            },
+            {
+              "name": "piano_call",
+              "description": "Rising question phrase",
+              "duration_s": 2.589,
+              "files": {
+                "wav": "output/music/piano/piano_call.wav"
+              }
+            },
+            {
+              "name": "piano_dom7",
+              "description": "Dominant 7th chord",
+              "duration_s": 2.368,
+              "files": {
+                "wav": "output/music/piano/piano_dom7.wav"
+              }
+            },
+            {
+              "name": "piano_grace",
+              "description": "Grace note into a chord",
+              "duration_s": 2.532,
+              "files": {
+                "wav": "output/music/piano/piano_grace.wav"
+              }
+            },
+            {
+              "name": "piano_high",
+              "description": "Bright high note",
+              "duration_s": 1.346,
+              "files": {
+                "wav": "output/music/piano/piano_high.wav"
+              }
+            },
+            {
+              "name": "piano_low",
+              "description": "Low inharmonic bass note",
+              "duration_s": 2.654,
+              "files": {
+                "wav": "output/music/piano/piano_low.wav"
+              }
+            },
+            {
+              "name": "piano_maj",
+              "description": "C major triad",
+              "duration_s": 2.368,
+              "files": {
+                "wav": "output/music/piano/piano_maj.wav"
+              }
+            },
+            {
+              "name": "piano_maj7",
+              "description": "Major 7th chord",
+              "duration_s": 2.368,
+              "files": {
+                "wav": "output/music/piano/piano_maj7.wav"
+              }
+            },
+            {
+              "name": "piano_min",
+              "description": "C minor triad",
+              "duration_s": 2.368,
+              "files": {
+                "wav": "output/music/piano/piano_min.wav"
+              }
+            },
+            {
+              "name": "piano_min7",
+              "description": "Minor 7th chord",
+              "duration_s": 2.368,
+              "files": {
+                "wav": "output/music/piano/piano_min7.wav"
+              }
+            },
+            {
+              "name": "piano_note",
+              "description": "Single ringing note",
+              "duration_s": 2.154,
+              "files": {
+                "wav": "output/music/piano/piano_note.wav"
+              }
+            },
+            {
+              "name": "piano_octaves",
+              "description": "Octave hits, twice",
+              "duration_s": 2.482,
+              "files": {
+                "wav": "output/music/piano/piano_octaves.wav"
+              }
+            },
+            {
+              "name": "piano_riff",
+              "description": "Left-hand minor riff",
+              "duration_s": 2.596,
+              "files": {
+                "wav": "output/music/piano/piano_riff.wav"
+              }
+            },
+            {
+              "name": "piano_roll",
+              "description": "Rolled spread chord",
+              "duration_s": 2.708,
+              "files": {
+                "wav": "output/music/piano/piano_roll.wav"
+              }
+            },
+            {
+              "name": "piano_run_down",
+              "description": "Descending scale run",
+              "duration_s": 1.982,
+              "files": {
+                "wav": "output/music/piano/piano_run_down.wav"
+              }
+            },
+            {
+              "name": "piano_run_up",
+              "description": "Ascending minor scale run",
+              "duration_s": 1.782,
+              "files": {
+                "wav": "output/music/piano/piano_run_up.wav"
+              }
+            },
+            {
+              "name": "piano_soft",
+              "description": "Softly struck, darker note",
+              "duration_s": 2.054,
+              "files": {
+                "wav": "output/music/piano/piano_soft.wav"
+              }
+            },
+            {
+              "name": "piano_stac",
+              "description": "Staccato damped note",
+              "duration_s": 0.252,
+              "files": {
+                "wav": "output/music/piano/piano_stac.wav"
+              }
+            },
+            {
+              "name": "piano_stride",
+              "description": "Stride bass and chord",
+              "duration_s": 2.396,
+              "files": {
+                "wav": "output/music/piano/piano_stride.wav"
+              }
+            },
+            {
+              "name": "piano_sus4",
+              "description": "Suspended 4th chord",
+              "duration_s": 2.368,
+              "files": {
+                "wav": "output/music/piano/piano_sus4.wav"
+              }
+            },
+            {
+              "name": "piano_vamp",
+              "description": "Two-chord vamp",
+              "duration_s": 3.125,
+              "files": {
+                "wav": "output/music/piano/piano_vamp.wav"
+              }
+            }
+          ]
+        },
+        {
+          "name": "strings",
+          "description": "Bowed string section: swells, stabs, tremolo, pizzicato and runs.",
+          "sounds": [
+            {
+              "name": "strings_cadence",
+              "description": "Fm-G-Cm section cadence",
+              "duration_s": 2.174,
+              "files": {
+                "wav": "output/music/strings/strings_cadence.wav"
+              }
+            },
+            {
+              "name": "strings_crescendo",
+              "description": "Chord growing from nothing",
+              "duration_s": 2.139,
+              "files": {
+                "wav": "output/music/strings/strings_crescendo.wav"
+              }
+            },
+            {
+              "name": "strings_fall_3",
+              "description": "Three falling bowed notes",
+              "duration_s": 1.745,
+              "files": {
+                "wav": "output/music/strings/strings_fall_3.wav"
+              }
+            },
+            {
+              "name": "strings_high",
+              "description": "High tense violin sustain",
+              "duration_s": 1.531,
+              "files": {
+                "wav": "output/music/strings/strings_high.wav"
+              }
+            },
+            {
+              "name": "strings_hold_maj",
+              "description": "Held major triad",
+              "duration_s": 1.711,
+              "files": {
+                "wav": "output/music/strings/strings_hold_maj.wav"
+              }
+            },
+            {
+              "name": "strings_hold_min",
+              "description": "Held minor triad",
+              "duration_s": 1.711,
+              "files": {
+                "wav": "output/music/strings/strings_hold_min.wav"
+              }
+            },
+            {
+              "name": "strings_low",
+              "description": "Dark cello/bass sustain",
+              "duration_s": 1.531,
+              "files": {
+                "wav": "output/music/strings/strings_low.wav"
+              }
+            },
+            {
+              "name": "strings_marcato",
+              "description": "Accented rising long notes",
+              "duration_s": 1.675,
+              "files": {
+                "wav": "output/music/strings/strings_marcato.wav"
+              }
+            },
+            {
+              "name": "strings_octaves",
+              "description": "Bowed octaves in unison",
+              "duration_s": 1.531,
+              "files": {
+                "wav": "output/music/strings/strings_octaves.wav"
+              }
+            },
+            {
+              "name": "strings_pizz",
+              "description": "Single pizzicato note",
+              "duration_s": 0.339,
+              "files": {
+                "wav": "output/music/strings/strings_pizz.wav"
+              }
+            },
+            {
+              "name": "strings_pizz_2",
+              "description": "Pizzicato root and fifth",
+              "duration_s": 0.661,
+              "files": {
+                "wav": "output/music/strings/strings_pizz_2.wav"
+              }
+            },
+            {
+              "name": "strings_pizz_chord",
+              "description": "Plucked minor triad",
+              "duration_s": 0.446,
+              "files": {
+                "wav": "output/music/strings/strings_pizz_chord.wav"
+              }
+            },
+            {
+              "name": "strings_pizz_low",
+              "description": "Low plucked bass note",
+              "duration_s": 0.446,
+              "files": {
+                "wav": "output/music/strings/strings_pizz_low.wav"
+              }
+            },
+            {
+              "name": "strings_pizz_riff",
+              "description": "Four-note pizzicato ostinato",
+              "duration_s": 0.982,
+              "files": {
+                "wav": "output/music/strings/strings_pizz_riff.wav"
+              }
+            },
+            {
+              "name": "strings_rise_3",
+              "description": "Three rising bowed notes",
+              "duration_s": 1.745,
+              "files": {
+                "wav": "output/music/strings/strings_rise_3.wav"
+              }
+            },
+            {
+              "name": "strings_run_down",
+              "description": "Quick descending bowed run",
+              "duration_s": 1.304,
+              "files": {
+                "wav": "output/music/strings/strings_run_down.wav"
+              }
+            },
+            {
+              "name": "strings_run_up",
+              "description": "Quick ascending bowed run",
+              "duration_s": 1.304,
+              "files": {
+                "wav": "output/music/strings/strings_run_up.wav"
+              }
+            },
+            {
+              "name": "strings_solo",
+              "description": "Exposed two-player line",
+              "duration_s": 1.531,
+              "files": {
+                "wav": "output/music/strings/strings_solo.wav"
+              }
+            },
+            {
+              "name": "strings_stab",
+              "description": "Full-section chord stab",
+              "duration_s": 0.339,
+              "files": {
+                "wav": "output/music/strings/strings_stab.wav"
+              }
+            },
+            {
+              "name": "strings_stab_3",
+              "description": "Three shrieking stabs",
+              "duration_s": 0.758,
+              "files": {
+                "wav": "output/music/strings/strings_stab_3.wav"
+              }
+            },
+            {
+              "name": "strings_staccato",
+              "description": "Four short bowed notes",
+              "duration_s": 0.875,
+              "files": {
+                "wav": "output/music/strings/strings_staccato.wav"
+              }
+            },
+            {
+              "name": "strings_swell",
+              "description": "Single note bowed in",
+              "duration_s": 2.025,
+              "files": {
+                "wav": "output/music/strings/strings_swell.wav"
+              }
+            },
+            {
+              "name": "strings_swell_chord",
+              "description": "Minor chord swell",
+              "duration_s": 2.025,
+              "files": {
+                "wav": "output/music/strings/strings_swell_chord.wav"
+              }
+            },
+            {
+              "name": "strings_tremolo",
+              "description": "Single-note bow tremolo",
+              "duration_s": 1.575,
+              "files": {
+                "wav": "output/music/strings/strings_tremolo.wav"
+              }
+            },
+            {
+              "name": "strings_tremolo_chord",
+              "description": "Tremolo across a triad",
+              "duration_s": 1.361,
+              "files": {
+                "wav": "output/music/strings/strings_tremolo_chord.wav"
               }
             }
           ]
