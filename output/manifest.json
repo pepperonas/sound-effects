@@ -1,6 +1,6 @@
 {
   "sample_rate": 44100,
-  "total_sounds": 498,
+  "total_sounds": 598,
   "groups": [
     {
       "name": "interface",
@@ -3359,6 +3359,172 @@
       "description": "Short one-shots for a DJ sample deck \u2014 trigger them over a mix.",
       "categories": [
         {
+          "name": "crowd",
+          "description": "Applause, cheers, whistles and chants \u2014 the room reacting.",
+          "sounds": [
+            {
+              "name": "crowd_applause",
+              "description": "A room, dense enough to blur",
+              "duration_s": 1.092,
+              "files": {
+                "wav": "output/dj/crowd/crowd_applause.wav"
+              }
+            },
+            {
+              "name": "crowd_applause_in",
+              "description": "Applause catching on",
+              "duration_s": 1.121,
+              "files": {
+                "wav": "output/dj/crowd/crowd_applause_in.wav"
+              }
+            },
+            {
+              "name": "crowd_applause_out",
+              "description": "Applause trailing off",
+              "duration_s": 1.15,
+              "files": {
+                "wav": "output/dj/crowd/crowd_applause_out.wav"
+              }
+            },
+            {
+              "name": "crowd_boo",
+              "description": "Low disapproving boo",
+              "duration_s": 1.101,
+              "files": {
+                "wav": "output/dj/crowd/crowd_boo.wav"
+              }
+            },
+            {
+              "name": "crowd_chant",
+              "description": "Two-syllable terrace chant",
+              "duration_s": 0.774,
+              "files": {
+                "wav": "output/dj/crowd/crowd_chant.wav"
+              }
+            },
+            {
+              "name": "crowd_chant_3",
+              "description": "Rising three-note chant",
+              "duration_s": 1.144,
+              "files": {
+                "wav": "output/dj/crowd/crowd_chant_3.wav"
+              }
+            },
+            {
+              "name": "crowd_cheer",
+              "description": "Voices and hands together",
+              "duration_s": 1.014,
+              "files": {
+                "wav": "output/dj/crowd/crowd_cheer.wav"
+              }
+            },
+            {
+              "name": "crowd_cheer_big",
+              "description": "Bigger, wider cheer",
+              "duration_s": 1.168,
+              "files": {
+                "wav": "output/dj/crowd/crowd_cheer_big.wav"
+              }
+            },
+            {
+              "name": "crowd_clap_few",
+              "description": "A few individual hands",
+              "duration_s": 0.9,
+              "files": {
+                "wav": "output/dj/crowd/crowd_clap_few.wav"
+              }
+            },
+            {
+              "name": "crowd_gasp",
+              "description": "Sharp collective intake",
+              "duration_s": 0.552,
+              "files": {
+                "wav": "output/dj/crowd/crowd_gasp.wav"
+              }
+            },
+            {
+              "name": "crowd_murmur",
+              "description": "A room talking",
+              "duration_s": 1.06,
+              "files": {
+                "wav": "output/dj/crowd/crowd_murmur.wav"
+              }
+            },
+            {
+              "name": "crowd_ovation",
+              "description": "Full-house ovation",
+              "duration_s": 1.197,
+              "files": {
+                "wav": "output/dj/crowd/crowd_ovation.wav"
+              }
+            },
+            {
+              "name": "crowd_slow_clap",
+              "description": "Five unimpressed claps",
+              "duration_s": 1.2,
+              "files": {
+                "wav": "output/dj/crowd/crowd_slow_clap.wav"
+              }
+            },
+            {
+              "name": "crowd_stomp",
+              "description": "Feet instead of hands",
+              "duration_s": 1.05,
+              "files": {
+                "wav": "output/dj/crowd/crowd_stomp.wav"
+              }
+            },
+            {
+              "name": "crowd_stomp_clap",
+              "description": "Stomp-stomp-clap",
+              "duration_s": 1.15,
+              "files": {
+                "wav": "output/dj/crowd/crowd_stomp_clap.wav"
+              }
+            },
+            {
+              "name": "crowd_whistle",
+              "description": "Loud two-finger whistle",
+              "duration_s": 0.55,
+              "files": {
+                "wav": "output/dj/crowd/crowd_whistle.wav"
+              }
+            },
+            {
+              "name": "crowd_whistle_crowd",
+              "description": "Several whistles at once",
+              "duration_s": 1.0,
+              "files": {
+                "wav": "output/dj/crowd/crowd_whistle_crowd.wav"
+              }
+            },
+            {
+              "name": "crowd_whistle_two",
+              "description": "Two-tone 'over here' call",
+              "duration_s": 0.58,
+              "files": {
+                "wav": "output/dj/crowd/crowd_whistle_two.wav"
+              }
+            },
+            {
+              "name": "crowd_whistle_up",
+              "description": "Approving rising whistle",
+              "duration_s": 0.55,
+              "files": {
+                "wav": "output/dj/crowd/crowd_whistle_up.wav"
+              }
+            },
+            {
+              "name": "crowd_woo",
+              "description": "Rising whoop on a drop",
+              "duration_s": 0.944,
+              "files": {
+                "wav": "output/dj/crowd/crowd_woo.wav"
+              }
+            }
+          ]
+        },
+        {
           "name": "drops",
           "description": "Short transitions: tape stop, brake, backspin, risers, impacts.",
           "sounds": [
@@ -3525,6 +3691,338 @@
           ]
         },
         {
+          "name": "fills",
+          "description": "Drum fills and rolls: toms, snares, hats, claps, into the drop.",
+          "sounds": [
+            {
+              "name": "fill_clap_build",
+              "description": "Claps doubling in speed",
+              "duration_s": 1.046,
+              "files": {
+                "wav": "output/dj/fills/fill_clap_build.wav"
+              }
+            },
+            {
+              "name": "fill_crash_out",
+              "description": "Crash and kick landing",
+              "duration_s": 1.0,
+              "files": {
+                "wav": "output/dj/fills/fill_crash_out.wav"
+              }
+            },
+            {
+              "name": "fill_floor_tom",
+              "description": "Heavy floor toms and kick",
+              "duration_s": 1.153,
+              "files": {
+                "wav": "output/dj/fills/fill_floor_tom.wav"
+              }
+            },
+            {
+              "name": "fill_half_bar",
+              "description": "Half-bar fill into a crash",
+              "duration_s": 1.099,
+              "files": {
+                "wav": "output/dj/fills/fill_half_bar.wav"
+              }
+            },
+            {
+              "name": "fill_hat_open",
+              "description": "Three closed into one open",
+              "duration_s": 1.093,
+              "files": {
+                "wav": "output/dj/fills/fill_hat_open.wav"
+              }
+            },
+            {
+              "name": "fill_hat_roll",
+              "description": "Sixteen hats opening out",
+              "duration_s": 1.039,
+              "files": {
+                "wav": "output/dj/fills/fill_hat_roll.wav"
+              }
+            },
+            {
+              "name": "fill_kick_roll",
+              "description": "Eight-kick double roll",
+              "duration_s": 1.09,
+              "files": {
+                "wav": "output/dj/fills/fill_kick_roll.wav"
+              }
+            },
+            {
+              "name": "fill_kick_snare",
+              "description": "Kick and snare trading",
+              "duration_s": 1.05,
+              "files": {
+                "wav": "output/dj/fills/fill_kick_snare.wav"
+              }
+            },
+            {
+              "name": "fill_one_beat",
+              "description": "Four-hit one-beat fill",
+              "duration_s": 0.622,
+              "files": {
+                "wav": "output/dj/fills/fill_one_beat.wav"
+              }
+            },
+            {
+              "name": "fill_reverse",
+              "description": "Backwards swell into the beat",
+              "duration_s": 0.956,
+              "files": {
+                "wav": "output/dj/fills/fill_reverse.wav"
+              }
+            },
+            {
+              "name": "fill_snare_accel",
+              "description": "Accelerating snare roll",
+              "duration_s": 1.122,
+              "files": {
+                "wav": "output/dj/fills/fill_snare_accel.wav"
+              }
+            },
+            {
+              "name": "fill_snare_drag",
+              "description": "Ghost-note drag into accent",
+              "duration_s": 0.378,
+              "files": {
+                "wav": "output/dj/fills/fill_snare_drag.wav"
+              }
+            },
+            {
+              "name": "fill_snare_flam",
+              "description": "Two-stick flam",
+              "duration_s": 0.309,
+              "files": {
+                "wav": "output/dj/fills/fill_snare_flam.wav"
+              }
+            },
+            {
+              "name": "fill_snare_ghost",
+              "description": "Accents with ghost notes",
+              "duration_s": 1.05,
+              "files": {
+                "wav": "output/dj/fills/fill_snare_ghost.wav"
+              }
+            },
+            {
+              "name": "fill_snare_roll",
+              "description": "Even eight-hit snare roll",
+              "duration_s": 1.03,
+              "files": {
+                "wav": "output/dj/fills/fill_snare_roll.wav"
+              }
+            },
+            {
+              "name": "fill_snare_triplet",
+              "description": "Six triplet snares",
+              "duration_s": 0.991,
+              "files": {
+                "wav": "output/dj/fills/fill_snare_triplet.wav"
+              }
+            },
+            {
+              "name": "fill_tom_snare",
+              "description": "Snare and tom alternating",
+              "duration_s": 1.053,
+              "files": {
+                "wav": "output/dj/fills/fill_tom_snare.wav"
+              }
+            },
+            {
+              "name": "fill_toms_down",
+              "description": "Four toms descending",
+              "duration_s": 1.053,
+              "files": {
+                "wav": "output/dj/fills/fill_toms_down.wav"
+              }
+            },
+            {
+              "name": "fill_toms_fast",
+              "description": "Six toms in sixteenths",
+              "duration_s": 0.856,
+              "files": {
+                "wav": "output/dj/fills/fill_toms_fast.wav"
+              }
+            },
+            {
+              "name": "fill_toms_up",
+              "description": "Four toms climbing",
+              "duration_s": 1.053,
+              "files": {
+                "wav": "output/dj/fills/fill_toms_up.wav"
+              }
+            }
+          ]
+        },
+        {
+          "name": "glitch",
+          "description": "Digital and analogue faults: stutter, bit-crush, static, tape wow.",
+          "sounds": [
+            {
+              "name": "glitch_alias",
+              "description": "Folded aliasing sweep",
+              "duration_s": 0.45,
+              "files": {
+                "wav": "output/dj/glitch/glitch_alias.wav"
+              }
+            },
+            {
+              "name": "glitch_bitcrush",
+              "description": "Four-bit gravel",
+              "duration_s": 0.35,
+              "files": {
+                "wav": "output/dj/glitch/glitch_bitcrush.wav"
+              }
+            },
+            {
+              "name": "glitch_bitcrush_hard",
+              "description": "Two-bit, barely a waveform",
+              "duration_s": 0.298,
+              "files": {
+                "wav": "output/dj/glitch/glitch_bitcrush_hard.wav"
+              }
+            },
+            {
+              "name": "glitch_cd_skip",
+              "description": "Disc reading the same block",
+              "duration_s": 0.186,
+              "files": {
+                "wav": "output/dj/glitch/glitch_cd_skip.wav"
+              }
+            },
+            {
+              "name": "glitch_crackle",
+              "description": "Worn-record crackle",
+              "duration_s": 0.6,
+              "files": {
+                "wav": "output/dj/glitch/glitch_crackle.wav"
+              }
+            },
+            {
+              "name": "glitch_crush_sweep",
+              "description": "Resolution collapsing",
+              "duration_s": 0.55,
+              "files": {
+                "wav": "output/dj/glitch/glitch_crush_sweep.wav"
+              }
+            },
+            {
+              "name": "glitch_downsample",
+              "description": "Sample-rate reduction",
+              "duration_s": 0.35,
+              "files": {
+                "wav": "output/dj/glitch/glitch_downsample.wav"
+              }
+            },
+            {
+              "name": "glitch_dropout",
+              "description": "Signal cutting in and out",
+              "duration_s": 0.55,
+              "files": {
+                "wav": "output/dj/glitch/glitch_dropout.wav"
+              }
+            },
+            {
+              "name": "glitch_flutter",
+              "description": "Fast capstan flutter",
+              "duration_s": 0.5,
+              "files": {
+                "wav": "output/dj/glitch/glitch_flutter.wav"
+              }
+            },
+            {
+              "name": "glitch_gate",
+              "description": "Sixteenth-gated chord",
+              "duration_s": 0.6,
+              "files": {
+                "wav": "output/dj/glitch/glitch_gate.wav"
+              }
+            },
+            {
+              "name": "glitch_megaphone",
+              "description": "Driven honking megaphone",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/dj/glitch/glitch_megaphone.wav"
+              }
+            },
+            {
+              "name": "glitch_reverse_stutter",
+              "description": "Alternating forward/back",
+              "duration_s": 0.385,
+              "files": {
+                "wav": "output/dj/glitch/glitch_reverse_stutter.wav"
+              }
+            },
+            {
+              "name": "glitch_static",
+              "description": "Quarter-second static burst",
+              "duration_s": 0.26,
+              "files": {
+                "wav": "output/dj/glitch/glitch_static.wav"
+              }
+            },
+            {
+              "name": "glitch_stutter",
+              "description": "Buffer stuck, six repeats",
+              "duration_s": 0.36,
+              "files": {
+                "wav": "output/dj/glitch/glitch_stutter.wav"
+              }
+            },
+            {
+              "name": "glitch_stutter_accel",
+              "description": "Accelerating slice repeat",
+              "duration_s": 0.336,
+              "files": {
+                "wav": "output/dj/glitch/glitch_stutter_accel.wav"
+              }
+            },
+            {
+              "name": "glitch_stutter_fade",
+              "description": "Stutter dying away",
+              "duration_s": 0.44,
+              "files": {
+                "wav": "output/dj/glitch/glitch_stutter_fade.wav"
+              }
+            },
+            {
+              "name": "glitch_stutter_fast",
+              "description": "25 ms slices, near-pitched",
+              "duration_s": 0.35,
+              "files": {
+                "wav": "output/dj/glitch/glitch_stutter_fast.wav"
+              }
+            },
+            {
+              "name": "glitch_tape_wow",
+              "description": "Slow tape pitch wander",
+              "duration_s": 0.65,
+              "files": {
+                "wav": "output/dj/glitch/glitch_tape_wow.wav"
+              }
+            },
+            {
+              "name": "glitch_telephone",
+              "description": "Narrow-band telephone",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/dj/glitch/glitch_telephone.wav"
+              }
+            },
+            {
+              "name": "glitch_vinyl_click",
+              "description": "Single groove click",
+              "duration_s": 0.22,
+              "files": {
+                "wav": "output/dj/glitch/glitch_vinyl_click.wav"
+              }
+            }
+          ]
+        },
+        {
           "name": "horns",
           "description": "Air horns, sirens, klaxons, alarms and lasers for calling a drop.",
           "sounds": [
@@ -3686,6 +4184,172 @@
               "duration_s": 0.16,
               "files": {
                 "wav": "output/dj/horns/horn_zap.wav"
+              }
+            }
+          ]
+        },
+        {
+          "name": "perc",
+          "description": "Percussion one-shots to layer over a beat: shakers, claves, blocks.",
+          "sounds": [
+            {
+              "name": "perc_agogo",
+              "description": "Bright clanging agogo bell",
+              "duration_s": 0.34,
+              "files": {
+                "wav": "output/dj/perc/perc_agogo.wav"
+              }
+            },
+            {
+              "name": "perc_bongo",
+              "description": "Tight high bongo",
+              "duration_s": 0.18,
+              "files": {
+                "wav": "output/dj/perc/perc_bongo.wav"
+              }
+            },
+            {
+              "name": "perc_cabasa",
+              "description": "Grainy steel-bead cabasa",
+              "duration_s": 0.11,
+              "files": {
+                "wav": "output/dj/perc/perc_cabasa.wav"
+              }
+            },
+            {
+              "name": "perc_clave",
+              "description": "Hardwood clave, loud and pitched",
+              "duration_s": 0.14,
+              "files": {
+                "wav": "output/dj/perc/perc_clave.wav"
+              }
+            },
+            {
+              "name": "perc_conga_hi",
+              "description": "High open conga tone",
+              "duration_s": 0.3,
+              "files": {
+                "wav": "output/dj/perc/perc_conga_hi.wav"
+              }
+            },
+            {
+              "name": "perc_conga_lo",
+              "description": "Low conga tone",
+              "duration_s": 0.38,
+              "files": {
+                "wav": "output/dj/perc/perc_conga_lo.wav"
+              }
+            },
+            {
+              "name": "perc_conga_slap",
+              "description": "Flat-hand conga slap",
+              "duration_s": 0.16,
+              "files": {
+                "wav": "output/dj/perc/perc_conga_slap.wav"
+              }
+            },
+            {
+              "name": "perc_cowbell",
+              "description": "Two-square 808 cowbell",
+              "duration_s": 0.3,
+              "files": {
+                "wav": "output/dj/perc/perc_cowbell.wav"
+              }
+            },
+            {
+              "name": "perc_djembe",
+              "description": "Djembe bass tone",
+              "duration_s": 0.44,
+              "files": {
+                "wav": "output/dj/perc/perc_djembe.wav"
+              }
+            },
+            {
+              "name": "perc_guiro",
+              "description": "Scraped guiro, notch by notch",
+              "duration_s": 0.36,
+              "files": {
+                "wav": "output/dj/perc/perc_guiro.wav"
+              }
+            },
+            {
+              "name": "perc_rim",
+              "description": "Thin papery rim click",
+              "duration_s": 0.09,
+              "files": {
+                "wav": "output/dj/perc/perc_rim.wav"
+              }
+            },
+            {
+              "name": "perc_shaker",
+              "description": "Forward shaker stroke",
+              "duration_s": 0.09,
+              "files": {
+                "wav": "output/dj/perc/perc_shaker.wav"
+              }
+            },
+            {
+              "name": "perc_shaker_back",
+              "description": "Softer back stroke",
+              "duration_s": 0.06,
+              "files": {
+                "wav": "output/dj/perc/perc_shaker_back.wav"
+              }
+            },
+            {
+              "name": "perc_stick",
+              "description": "Wood-on-wood count-in click",
+              "duration_s": 0.02,
+              "files": {
+                "wav": "output/dj/perc/perc_stick.wav"
+              }
+            },
+            {
+              "name": "perc_tamb_hit",
+              "description": "Tambourine struck by hand",
+              "duration_s": 0.3,
+              "files": {
+                "wav": "output/dj/perc/perc_tamb_hit.wav"
+              }
+            },
+            {
+              "name": "perc_tambourine",
+              "description": "Ringing tambourine jingles",
+              "duration_s": 0.34,
+              "files": {
+                "wav": "output/dj/perc/perc_tambourine.wav"
+              }
+            },
+            {
+              "name": "perc_timbale",
+              "description": "Metal-shell timbale",
+              "duration_s": 0.26,
+              "files": {
+                "wav": "output/dj/perc/perc_timbale.wav"
+              }
+            },
+            {
+              "name": "perc_triangle",
+              "description": "Long-ringing triangle",
+              "duration_s": 1.1,
+              "files": {
+                "wav": "output/dj/perc/perc_triangle.wav"
+              }
+            },
+            {
+              "name": "perc_woodblock",
+              "description": "Dry hollow woodblock",
+              "duration_s": 0.13,
+              "files": {
+                "wav": "output/dj/perc/perc_woodblock.wav"
+              }
+            },
+            {
+              "name": "perc_woodblock_low",
+              "description": "Lower, bigger woodblock",
+              "duration_s": 0.16,
+              "files": {
+                "wav": "output/dj/perc/perc_woodblock_low.wav"
               }
             }
           ]
@@ -4018,6 +4682,172 @@
               "duration_s": 0.24,
               "files": {
                 "wav": "output/dj/stabs/stab_synth_maj.wav"
+              }
+            }
+          ]
+        },
+        {
+          "name": "subs",
+          "description": "Short bass hits: 808s, pitch slides, sub drops, growls and stabs.",
+          "sounds": [
+            {
+              "name": "sub_808",
+              "description": "Tuned 808 with pitch drop",
+              "duration_s": 0.85,
+              "files": {
+                "wav": "output/dj/subs/sub_808.wav"
+              }
+            },
+            {
+              "name": "sub_808_clean",
+              "description": "Clean 808 for layering",
+              "duration_s": 0.8,
+              "files": {
+                "wav": "output/dj/subs/sub_808_clean.wav"
+              }
+            },
+            {
+              "name": "sub_808_hard",
+              "description": "Driven, harmonically rich 808",
+              "duration_s": 0.7,
+              "files": {
+                "wav": "output/dj/subs/sub_808_hard.wav"
+              }
+            },
+            {
+              "name": "sub_808_low",
+              "description": "Bottom-octave 808",
+              "duration_s": 0.95,
+              "files": {
+                "wav": "output/dj/subs/sub_808_low.wav"
+              }
+            },
+            {
+              "name": "sub_808_short",
+              "description": "Clipped third-second 808",
+              "duration_s": 0.32,
+              "files": {
+                "wav": "output/dj/subs/sub_808_short.wav"
+              }
+            },
+            {
+              "name": "sub_dive",
+              "description": "Fast quarter-second dive",
+              "duration_s": 0.3,
+              "files": {
+                "wav": "output/dj/subs/sub_dive.wav"
+              }
+            },
+            {
+              "name": "sub_donk",
+              "description": "Hard mid-heavy donk hit",
+              "duration_s": 0.18,
+              "files": {
+                "wav": "output/dj/subs/sub_donk.wav"
+              }
+            },
+            {
+              "name": "sub_double",
+              "description": "Two 808 hits an eighth apart",
+              "duration_s": 0.53,
+              "files": {
+                "wav": "output/dj/subs/sub_double.wav"
+              }
+            },
+            {
+              "name": "sub_fall",
+              "description": "Sub falling into the floor",
+              "duration_s": 1.1,
+              "files": {
+                "wav": "output/dj/subs/sub_fall.wav"
+              }
+            },
+            {
+              "name": "sub_growl",
+              "description": "Fast-chewed growl",
+              "duration_s": 0.6,
+              "files": {
+                "wav": "output/dj/subs/sub_growl.wav"
+              }
+            },
+            {
+              "name": "sub_pluck",
+              "description": "Filtered sub pluck",
+              "duration_s": 0.35,
+              "files": {
+                "wav": "output/dj/subs/sub_pluck.wav"
+              }
+            },
+            {
+              "name": "sub_reese",
+              "description": "Beating detuned reese",
+              "duration_s": 0.55,
+              "files": {
+                "wav": "output/dj/subs/sub_reese.wav"
+              }
+            },
+            {
+              "name": "sub_rise",
+              "description": "Low-to-high lift",
+              "duration_s": 0.55,
+              "files": {
+                "wav": "output/dj/subs/sub_rise.wav"
+              }
+            },
+            {
+              "name": "sub_slide_down",
+              "description": "808 sliding back down",
+              "duration_s": 0.9,
+              "files": {
+                "wav": "output/dj/subs/sub_slide_down.wav"
+              }
+            },
+            {
+              "name": "sub_slide_long",
+              "description": "Slow minor-third slide",
+              "duration_s": 1.15,
+              "files": {
+                "wav": "output/dj/subs/sub_slide_long.wav"
+              }
+            },
+            {
+              "name": "sub_slide_oct",
+              "description": "Octave slide inside one hit",
+              "duration_s": 0.95,
+              "files": {
+                "wav": "output/dj/subs/sub_slide_oct.wav"
+              }
+            },
+            {
+              "name": "sub_slide_up",
+              "description": "808 sliding up a fifth",
+              "duration_s": 0.9,
+              "files": {
+                "wav": "output/dj/subs/sub_slide_up.wav"
+              }
+            },
+            {
+              "name": "sub_stab",
+              "description": "150 ms sub stab",
+              "duration_s": 0.16,
+              "files": {
+                "wav": "output/dj/subs/sub_stab.wav"
+              }
+            },
+            {
+              "name": "sub_thump",
+              "description": "Pitchless movement of air",
+              "duration_s": 0.24,
+              "files": {
+                "wav": "output/dj/subs/sub_thump.wav"
+              }
+            },
+            {
+              "name": "sub_wobble",
+              "description": "Single slow dubstep wobble",
+              "duration_s": 0.75,
+              "files": {
+                "wav": "output/dj/subs/sub_wobble.wav"
               }
             }
           ]

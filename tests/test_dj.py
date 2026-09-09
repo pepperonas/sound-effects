@@ -24,7 +24,13 @@ OUT = os.path.join(ROOT, "output", "dj")
 # Category name -> the prefix its sounds carry. They differ because a folder
 # reads better plural and a filename reads better singular.
 PREFIX = {"stabs": "stab_", "scratch": "scratch_", "horns": "horn_",
-          "drops": "drop_", "vox": "vox_"}
+          "drops": "drop_", "vox": "vox_", "fills": "fill_", "perc": "perc_",
+          "glitch": "glitch_", "subs": "sub_", "crowd": "crowd_"}
+
+# Categories that are HITS: every one of them must land on the beat. The rest
+# (fills, drops, crowd) are supposed to arrive rather than strike -- a fill
+# builds towards the bar line, applause gathers, a riser rises.
+HIT_CATEGORIES = ("stabs", "scratch", "subs", "glitch")
 
 MAX_SECONDS = 1.2
 
@@ -67,7 +73,7 @@ class TestDJConstraints(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.files = list(files())
-        if len(cls.files) != 100:
+        if len(cls.files) != 200:
             raise unittest.SkipTest("run build.py -g dj first")
 
     def test_nothing_runs_longer_than_a_trigger_should(self):
@@ -78,7 +84,7 @@ class TestDJConstraints(unittest.TestCase):
 
     def test_the_group_averages_well_under_a_second(self):
         durs = [len(read(p)) / 44100 for _, _, p in self.files]
-        self.assertLess(sum(durs) / len(durs), 0.60)
+        self.assertLess(sum(durs) / len(durs), 0.65)
 
     def test_they_are_much_shorter_than_the_music_motifs(self):
         """The whole point of the group: these are triggered, not scheduled."""
@@ -105,28 +111,30 @@ class TestDJConstraints(unittest.TestCase):
             with self.subTest(sound=name):
                 self.assertLess(abs(sum(xs) / len(xs)), 0.005)
 
-    def test_most_of_them_punch_at_the_front(self):
-        """85 of 100 reach 70% of their peak inside 30 ms. The rest are the
-        ones that are supposed to arrive rather than hit — risers, sweeps, a
-        fog horn, and the shouts, which begin with a consonant."""
-        front = 0
-        for cat, name, p in self.files:
-            xs = read(p)
-            pk = max(abs(x) for x in xs)
-            head = max(abs(x) for x in xs[:int(0.030 * 44100)])
-            front += head >= 0.70 * pk
-        self.assertGreaterEqual(front, 80)
+    def _front(self, p):
+        xs = read(p)
+        pk = max(abs(x) for x in xs)
+        return max(abs(x) for x in xs[:int(0.030 * 44100)]) / max(1e-9, pk)
 
-    def test_stabs_and_scratches_all_punch(self):
-        """Those two categories have no excuse: every one is a hit."""
+    def test_most_of_the_group_punches_at_the_front(self):
+        """154 of 200 reach 70% of their peak inside 30 ms when written. The
+        rest are the ones that build: fills, applause, risers and sweeps, plus
+        the shouts, which begin with a consonant."""
+        front = sum(self._front(p) >= 0.70 for _, _, p in self.files)
+        self.assertGreaterEqual(front, 145)
+
+    def test_every_hit_category_lands_on_the_beat(self):
+        """No excuses in these four: each sound is a hit, so each must punch."""
         for cat, name, p in self.files:
-            if cat not in ("stabs", "scratch"):
+            if cat not in HIT_CATEGORIES:
                 continue
-            xs = read(p)
-            pk = max(abs(x) for x in xs)
-            head = max(abs(x) for x in xs[:int(0.030 * 44100)])
             with self.subTest(sound=name):
-                self.assertGreaterEqual(head, 0.70 * pk)
+                self.assertGreaterEqual(self._front(p), 0.70)
+
+    def test_percussion_is_almost_all_punch(self):
+        """Nineteen of twenty; the exception is the guiro, which is a scrape."""
+        n = sum(self._front(p) >= 0.70 for c, _, p in self.files if c == "perc")
+        self.assertGreaterEqual(n, 19)
 
 
 class TestScratchMotion(unittest.TestCase):
