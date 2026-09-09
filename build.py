@@ -5,6 +5,7 @@ build.py — generate every sound effect into output/<group>/<category>/, sorted
 Sounds are split into two use cases (the generator's GROUP):
     interface/  — computer & UI interaction sounds
     music/      — FL-Studio-style music-production samples
+    dj/         — short one-shots for a DJ sample deck
 
 Usage:
     python3 build.py                 # build everything (WAV only)
@@ -38,8 +39,9 @@ OUT = os.path.join(ROOT, "output")
 GROUP_DESCRIPTIONS = {
     "interface": "Computer & UI interaction sounds.",
     "music": "FL-Studio-style music-production samples.",
+    "dj": "Short one-shots for a DJ sample deck — trigger them over a mix.",
 }
-GROUP_ORDER = {"interface": 0, "music": 1}
+GROUP_ORDER = {"interface": 0, "music": 1, "dj": 2}
 
 
 def have_ffmpeg():
@@ -71,7 +73,7 @@ def group_of(m):
 def main():
     ap = argparse.ArgumentParser(description="Generate UI & music sound effects.")
     ap.add_argument("-g", "--group", nargs="+", metavar="GRP",
-                    help="only build these groups (interface | music)")
+                    help="only build these groups (interface | music | dj)")
     ap.add_argument("-c", "--category", nargs="+", metavar="CAT",
                     help="only build these categories")
     ap.add_argument("--list", action="store_true",

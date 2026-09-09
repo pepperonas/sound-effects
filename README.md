@@ -9,8 +9,8 @@
 [![Made with Python](https://img.shields.io/badge/Made%20with-Python%203-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![No dependencies](https://img.shields.io/badge/dependencies-none-success)](#requirements)
 [![Stdlib only](https://img.shields.io/badge/stdlib-only-informational)](synth/core.py)
-[![Sounds](https://img.shields.io/badge/sounds-398-ff69b4)](output/)
-[![Categories](https://img.shields.io/badge/categories-26-blueviolet)](#-categories)
+[![Sounds](https://img.shields.io/badge/sounds-498-ff69b4)](output/)
+[![Categories](https://img.shields.io/badge/categories-31-blueviolet)](#-categories)
 [![Format WAV](https://img.shields.io/badge/format-WAV%2044.1kHz-orange)](#output-layout)
 [![MP3 optional](https://img.shields.io/badge/MP3-optional-lightgrey)](#output-layout)
 [![Royalty free](https://img.shields.io/badge/royalty-free-brightgreen)](#-license)
@@ -19,7 +19,7 @@
 [![Platform](https://img.shields.io/badge/platform-cross--platform-lightgrey)](#requirements)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#-adding-your-own-sounds)
 [![Maintained](https://img.shields.io/badge/maintained-yes-success)](https://github.com/pepperonas/sound-effects)
-[![Tests](https://img.shields.io/badge/tests-108%20passing-brightgreen)](tests/)
+[![Tests](https://img.shields.io/badge/tests-125%20passing-brightgreen)](tests/)
 [![Test framework](https://img.shields.io/badge/tests-unittest%20(stdlib)-informational)](tests/)
 [![Instruments](https://img.shields.io/badge/instrument%20kits-11-9b59b6)](#-instruments-motif-kits--every-sample-is-a-playable-figure)
 [![Motifs](https://img.shields.io/badge/playable%20motifs-159-e67e22)](#-instruments-motif-kits--every-sample-is-a-playable-figure)
@@ -28,9 +28,12 @@
 [![Key](https://img.shields.io/badge/key-rooted%20on%20C-lightgrey)](#-instruments-motif-kits--every-sample-is-a-playable-figure)
 [![Bit depth](https://img.shields.io/badge/PCM-16--bit%20mono-orange)](#output-layout)
 [![Clipping](https://img.shields.io/badge/clipping-none-brightgreen)](tests/test_render.py)
-[![Build time](https://img.shields.io/badge/full%20build-~85s-lightgrey)](#-usage)
+[![Build time](https://img.shields.io/badge/full%20build-~90s-lightgrey)](#-usage)
 [![Engine size](https://img.shields.io/badge/engine-~330%20LOC-informational)](synth/core.py)
 [![Python](https://img.shields.io/badge/python-3.11%20%E2%80%93%203.14-3776AB)](#-requirements)
+[![DJ one-shots](https://img.shields.io/badge/DJ%20one--shots-100-ff5722)](#-dj-one-shots-short-enough-to-trigger-by-hand)
+[![Trigger length](https://img.shields.io/badge/DJ%20samples-%E2%89%A41.2s%20%C2%B7%20%C3%B8%200.46s-ff5722)](#-dj-one-shots-short-enough-to-trigger-by-hand)
+[![Groups](https://img.shields.io/badge/groups-interface%20%C2%B7%20music%20%C2%B7%20dj-blueviolet)](#-categories)
 [![Code style](https://img.shields.io/badge/code%20style-PEP%208-blue)](https://peps.python.org/pep-0008/)
 
 </div>
@@ -48,9 +51,10 @@ python3 build.py          # → output/<category>/<name>.{wav,mp3} + manifest.js
 
 ## ✨ Highlights
 
-- 🧰 **398 ready-to-use sounds** across **26 categories** — UI interactions **and** music-production samples
+- 🧰 **498 ready-to-use sounds** across **31 categories** — UI interactions, music production **and** a DJ sample deck
 - 🎹 **A whole band and orchestra** — guitar, e-bass, piano, e-piano, brass, strings, choir, flute, harp, mallets, organ, drums, synths and FX, all tuned to musical notes and rooted on C
 - 🎺 **Playable motifs, not just one-shots** — riffs, fanfares, arpeggios, glissandi, walking lines and cadences, each a single drag-and-drop sample
+- 🎚️ **A DJ one-shot kit** — orchestra hits, turntable scratches, air horns, tape stops and vocal shouts, none longer than 1.2 s so they trigger on the beat
 - 🔬 **Modelled, not faked** — Karplus-Strong strings, real 2-operator FM for the e-piano, piano string inharmonicity, bar modes for mallets, drawbar additive organ and vocal-tract formants for the choir
 - 🐍 **Pure Python standard library** — clone and run, nothing to install
 - 🗂️ **Sorted output** — one folder per category + a machine-readable `manifest.json`
@@ -101,6 +105,21 @@ python3 build.py          # → output/<category>/<name>.{wav,mp3} + manifest.js
 | 🎤 **choir** | vowel formants (ah/oo/oh/eh), swells, stabs, chords, cadences | 25 |
 | 🪈 **flute** | phrases, trills, mordents, runs, flutter-tongue, grace notes | 25 |
 
+### 🎚️ DJ one-shots (short enough to trigger by hand)
+
+Their own top-level folder, `output/dj/`, so the whole set can be dragged into
+a sample deck at once. **Nothing runs past 1.2 s and the average is 0.46 s** —
+the long cinematic riser in `fx` is something you schedule, this is something
+you hit.
+
+| Category | What's in it | Sounds |
+|----------|--------------|:------:|
+| 💥 **stabs** | orchestra hits, brass, organ, piano and synth chord stabs | 20 |
+| 💿 **scratch** | baby, chirp, transformer, flare, crab, backspin, brake | 20 |
+| 📣 **horns** | reggae air horns, sirens, klaxons, alarms, lasers, beeps | 20 |
+| ⏬ **drops** | tape stop, vinyl brake, rewind, risers, impacts, snare roll | 20 |
+| 🗣️ **vox** | hey · ho · yeah · uh, vocal chops, crowds, chants | 20 |
+
 > See the full annotated list any time with `python3 build.py --list`.
 
 ### A taste of what's inside
@@ -125,6 +144,11 @@ python3 build.py          # → output/<category>/<name>.{wav,mp3} + manifest.js
 **organ** · `organ_full` · `organ_jazz` · `organ_leslie` · `organ_shout` · `organ_gliss_up` · `organ_plagal` · `organ_swell`
 **choir** · `choir_ah` · `choir_oo` · `choir_swell` · `choir_stab` · `choir_amen` · `choir_cluster` · `choir_vowel_shift`
 **flute** · `flute_trill` · `flute_run_up` · `flute_flutter` · `flute_mordent` · `flute_phrase` · `flute_sigh` · `flute_octave`
+**stabs** · `stab_orch` · `stab_brass` · `stab_organ` · `stab_hoover` · `stab_sub`
+**scratch** · `scratch_baby` · `scratch_chirp` · `scratch_transformer` · `scratch_flare` · `scratch_crab` · `scratch_backspin` · `scratch_brake`
+**horns** · `horn_air` · `horn_siren_wail` · `horn_klaxon` · `horn_laser` · `horn_pull_up` · `horn_beep_3`
+**drops** · `drop_tape_stop` · `drop_brake` · `drop_rewind` · `drop_riser` · `drop_impact` · `drop_reverse_hit` · `drop_roll`
+**vox** · `vox_hey` · `vox_ho` · `vox_yeah` · `vox_chop_ah` · `vox_crowd` · `vox_chant_3`
 **fx** · `riser` · `downlifter` · `impact` · `sub_drop` · `sweep_up` · `sweep_down` · `reverse_cymbal` · `white_riser` · `vinyl_crackle` · `laser_zap`
 
 ## 🚀 Usage
@@ -137,6 +161,7 @@ python3 build.py -c clicks ui          # build only specific categories
 python3 build.py -c drums bass synth   # just part of the music-production kit
 python3 build.py -c brass              # just the brass stabs & fanfare motifs
 python3 build.py -c guitar ebass piano # build a rhythm section
+python3 build.py -g dj                 # just the DJ one-shots (~9 s)
 python3 build.py --mp3                 # also encode an MP3 copy (needs ffmpeg)
 ```
 
@@ -147,6 +172,7 @@ afplay output/interface/clipboard/paste.wav
 aplay  output/music/drums/kick_808.wav
 afplay output/music/brass/brass_fanfare_3.wav
 afplay output/music/harp/harp_gliss_up.wav
+afplay output/dj/stabs/stab_orch.wav
 ```
 
 ### Output layout
@@ -170,6 +196,12 @@ output/
 │   ├── bass/ synth/ chords/ brass/ fx/
 │   ├── guitar/ ebass/ piano/ epiano/ strings/
 │   ├── mallets/ harp/ organ/ choir/ flute/
+│   └── …
+├── dj/                        ← short one-shots for a sample deck
+│   ├── stabs/
+│   │   ├── stab_orch.wav
+│   │   └── …
+│   ├── scratch/ horns/ drops/ vox/
 │   └── …
 └── manifest.json              ← machine-readable index of every sound
 ```
@@ -265,6 +297,11 @@ sound-effects/
 │   ├── organ.py         │
 │   ├── choir.py         │
 │   ├── flute.py         ┘
+│   ├── stabs.py         ┐
+│   ├── scratch.py       │
+│   ├── horns.py         │ GROUP = "dj"
+│   ├── drops.py         │
+│   ├── vox.py           ┘
 │   └── _music.py        # shared: note sequencer, additive summer, glide, stack
                          #   (leading "_" keeps it out of discover())
 └── output/             # generated WAVs: output/<group>/<category>/ (+ manifest.json)
@@ -279,7 +316,7 @@ sound-effects/
 ## 🧪 Tests
 
 ```bash
-python3 -m unittest discover tests -v      # 108 tests, stdlib only, ~16 s
+python3 -m unittest discover tests -v      # 125 tests, stdlib only, ~17 s
 python3 -m unittest tests.test_synth       # just the engine
 ```
 
@@ -288,6 +325,7 @@ python3 -m unittest tests.test_synth       # just the engine
 | `tests/test_synth.py` | Engine primitives: oscillator spectra, envelope shapes, filter direction, `pluck()` **in tune to ≤ 2 cents across five octaves** and bending correctly, `fm()` sideband structure, vibrato symmetry, WAV format and normalisation |
 | `tests/test_music.py` | The shared sequencer: event timing in steps, chord expansion, strum direction, per-note overrides, gain scaling, no leading silence — plus the guard that **ensemble detune stays bounded as voices are added** |
 | `tests/test_generators.py` | Every module's contract: `CATEGORY`/`GROUP`/`SOUNDS`, safe folder and file names, globally unique sound names, no dead generator functions, and a manifest that matches what is on disk |
+| `tests/test_dj.py` | The DJ constraints: **nothing over 1.2 s**, no dead head, no DC offset, 85 of 100 punching inside 30 ms — plus that a scratch's platter speed really sets its pitch, its crossfader really silences, and "eh" really does put energy where "ah" does not |
 | `tests/test_render.py` | The rendered audio: nothing clips, nothing is silent, no leading gap, every tail ends at zero, and a rebuild is **byte-identical**. Also counts the events behind each sample to check the kits really are motif kits |
 
 Two of these were written after a bug they then caught: `pluck()`'s damping was

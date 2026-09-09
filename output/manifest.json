@@ -1,6 +1,6 @@
 {
   "sample_rate": 44100,
-  "total_sounds": 398,
+  "total_sounds": 498,
   "groups": [
     {
       "name": "interface",
@@ -3348,6 +3348,842 @@
               "duration_s": 0.3,
               "files": {
                 "wav": "output/music/synth/stab.wav"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dj",
+      "description": "Short one-shots for a DJ sample deck \u2014 trigger them over a mix.",
+      "categories": [
+        {
+          "name": "drops",
+          "description": "Short transitions: tape stop, brake, backspin, risers, impacts.",
+          "sounds": [
+            {
+              "name": "drop_air",
+              "description": "Thin air-suction lead-in",
+              "duration_s": 0.417,
+              "files": {
+                "wav": "output/dj/drops/drop_air.wav"
+              }
+            },
+            {
+              "name": "drop_backspin",
+              "description": "Record thrown backwards",
+              "duration_s": 0.55,
+              "files": {
+                "wav": "output/dj/drops/drop_backspin.wav"
+              }
+            },
+            {
+              "name": "drop_brake",
+              "description": "Hand brake on the platter",
+              "duration_s": 0.45,
+              "files": {
+                "wav": "output/dj/drops/drop_brake.wav"
+              }
+            },
+            {
+              "name": "drop_downlifter",
+              "description": "Falling post-drop lifter",
+              "duration_s": 0.7,
+              "files": {
+                "wav": "output/dj/drops/drop_downlifter.wav"
+              }
+            },
+            {
+              "name": "drop_impact",
+              "description": "Full downbeat impact",
+              "duration_s": 0.8,
+              "files": {
+                "wav": "output/dj/drops/drop_impact.wav"
+              }
+            },
+            {
+              "name": "drop_impact_short",
+              "description": "300 ms punch, no tail",
+              "duration_s": 0.32,
+              "files": {
+                "wav": "output/dj/drops/drop_impact_short.wav"
+              }
+            },
+            {
+              "name": "drop_noise_hit",
+              "description": "Flat white-noise burst",
+              "duration_s": 0.16,
+              "files": {
+                "wav": "output/dj/drops/drop_noise_hit.wav"
+              }
+            },
+            {
+              "name": "drop_reverse_crash",
+              "description": "Backwards cymbal swell",
+              "duration_s": 0.75,
+              "files": {
+                "wav": "output/dj/drops/drop_reverse_crash.wav"
+              }
+            },
+            {
+              "name": "drop_reverse_hit",
+              "description": "Impact played backwards",
+              "duration_s": 0.32,
+              "files": {
+                "wav": "output/dj/drops/drop_reverse_hit.wav"
+              }
+            },
+            {
+              "name": "drop_rewind",
+              "description": "Pull-up rewind rush",
+              "duration_s": 0.5,
+              "files": {
+                "wav": "output/dj/drops/drop_rewind.wav"
+              }
+            },
+            {
+              "name": "drop_riser",
+              "description": "700 ms noise-and-tone riser",
+              "duration_s": 0.7,
+              "files": {
+                "wav": "output/dj/drops/drop_riser.wav"
+              }
+            },
+            {
+              "name": "drop_riser_short",
+              "description": "Quarter-second tension flick",
+              "duration_s": 0.274,
+              "files": {
+                "wav": "output/dj/drops/drop_riser_short.wav"
+              }
+            },
+            {
+              "name": "drop_roll",
+              "description": "Accelerating snare roll",
+              "duration_s": 1.15,
+              "files": {
+                "wav": "output/dj/drops/drop_roll.wav"
+              }
+            },
+            {
+              "name": "drop_spinup",
+              "description": "Deck pulling up to pitch",
+              "duration_s": 0.55,
+              "files": {
+                "wav": "output/dj/drops/drop_spinup.wav"
+              }
+            },
+            {
+              "name": "drop_sub",
+              "description": "Sub sliding into the floor",
+              "duration_s": 0.8,
+              "files": {
+                "wav": "output/dj/drops/drop_sub.wav"
+              }
+            },
+            {
+              "name": "drop_sweep_down",
+              "description": "Filtered whoosh down",
+              "duration_s": 0.399,
+              "files": {
+                "wav": "output/dj/drops/drop_sweep_down.wav"
+              }
+            },
+            {
+              "name": "drop_sweep_up",
+              "description": "Filtered whoosh up",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/dj/drops/drop_sweep_up.wav"
+              }
+            },
+            {
+              "name": "drop_tape_stop",
+              "description": "Tape sagging to a stop",
+              "duration_s": 0.65,
+              "files": {
+                "wav": "output/dj/drops/drop_tape_stop.wav"
+              }
+            },
+            {
+              "name": "drop_tape_stop_fast",
+              "description": "250 ms tape stop",
+              "duration_s": 0.32,
+              "files": {
+                "wav": "output/dj/drops/drop_tape_stop_fast.wav"
+              }
+            },
+            {
+              "name": "drop_uplift_stab",
+              "description": "Short rise landing on a stab",
+              "duration_s": 0.532,
+              "files": {
+                "wav": "output/dj/drops/drop_uplift_stab.wav"
+              }
+            }
+          ]
+        },
+        {
+          "name": "horns",
+          "description": "Air horns, sirens, klaxons, alarms and lasers for calling a drop.",
+          "sounds": [
+            {
+              "name": "horn_air",
+              "description": "Three-reed reggae air horn",
+              "duration_s": 0.9,
+              "files": {
+                "wav": "output/dj/horns/horn_air.wav"
+              }
+            },
+            {
+              "name": "horn_air_double",
+              "description": "Two-blast air horn",
+              "duration_s": 0.6,
+              "files": {
+                "wav": "output/dj/horns/horn_air_double.wav"
+              }
+            },
+            {
+              "name": "horn_air_low",
+              "description": "Low chesty air horn",
+              "duration_s": 0.8,
+              "files": {
+                "wav": "output/dj/horns/horn_air_low.wav"
+              }
+            },
+            {
+              "name": "horn_air_rise",
+              "description": "Air horn pulled upward",
+              "duration_s": 0.7,
+              "files": {
+                "wav": "output/dj/horns/horn_air_rise.wav"
+              }
+            },
+            {
+              "name": "horn_air_short",
+              "description": "Single 400 ms blast",
+              "duration_s": 0.42,
+              "files": {
+                "wav": "output/dj/horns/horn_air_short.wav"
+              }
+            },
+            {
+              "name": "horn_alarm",
+              "description": "Fast high two-tone alarm",
+              "duration_s": 0.8,
+              "files": {
+                "wav": "output/dj/horns/horn_alarm.wav"
+              }
+            },
+            {
+              "name": "horn_beep",
+              "description": "Flat 200 ms censor beep",
+              "duration_s": 0.2,
+              "files": {
+                "wav": "output/dj/horns/horn_beep.wav"
+              }
+            },
+            {
+              "name": "horn_beep_3",
+              "description": "Three-beep countdown",
+              "duration_s": 0.5,
+              "files": {
+                "wav": "output/dj/horns/horn_beep_3.wav"
+              }
+            },
+            {
+              "name": "horn_fog",
+              "description": "Huge slow fog horn",
+              "duration_s": 1.1,
+              "files": {
+                "wav": "output/dj/horns/horn_fog.wav"
+              }
+            },
+            {
+              "name": "horn_klaxon",
+              "description": "Two-tone ship's klaxon",
+              "duration_s": 0.85,
+              "files": {
+                "wav": "output/dj/horns/horn_klaxon.wav"
+              }
+            },
+            {
+              "name": "horn_laser",
+              "description": "Fast falling laser zap",
+              "duration_s": 0.3,
+              "files": {
+                "wav": "output/dj/horns/horn_laser.wav"
+              }
+            },
+            {
+              "name": "horn_laser_up",
+              "description": "Rising reverse laser",
+              "duration_s": 0.32,
+              "files": {
+                "wav": "output/dj/horns/horn_laser_up.wav"
+              }
+            },
+            {
+              "name": "horn_pull_up",
+              "description": "Rewind pull-up signal",
+              "duration_s": 0.65,
+              "files": {
+                "wav": "output/dj/horns/horn_pull_up.wav"
+              }
+            },
+            {
+              "name": "horn_siren_down",
+              "description": "Falling siren sweep",
+              "duration_s": 1.0,
+              "files": {
+                "wav": "output/dj/horns/horn_siren_down.wav"
+              }
+            },
+            {
+              "name": "horn_siren_fast",
+              "description": "Three urgent quick wails",
+              "duration_s": 0.9,
+              "files": {
+                "wav": "output/dj/horns/horn_siren_fast.wav"
+              }
+            },
+            {
+              "name": "horn_siren_up",
+              "description": "Rising siren sweep",
+              "duration_s": 1.1,
+              "files": {
+                "wav": "output/dj/horns/horn_siren_up.wav"
+              }
+            },
+            {
+              "name": "horn_siren_wail",
+              "description": "Up-and-down police wail",
+              "duration_s": 1.2,
+              "files": {
+                "wav": "output/dj/horns/horn_siren_wail.wav"
+              }
+            },
+            {
+              "name": "horn_stinger",
+              "description": "Short rising horn stinger",
+              "duration_s": 0.26,
+              "files": {
+                "wav": "output/dj/horns/horn_stinger.wav"
+              }
+            },
+            {
+              "name": "horn_warble",
+              "description": "Warbling evacuation tone",
+              "duration_s": 0.95,
+              "files": {
+                "wav": "output/dj/horns/horn_warble.wav"
+              }
+            },
+            {
+              "name": "horn_zap",
+              "description": "Very short electric crack",
+              "duration_s": 0.16,
+              "files": {
+                "wav": "output/dj/horns/horn_zap.wav"
+              }
+            }
+          ]
+        },
+        {
+          "name": "scratch",
+          "description": "Turntable scratches: baby, chirp, transformer, flare, crab, backspin.",
+          "sounds": [
+            {
+              "name": "scratch_baby",
+              "description": "Forward-back baby scratch",
+              "duration_s": 0.36,
+              "files": {
+                "wav": "output/dj/scratch/scratch_baby.wav"
+              }
+            },
+            {
+              "name": "scratch_baby_fast",
+              "description": "Double-speed baby scratch",
+              "duration_s": 0.2,
+              "files": {
+                "wav": "output/dj/scratch/scratch_baby_fast.wav"
+              }
+            },
+            {
+              "name": "scratch_backspin",
+              "description": "Full backspin run-down",
+              "duration_s": 0.55,
+              "files": {
+                "wav": "output/dj/scratch/scratch_backspin.wav"
+              }
+            },
+            {
+              "name": "scratch_backspin_short",
+              "description": "Quick half-turn backspin",
+              "duration_s": 0.28,
+              "files": {
+                "wav": "output/dj/scratch/scratch_backspin_short.wav"
+              }
+            },
+            {
+              "name": "scratch_brake",
+              "description": "Hand brake into the floor",
+              "duration_s": 0.36,
+              "files": {
+                "wav": "output/dj/scratch/scratch_brake.wav"
+              }
+            },
+            {
+              "name": "scratch_chirp",
+              "description": "Fader-squeezed chirp",
+              "duration_s": 0.285,
+              "files": {
+                "wav": "output/dj/scratch/scratch_chirp.wav"
+              }
+            },
+            {
+              "name": "scratch_chop",
+              "description": "Forward only, return cut",
+              "duration_s": 0.3,
+              "files": {
+                "wav": "output/dj/scratch/scratch_chop.wav"
+              }
+            },
+            {
+              "name": "scratch_crab",
+              "description": "Four-finger crab",
+              "duration_s": 0.3,
+              "files": {
+                "wav": "output/dj/scratch/scratch_crab.wav"
+              }
+            },
+            {
+              "name": "scratch_drag",
+              "description": "Slow growling drag",
+              "duration_s": 0.55,
+              "files": {
+                "wav": "output/dj/scratch/scratch_drag.wav"
+              }
+            },
+            {
+              "name": "scratch_flare",
+              "description": "One-click flare",
+              "duration_s": 0.3,
+              "files": {
+                "wav": "output/dj/scratch/scratch_flare.wav"
+              }
+            },
+            {
+              "name": "scratch_flare_2",
+              "description": "Two-click flare",
+              "duration_s": 0.34,
+              "files": {
+                "wav": "output/dj/scratch/scratch_flare_2.wav"
+              }
+            },
+            {
+              "name": "scratch_hydro",
+              "description": "Hydroplane thumb drag",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/dj/scratch/scratch_hydro.wav"
+              }
+            },
+            {
+              "name": "scratch_orbit",
+              "description": "Symmetrical orbit flare",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/dj/scratch/scratch_orbit.wav"
+              }
+            },
+            {
+              "name": "scratch_rub",
+              "description": "Slow needle rub",
+              "duration_s": 0.45,
+              "files": {
+                "wav": "output/dj/scratch/scratch_rub.wav"
+              }
+            },
+            {
+              "name": "scratch_scribble",
+              "description": "Fast scribble blur",
+              "duration_s": 0.42,
+              "files": {
+                "wav": "output/dj/scratch/scratch_scribble.wav"
+              }
+            },
+            {
+              "name": "scratch_spinup",
+              "description": "Motor pulling up to speed",
+              "duration_s": 0.5,
+              "files": {
+                "wav": "output/dj/scratch/scratch_spinup.wav"
+              }
+            },
+            {
+              "name": "scratch_stab",
+              "description": "Single forward stab",
+              "duration_s": 0.22,
+              "files": {
+                "wav": "output/dj/scratch/scratch_stab.wav"
+              }
+            },
+            {
+              "name": "scratch_tear",
+              "description": "Two-step tear",
+              "duration_s": 0.34,
+              "files": {
+                "wav": "output/dj/scratch/scratch_tear.wav"
+              }
+            },
+            {
+              "name": "scratch_transformer",
+              "description": "Even fader chopping",
+              "duration_s": 0.34,
+              "files": {
+                "wav": "output/dj/scratch/scratch_transformer.wav"
+              }
+            },
+            {
+              "name": "scratch_zigzag",
+              "description": "Three quick alternations",
+              "duration_s": 0.42,
+              "files": {
+                "wav": "output/dj/scratch/scratch_zigzag.wav"
+              }
+            }
+          ]
+        },
+        {
+          "name": "stabs",
+          "description": "Short tonal one-shot hits: orchestra, brass, organ, piano, synth.",
+          "sounds": [
+            {
+              "name": "stab_brass",
+              "description": "Bright brass stab",
+              "duration_s": 0.3,
+              "files": {
+                "wav": "output/dj/stabs/stab_brass.wav"
+              }
+            },
+            {
+              "name": "stab_brass_7",
+              "description": "Dominant 7th brass stab",
+              "duration_s": 0.3,
+              "files": {
+                "wav": "output/dj/stabs/stab_brass_7.wav"
+              }
+            },
+            {
+              "name": "stab_brass_low",
+              "description": "Low chesty brass stab",
+              "duration_s": 0.36,
+              "files": {
+                "wav": "output/dj/stabs/stab_brass_low.wav"
+              }
+            },
+            {
+              "name": "stab_brass_min",
+              "description": "Minor brass stab",
+              "duration_s": 0.3,
+              "files": {
+                "wav": "output/dj/stabs/stab_brass_min.wav"
+              }
+            },
+            {
+              "name": "stab_brass_tight",
+              "description": "Ultra-tight 120 ms brass",
+              "duration_s": 0.18,
+              "files": {
+                "wav": "output/dj/stabs/stab_brass_tight.wav"
+              }
+            },
+            {
+              "name": "stab_hoover",
+              "description": "Rave hoover stab",
+              "duration_s": 0.3,
+              "files": {
+                "wav": "output/dj/stabs/stab_hoover.wav"
+              }
+            },
+            {
+              "name": "stab_orch",
+              "description": "Classic orchestra hit, major",
+              "duration_s": 0.404,
+              "files": {
+                "wav": "output/dj/stabs/stab_orch.wav"
+              }
+            },
+            {
+              "name": "stab_orch_dim",
+              "description": "Diminished tension hit",
+              "duration_s": 0.364,
+              "files": {
+                "wav": "output/dj/stabs/stab_orch_dim.wav"
+              }
+            },
+            {
+              "name": "stab_orch_low",
+              "description": "Low octave orchestra hit",
+              "duration_s": 0.464,
+              "files": {
+                "wav": "output/dj/stabs/stab_orch_low.wav"
+              }
+            },
+            {
+              "name": "stab_orch_min",
+              "description": "Orchestra hit, minor",
+              "duration_s": 0.404,
+              "files": {
+                "wav": "output/dj/stabs/stab_orch_min.wav"
+              }
+            },
+            {
+              "name": "stab_orch_short",
+              "description": "Clipped 150 ms orchestra hit",
+              "duration_s": 0.234,
+              "files": {
+                "wav": "output/dj/stabs/stab_orch_short.wav"
+              }
+            },
+            {
+              "name": "stab_orch_sus",
+              "description": "Suspended orchestra hit",
+              "duration_s": 0.404,
+              "files": {
+                "wav": "output/dj/stabs/stab_orch_sus.wav"
+              }
+            },
+            {
+              "name": "stab_organ",
+              "description": "Full-drawbar organ stab",
+              "duration_s": 0.26,
+              "files": {
+                "wav": "output/dj/stabs/stab_organ.wav"
+              }
+            },
+            {
+              "name": "stab_organ_9",
+              "description": "Minor 9th organ stab",
+              "duration_s": 0.32,
+              "files": {
+                "wav": "output/dj/stabs/stab_organ_9.wav"
+              }
+            },
+            {
+              "name": "stab_organ_maj",
+              "description": "Bright major organ stab",
+              "duration_s": 0.26,
+              "files": {
+                "wav": "output/dj/stabs/stab_organ_maj.wav"
+              }
+            },
+            {
+              "name": "stab_piano",
+              "description": "Damped piano chord stab",
+              "duration_s": 0.26,
+              "files": {
+                "wav": "output/dj/stabs/stab_piano.wav"
+              }
+            },
+            {
+              "name": "stab_pluck",
+              "description": "Short bright pluck stab",
+              "duration_s": 0.16,
+              "files": {
+                "wav": "output/dj/stabs/stab_pluck.wav"
+              }
+            },
+            {
+              "name": "stab_sub",
+              "description": "Sub punch to layer underneath",
+              "duration_s": 0.22,
+              "files": {
+                "wav": "output/dj/stabs/stab_sub.wav"
+              }
+            },
+            {
+              "name": "stab_synth",
+              "description": "Filter-drop synth stab",
+              "duration_s": 0.24,
+              "files": {
+                "wav": "output/dj/stabs/stab_synth.wav"
+              }
+            },
+            {
+              "name": "stab_synth_maj",
+              "description": "Major synth stab",
+              "duration_s": 0.24,
+              "files": {
+                "wav": "output/dj/stabs/stab_synth_maj.wav"
+              }
+            }
+          ]
+        },
+        {
+          "name": "vox",
+          "description": "Synthetic vocal shouts and chops: hey, ho, yeah, chants, crowd.",
+          "sounds": [
+            {
+              "name": "vox_ah",
+              "description": "Open held 'ah' shout",
+              "duration_s": 0.44,
+              "files": {
+                "wav": "output/dj/vox/vox_ah.wav"
+              }
+            },
+            {
+              "name": "vox_ay",
+              "description": "Bright calling 'ay'",
+              "duration_s": 0.392,
+              "files": {
+                "wav": "output/dj/vox/vox_ay.wav"
+              }
+            },
+            {
+              "name": "vox_chant",
+              "description": "Two-shout terrace chant",
+              "duration_s": 0.6,
+              "files": {
+                "wav": "output/dj/vox/vox_chant.wav"
+              }
+            },
+            {
+              "name": "vox_chant_3",
+              "description": "Rising three-note chant",
+              "duration_s": 0.9,
+              "files": {
+                "wav": "output/dj/vox/vox_chant_3.wav"
+              }
+            },
+            {
+              "name": "vox_chop_3",
+              "description": "Stuttered triple chop",
+              "duration_s": 0.39,
+              "files": {
+                "wav": "output/dj/vox/vox_chop_3.wav"
+              }
+            },
+            {
+              "name": "vox_chop_ah",
+              "description": "120 ms 'ah' vocal chop",
+              "duration_s": 0.17,
+              "files": {
+                "wav": "output/dj/vox/vox_chop_ah.wav"
+              }
+            },
+            {
+              "name": "vox_chop_eh",
+              "description": "Bright 'eh' chop",
+              "duration_s": 0.17,
+              "files": {
+                "wav": "output/dj/vox/vox_chop_eh.wav"
+              }
+            },
+            {
+              "name": "vox_chop_low",
+              "description": "Low chesty chop",
+              "duration_s": 0.22,
+              "files": {
+                "wav": "output/dj/vox/vox_chop_low.wav"
+              }
+            },
+            {
+              "name": "vox_chop_oo",
+              "description": "Dark 'oo' chop",
+              "duration_s": 0.17,
+              "files": {
+                "wav": "output/dj/vox/vox_chop_oo.wav"
+              }
+            },
+            {
+              "name": "vox_crowd",
+              "description": "Four staggered voices",
+              "duration_s": 0.74,
+              "files": {
+                "wav": "output/dj/vox/vox_crowd.wav"
+              }
+            },
+            {
+              "name": "vox_crowd_low",
+              "description": "Low room of voices",
+              "duration_s": 0.8,
+              "files": {
+                "wav": "output/dj/vox/vox_crowd_low.wav"
+              }
+            },
+            {
+              "name": "vox_hey",
+              "description": "Shouted 'hey', eh to ih",
+              "duration_s": 0.382,
+              "files": {
+                "wav": "output/dj/vox/vox_hey.wav"
+              }
+            },
+            {
+              "name": "vox_hey_high",
+              "description": "High urgent 'hey'",
+              "duration_s": 0.342,
+              "files": {
+                "wav": "output/dj/vox/vox_hey_high.wav"
+              }
+            },
+            {
+              "name": "vox_ho",
+              "description": "Heavy rounded 'ho'",
+              "duration_s": 0.402,
+              "files": {
+                "wav": "output/dj/vox/vox_ho.wav"
+              }
+            },
+            {
+              "name": "vox_hut",
+              "description": "Clipped drill-call 'hut'",
+              "duration_s": 0.21,
+              "files": {
+                "wav": "output/dj/vox/vox_hut.wav"
+              }
+            },
+            {
+              "name": "vox_oh",
+              "description": "Falling rounded 'oh'",
+              "duration_s": 0.4,
+              "files": {
+                "wav": "output/dj/vox/vox_oh.wav"
+              }
+            },
+            {
+              "name": "vox_rise",
+              "description": "Vowel bent up a fourth",
+              "duration_s": 0.452,
+              "files": {
+                "wav": "output/dj/vox/vox_rise.wav"
+              }
+            },
+            {
+              "name": "vox_uh",
+              "description": "Short grunted 'uh'",
+              "duration_s": 0.26,
+              "files": {
+                "wav": "output/dj/vox/vox_uh.wav"
+              }
+            },
+            {
+              "name": "vox_woo",
+              "description": "Rising crowd 'woo'",
+              "duration_s": 0.512,
+              "files": {
+                "wav": "output/dj/vox/vox_woo.wav"
+              }
+            },
+            {
+              "name": "vox_yeah",
+              "description": "Glided 'yeah', eh to ah",
+              "duration_s": 0.442,
+              "files": {
+                "wav": "output/dj/vox/vox_yeah.wav"
               }
             }
           ]

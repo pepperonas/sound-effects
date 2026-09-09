@@ -30,7 +30,9 @@ def read(path):
 
 
 def built_files():
-    for group in ("interface", "music"):
+    # Groups come from the modules, not from a hand-typed list — adding a
+    # group must not silently drop its files out of every test here.
+    for group in sorted({m.GROUP for m in MODS.values()}):
         d = os.path.join(OUT, group)
         if not os.path.isdir(d):
             continue
