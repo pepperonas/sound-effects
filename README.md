@@ -7,8 +7,8 @@
 [![Made with Python](https://img.shields.io/badge/Made%20with-Python%203-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![No dependencies](https://img.shields.io/badge/dependencies-none-success)](#requirements)
 [![Stdlib only](https://img.shields.io/badge/stdlib-only-informational)](synth/core.py)
-[![Sounds](https://img.shields.io/badge/sounds-129-ff69b4)](output/)
-[![Categories](https://img.shields.io/badge/categories-15-blueviolet)](#-categories)
+[![Sounds](https://img.shields.io/badge/sounds-148-ff69b4)](output/)
+[![Categories](https://img.shields.io/badge/categories-16-blueviolet)](#-categories)
 [![Format WAV](https://img.shields.io/badge/format-WAV%2044.1kHz-orange)](#output-layout)
 [![MP3 optional](https://img.shields.io/badge/MP3-optional-lightgrey)](#output-layout)
 [![Royalty free](https://img.shields.io/badge/royalty-free-brightgreen)](#-license)
@@ -33,8 +33,9 @@ python3 build.py          # → output/<category>/<name>.{wav,mp3} + manifest.js
 
 ## ✨ Highlights
 
-- 🧰 **129 ready-to-use sounds** across **15 categories** — UI interactions **and** music-production samples
-- 🎹 **FL-Studio-style sample kit** — drums, basses, synth tones, chord stabs and production FX, tuned to musical notes
+- 🧰 **148 ready-to-use sounds** across **16 categories** — UI interactions **and** music-production samples
+- 🎹 **FL-Studio-style sample kit** — drums, basses, synth tones, chord stabs, brass motifs and production FX, tuned to musical notes
+- 🎺 **Playable motifs, not just one-shots** — the brass kit ships 2–5 note fanfares, calls and riffs as single drag-and-drop samples
 - 🐍 **Pure Python standard library** — clone and run, nothing to install
 - 🗂️ **Sorted output** — one folder per category + a machine-readable `manifest.json`
 - ♻️ **Reproducible** — seeded noise means identical output everywhere
@@ -66,6 +67,7 @@ python3 build.py          # → output/<category>/<name>.{wav,mp3} + manifest.js
 | 🎸 **bass** | 808, sub, reese, saw/square, pluck, wobble, FM — tuned to notes | 8 |
 | 🎛️ **synth** | plucks, stabs, leads, keys, bells, organ, pad, arp | 9 |
 | 🎵 **chords** | major / minor / 7th / sus / power stabs + pads, rooted on C | 9 |
+| 🎺 **brass** | synthetic horn stabs **and 2–5 note fanfare motifs** — duos, calls, riffs | 19 |
 | 💥 **fx** | risers, downlifters, impacts, sweeps, reverse cymbal, vinyl | 10 |
 
 > See the full annotated list any time with `python3 build.py --list`.
@@ -81,6 +83,7 @@ python3 build.py          # → output/<category>/<name>.{wav,mp3} + manifest.js
 **bass** · `bass_808` · `sub_bass` · `saw_bass` · `square_bass` · `reese` · `pluck_bass` · `wobble_bass` · `fm_bass`
 **synth** · `pluck` · `stab` · `lead` · `key` · `bell_tone` · `organ` · `pad` · `arp_blip` · `saw_lead_oct`
 **chords** · `major` · `minor` · `maj7` · `min7` · `dom7` · `sus4` · `power` · `major_pad` · `minor_pad`
+**brass** · `brass_stab` · `brass_dub_dub` · `brass_da_da` · `brass_duo_up/down` · `brass_octave` · `brass_fanfare_2/3` · `brass_rise_3` · `brass_fall_3` · `brass_call` · `brass_answer` · `brass_triumph` · `brass_riff_4` · `brass_stomp` · `brass_climb_5`
 **fx** · `riser` · `downlifter` · `impact` · `sub_drop` · `sweep_up` · `sweep_down` · `reverse_cymbal` · `white_riser` · `vinyl_crackle` · `laser_zap`
 
 ## 🚀 Usage
@@ -91,6 +94,7 @@ python3 build.py --list                # list every group, category & sound, gen
 python3 build.py -g music              # only one use case (interface | music)
 python3 build.py -c clicks ui          # build only specific categories
 python3 build.py -c drums bass synth   # just part of the music-production kit
+python3 build.py -c brass              # just the brass stabs & fanfare motifs
 python3 build.py --mp3                 # also encode an MP3 copy (needs ffmpeg)
 ```
 
@@ -99,6 +103,7 @@ Preview a sound (macOS `afplay`, Linux `aplay`/`ffplay`):
 ```bash
 afplay output/interface/clipboard/paste.wav
 aplay  output/music/drums/kick_808.wav
+afplay output/music/brass/brass_fanfare_3.wav
 ```
 
 ### Output layout
@@ -119,7 +124,7 @@ output/
 │   ├── drums/
 │   │   ├── kick_808.wav
 │   │   └── …
-│   ├── bass/ synth/ chords/ fx/
+│   ├── bass/ synth/ chords/ brass/ fx/
 │   └── …
 └── manifest.json              ← machine-readable index of every sound
 ```
@@ -198,6 +203,7 @@ sound-effects/
 │   ├── bass.py          │
 │   ├── synthtones.py    │ GROUP = "music"  (synthtones → CATEGORY "synth")
 │   ├── chords.py        │
+│   ├── brass.py         │
 │   └── fx.py            ┘
 └── output/             # generated WAVs: output/<group>/<category>/ (+ manifest.json)
 ```

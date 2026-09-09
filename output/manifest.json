@@ -1,6 +1,6 @@
 {
   "sample_rate": 44100,
-  "total_sounds": 129,
+  "total_sounds": 148,
   "groups": [
     {
       "name": "interface",
@@ -746,6 +746,164 @@
               "duration_s": 0.9,
               "files": {
                 "wav": "output/music/bass/wobble_bass.wav"
+              }
+            }
+          ]
+        },
+        {
+          "name": "brass",
+          "description": "Synthetic brass stabs and 2-5 note fanfare motifs, rooted on C.",
+          "sounds": [
+            {
+              "name": "brass_answer",
+              "description": "Falling answer, resolves home",
+              "duration_s": 1.166,
+              "files": {
+                "wav": "output/music/brass/brass_answer.wav"
+              }
+            },
+            {
+              "name": "brass_call",
+              "description": "Rising question figure",
+              "duration_s": 1.059,
+              "files": {
+                "wav": "output/music/brass/brass_call.wav"
+              }
+            },
+            {
+              "name": "brass_climb_5",
+              "description": "Five-note climb into a held hit",
+              "duration_s": 1.488,
+              "files": {
+                "wav": "output/music/brass/brass_climb_5.wav"
+              }
+            },
+            {
+              "name": "brass_da_da",
+              "description": "Short-long minor third (DA-DA)",
+              "duration_s": 0.738,
+              "files": {
+                "wav": "output/music/brass/brass_da_da.wav"
+              }
+            },
+            {
+              "name": "brass_double_hit",
+              "description": "Two wide stabs with a gap",
+              "duration_s": 0.952,
+              "files": {
+                "wav": "output/music/brass/brass_double_hit.wav"
+              }
+            },
+            {
+              "name": "brass_dub_dub",
+              "description": "Two fast hard stabs (D\u00dcB-D\u00dcB)",
+              "duration_s": 0.416,
+              "files": {
+                "wav": "output/music/brass/brass_dub_dub.wav"
+              }
+            },
+            {
+              "name": "brass_duo_down",
+              "description": "Two stabs, fifth down",
+              "duration_s": 0.631,
+              "files": {
+                "wav": "output/music/brass/brass_duo_down.wav"
+              }
+            },
+            {
+              "name": "brass_duo_up",
+              "description": "Two stabs, fifth up",
+              "duration_s": 0.631,
+              "files": {
+                "wav": "output/music/brass/brass_duo_up.wav"
+              }
+            },
+            {
+              "name": "brass_fall_3",
+              "description": "Falling minor triad, three stabs",
+              "duration_s": 0.952,
+              "files": {
+                "wav": "output/music/brass/brass_fall_3.wav"
+              }
+            },
+            {
+              "name": "brass_fanfare_2",
+              "description": "Two-note bugle fourth fanfare",
+              "duration_s": 0.845,
+              "files": {
+                "wav": "output/music/brass/brass_fanfare_2.wav"
+              }
+            },
+            {
+              "name": "brass_fanfare_3",
+              "description": "Short-short-long major fanfare",
+              "duration_s": 1.059,
+              "files": {
+                "wav": "output/music/brass/brass_fanfare_3.wav"
+              }
+            },
+            {
+              "name": "brass_octave",
+              "description": "Octave leap C3 to C4",
+              "duration_s": 0.845,
+              "files": {
+                "wav": "output/music/brass/brass_octave.wav"
+              }
+            },
+            {
+              "name": "brass_riff_4",
+              "description": "Syncopated four-note minor riff",
+              "duration_s": 1.059,
+              "files": {
+                "wav": "output/music/brass/brass_riff_4.wav"
+              }
+            },
+            {
+              "name": "brass_rise_3",
+              "description": "Rising minor triad, three stabs",
+              "duration_s": 0.952,
+              "files": {
+                "wav": "output/music/brass/brass_rise_3.wav"
+              }
+            },
+            {
+              "name": "brass_stab",
+              "description": "Bright single brass stab (C3)",
+              "duration_s": 0.416,
+              "files": {
+                "wav": "output/music/brass/brass_stab.wav"
+              }
+            },
+            {
+              "name": "brass_stab_low",
+              "description": "Dark heavy low stab (C2)",
+              "duration_s": 0.524,
+              "files": {
+                "wav": "output/music/brass/brass_stab_low.wav"
+              }
+            },
+            {
+              "name": "brass_stab_soft",
+              "description": "Soft warm stab for layering",
+              "duration_s": 0.524,
+              "files": {
+                "wav": "output/music/brass/brass_stab_soft.wav"
+              }
+            },
+            {
+              "name": "brass_stomp",
+              "description": "Low three-note marching stomp",
+              "duration_s": 1.059,
+              "files": {
+                "wav": "output/music/brass/brass_stomp.wav"
+              }
+            },
+            {
+              "name": "brass_triumph",
+              "description": "Three hits into a held octave",
+              "duration_s": 1.595,
+              "files": {
+                "wav": "output/music/brass/brass_triumph.wav"
               }
             }
           ]
